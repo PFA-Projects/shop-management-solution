@@ -7,8 +7,8 @@
     <ProjectGuid>{79DE0F1B-A471-46E4-91E5-145DBEFFDF23}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClubManagement</RootNamespace>
-    <AssemblyName>ClubManagementSystem</AssemblyName>
+    <RootNamespace>ShopManagement</RootNamespace>
+    <AssemblyName>ShopManagement</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -67,31 +67,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAL\BaseBAO.cs" />
-    <Compile Include="BAL\Security\RoleBAO.cs" />
+    <Compile Include="BLL\BaseBLO.cs" />
+    <Compile Include="BLL\Class1.cs" />
+    <Compile Include="BLL\Security\RoleBAO.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\Resources\Article\Article.fr.Designer.cs">
+      <DependentUpon>Article.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Article\Article.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Article.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Provider\Provider1.fr.Designer.cs">
+      <DependentUpon>Provider1.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Provider\Provider1.Designer.cs">
+      <DependentUpon>Provider1.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\UserApp.cs" />
+    <Compile Include="Migrations\201703171609225_Initial_Table.cs" />
+    <Compile Include="Migrations\201703171609225_Initial_Table.Designer.cs">
+      <DependentUpon>201703171609225_Initial_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
-    <Compile Include="Entities\GroupAge.cs" />
-    <Compile Include="Entities\Resources\GroupAge\GroupAge.ar.Designer.cs">
-      <DependentUpon>GroupAge.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\GroupAge\GroupAge.en.Designer.cs">
-      <DependentUpon>GroupAge.en.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\GroupAge\GroupAge.fr.Designer.cs">
-      <DependentUpon>GroupAge.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\GroupAge\GroupAge.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GroupAge.resx</DependentUpon>
-    </Compile>
     <Compile Include="FormMenuApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,24 +107,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Entities\Resources\GroupAge\GroupAge.ar.resx">
+    <EmbeddedResource Include="Entities\Resources\Article\Article.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GroupAge.ar.Designer.cs</LastGenOutput>
+      <LastGenOutput>Article.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\GroupAge\GroupAge.en.resx">
+    <EmbeddedResource Include="Entities\Resources\Article\Article.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GroupAge.en.Designer.cs</LastGenOutput>
+      <LastGenOutput>Article.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\GroupAge\GroupAge.fr.resx">
+    <EmbeddedResource Include="Entities\Resources\Provider\Provider1.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GroupAge.fr.Designer.cs</LastGenOutput>
+      <LastGenOutput>Provider1.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\GroupAge\GroupAge.resx">
+    <EmbeddedResource Include="Entities\Resources\Provider\Provider1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GroupAge.Designer.cs</LastGenOutput>
+      <LastGenOutput>Provider1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703171609225_Initial_Table.resx">
+      <DependentUpon>201703171609225_Initial_Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

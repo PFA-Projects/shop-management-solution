@@ -1,10 +1,11 @@
 ﻿namespace App
 {
-    using ClubManagement.Entities;
+    using ShopManagement.Entities;
     using Gwin.Entities.Application;
-    using Gwin.Entities.Authentication;
     using Gwin.Entities.ContactInformations;
-    using Gwin.Entities.Security;
+    using Gwin.Entities.Secrurity.Authentication;
+    using Gwin.Entities.Secrurity.Autorizations;
+    using ShopManagement.Entities;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -13,7 +14,7 @@
     public class ModelContext : DbContext
     {
 
-        public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system; user = sa;password = admintp4; MultipleActiveResultSets = True; App = EntityFramework")
+        public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; integrated security =true ; MultipleActiveResultSets = True; App = EntityFramework")
         {
             // Integrated Security = true
             // 
@@ -35,9 +36,10 @@
         public virtual DbSet<ContactInformation> ContactInformations { get; set; }
         public virtual DbSet<ApplicationName> ApplicationNames { get; set; }
 
+        //Shop Management System
+        public virtual DbSet<Article> Articles { get; set; }
+        public virtual DbSet<Provider> Providers { get; set; }
 
-        // Club Management System
-    
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

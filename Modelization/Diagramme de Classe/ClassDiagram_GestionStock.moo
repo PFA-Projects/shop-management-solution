@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489684464" Name="ClassDiagram_GestionStock" Objects="67" Symbols="16" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489684464" Name="ClassDiagram_GestionStock" Objects="49" Symbols="14" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1397,7 +1397,7 @@ Shadow=0</a:DisplayPreferences>
 <o:AssociationSymbol Id="o6">
 <a:CreationDate>1489625613</a:CreationDate>
 <a:ModificationDate>1489684260</a:ModificationDate>
-<a:Rect>((25025,3040), (29018,15151))</a:Rect>
+<a:Rect>((24463,3040), (29543,15151))</a:Rect>
 <a:ListOfPoints>((25025,15151),(25025,5473),(29018,5473),(29018,3040))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1418,7 +1418,7 @@ MULA 0 Arial,12,N</a:FontList>
 <o:AssociationSymbol Id="o10">
 <a:CreationDate>1489625777</a:CreationDate>
 <a:ModificationDate>1489684460</a:ModificationDate>
-<a:Rect>((-30266,7464), (-14502,13873))</a:Rect>
+<a:Rect>((-30266,7239), (-14502,14098))</a:Rect>
 <a:ListOfPoints>((-14502,13873),(-23302,13873),(-23302,7464),(-30266,7464))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1460,7 +1460,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o17">
 <a:CreationDate>1489684253</a:CreationDate>
 <a:ModificationDate>1489684411</a:ModificationDate>
-<a:Rect>((-4234,5744), (6317,13271))</a:Rect>
+<a:Rect>((-4234,5744), (6354,13271))</a:Rect>
 <a:ListOfPoints>((6317,5744),(6317,12097),(-4234,12097))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1481,7 +1481,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o20">
 <a:CreationDate>1489684255</a:CreationDate>
 <a:ModificationDate>1489684411</a:ModificationDate>
-<a:Rect>((12288,-1180), (26027,5222))</a:Rect>
+<a:Rect>((12251,-1180), (26027,5222))</a:Rect>
 <a:ListOfPoints>((12288,5222),(12288,-7),(26027,-7))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1502,7 +1502,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o22">
 <a:CreationDate>1489684315</a:CreationDate>
 <a:ModificationDate>1489684366</a:ModificationDate>
-<a:Rect>((-4089,-9294), (29135,-2337))</a:Rect>
+<a:Rect>((-4052,-9294), (29135,-2337))</a:Rect>
 <a:ListOfPoints>((-2065,-9294),(-2065,-2338),(29135,-2338))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
