@@ -120,7 +120,7 @@
   <data name="BuyingPrice" xml:space="preserve">
     <value>Prix d'achat</value>
   </data>
-  <data name="PluraleName" xml:space="preserve">
+  <data name="PluralName" xml:space="preserve">
     <value>Articles</value>
   </data>
   <data name="QuantityInStock" xml:space="preserve">

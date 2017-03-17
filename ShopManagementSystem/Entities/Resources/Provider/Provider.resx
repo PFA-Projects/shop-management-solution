@@ -132,7 +132,7 @@
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
-  <data name="PluraleName" xml:space="preserve">
+  <data name="PluralName" xml:space="preserve">
     <value>Providers</value>
   </data>
   <data name="SingularName" xml:space="preserve">

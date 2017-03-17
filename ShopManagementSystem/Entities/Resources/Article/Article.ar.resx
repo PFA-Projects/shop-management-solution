@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BuyingPrice" xml:space="preserve">
-    <value>BuyingPrice</value>
+    <value />
   </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Articles</value>
+    <value />
   </data>
   <data name="QuantityInStock" xml:space="preserve">
-    <value>QuantityInStock</value>
+    <value />
   </data>
   <data name="Reference" xml:space="preserve">
-    <value>Reference</value>
+    <value />
   </data>
   <data name="SellPrice" xml:space="preserve">
-    <value>SellPrice</value>
+    <value />
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Article</value>
+    <value />
   </data>
 </root>

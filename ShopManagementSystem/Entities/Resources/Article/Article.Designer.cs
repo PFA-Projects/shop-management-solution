@@ -72,9 +72,9 @@ namespace ShopManagement.Entities.Resources.Article {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Articles.
         /// </summary>
-        internal static string PluraleName {
+        internal static string PluralName {
             get {
-                return ResourceManager.GetString("PluraleName", resourceCulture);
+                return ResourceManager.GetString("PluralName", resourceCulture);
             }
         }
         
