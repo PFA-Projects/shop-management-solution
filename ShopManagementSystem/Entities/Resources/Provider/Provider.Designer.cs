@@ -108,7 +108,9 @@ namespace ShopManagement.Entities.Resources.Provider {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Providers.
         /// </summary>
+        internal static string PluralName {
             get {
+                return ResourceManager.GetString("PluralName", resourceCulture);
             }
         }
         
