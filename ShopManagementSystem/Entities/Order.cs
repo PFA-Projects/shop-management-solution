@@ -34,5 +34,13 @@ namespace ShopManagement.Entities
         [DataGrid]
         [Filter]
         public DateTime DeliveryDateExpected { get; set; }
+
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [Filter]
+        [DataGrid(WidthColonne = 100)]
+        public Provider provider { get; set; }
+
+       
     }
 }

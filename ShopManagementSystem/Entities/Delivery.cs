@@ -27,6 +27,8 @@ namespace ShopManagement.Entities
         [EntryForm]
         [DataGrid]
         [Filter]
-        public string DeliveryDate { get; set; }
+        public DateTime DeliveryDate { get; set; }
+
+        
     }
 }

@@ -21,5 +21,18 @@ namespace ShopManagement.Entities
         [DataGrid]
         [Filter]
         public int Quantity { get; set; }
+
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [Filter]
+        [DataGrid(WidthColonne = 100)]
+        public Article article { get; set; }
+
+
+        //[Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        //[EntryForm]
+        //[Filter]
+        //[DataGrid(WidthColonne = 100)]
+        //public Order order { get; set; }
     }
 }
