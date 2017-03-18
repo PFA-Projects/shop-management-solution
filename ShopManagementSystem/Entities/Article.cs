@@ -1,4 +1,4 @@
-﻿// Name : Mariam Aital
+﻿// Name : Mariam Ait al
 // Name : ES-SARRAJ Fouad
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
@@ -33,5 +33,12 @@ namespace ShopManagement.Entities
         [DataGrid]
         [Filter]
         public float QuantityInStock { get; set; }
+
+
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [Filter]
+        [DataGrid(WidthColonne = 100)]
+        public ArticleCategory articleCategory { get; set; }
     }
 }

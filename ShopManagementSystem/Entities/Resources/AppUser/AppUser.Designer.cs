@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopManagement.Entities.Resources.Provider {
+namespace ShopManagement.Entities.Resources.AppUser {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ShopManagement.Entities.Resources.Provider {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Provider {
+    internal class AppUser {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Provider() {
+        internal AppUser() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ShopManagement.Entities.Resources.Provider {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShopManagement.Entities.Resources.Provider.Provider", typeof(Provider).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShopManagement.Entities.Resources.AppUser.AppUser", typeof(AppUser).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,15 +57,6 @@ namespace ShopManagement.Entities.Resources.Provider {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Adresse.
-        /// </summary>
-        internal static string Adresse {
-            get {
-                return ResourceManager.GetString("Adresse", resourceCulture);
             }
         }
         
@@ -97,16 +88,25 @@ namespace ShopManagement.Entities.Resources.Provider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Phone.
+        ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string Phone {
+        internal static string Login {
             get {
-                return ResourceManager.GetString("Phone", resourceCulture);
+                return ResourceManager.GetString("Login", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Providers.
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AppUsers.
         /// </summary>
         internal static string PluralName {
             get {
@@ -115,11 +115,20 @@ namespace ShopManagement.Entities.Resources.Provider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provider.
+        ///   Looks up a localized string similar to AppUser.
         /// </summary>
         internal static string SingularName {
             get {
                 return ResourceManager.GetString("SingularName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tel.
+        /// </summary>
+        internal static string Tel {
+            get {
+                return ResourceManager.GetString("Tel", resourceCulture);
             }
         }
     }

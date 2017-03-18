@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
@@ -13,9 +12,10 @@ namespace ShopManagement.Entities
     /// Mariam Ait al
     /// </summary>
     /// 
+
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
     [Menu]
-    public class Provider:BaseEntity  
+    public class AppUser:BaseEntity
     {
         [DisplayProperty(Titre = "FirstName")]
         [EntryForm]
@@ -27,25 +27,30 @@ namespace ShopManagement.Entities
         [EntryForm]
         [DataGrid]
         [Filter]
-
         public string LastName { get; set; }
-
-        [DisplayProperty(Titre = "Adresse")]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        public string Adresse { get; set; }
-
-        [DisplayProperty(Titre = "Phone")]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        public string Phone { get; set; }
 
         [DisplayProperty(Titre = "Email")]
         [EntryForm]
         [DataGrid]
         [Filter]
         public string Email { get; set; }
+
+        [DisplayProperty(Titre = "Login")]
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public string Login { get; set; }
+
+        [DisplayProperty(Titre = "Password")]
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public string Password { get; set; }
+
+        [DisplayProperty(Titre = "Tel")]
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public string Tel { get; set; }
     }
 }

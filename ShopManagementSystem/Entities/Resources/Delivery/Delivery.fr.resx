@@ -117,25 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Adresse" xml:space="preserve">
-    <value>Adresse</value>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Date livraison</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="FirstName" xml:space="preserve">
-    <value>Prenom</value>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Tel</value>
+  <data name="DeliveryName" xml:space="preserve">
+    <value>Nom Livraison</value>
   </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Fournisseurs</value>
+    <value>Livraisons</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Fournisseur</value>
+    <value>Livraison</value>
   </data>
 </root>
