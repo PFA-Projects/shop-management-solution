@@ -1,5 +1,4 @@
-﻿//Mariam Ait al
-using App.Gwin.Attributes;
+﻿using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
-   
-
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
-    [Menu(Group = "Buy")]
-    public class AppUser:BaseEntity
+    [Menu(Group = "Sell")]
+    public class Customer:BaseEntity
     {
         [DisplayProperty(Titre = "FirstName")]
         [EntryForm]
@@ -27,28 +24,29 @@ namespace ShopManagement.Entities
         [Filter]
         public string LastName { get; set; }
 
-        [DisplayProperty(Titre = "Email")]
+        [DisplayProperty(Titre = "Adress")]
         [EntryForm]
         [DataGrid]
         [Filter]
-        public string Email { get; set; }
-
-        [DisplayProperty(Titre = "Login")]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        public string Login { get; set; }
-
-        [DisplayProperty(Titre = "Password")]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        public string Password { get; set; }
+        public string Adress { get; set; }
 
         [DisplayProperty(Titre = "Tel")]
         [EntryForm]
         [DataGrid]
         [Filter]
         public string Tel { get; set; }
+
+        [DisplayProperty(Titre = "Email")]
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public string Email { get; set; }
+
+        [DisplayProperty(Titre = "CNE")]
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public string CNE { get; set; }
+
     }
 }

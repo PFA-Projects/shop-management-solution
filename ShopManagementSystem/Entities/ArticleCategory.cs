@@ -1,4 +1,5 @@
-﻿using App.Gwin.Attributes;
+﻿// Name : Mariam Ait al
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
-    /// <summary>
-    /// Mariam Ait al
-    /// </summary>
-    /// 
+    
 
     [GwinEntity(Localizable = true, DisplayMember = "Name")]
-    [Menu]
+    [Menu(Group = "Buy")]
     public class ArticleCategory:BaseEntity
     {
         [DisplayProperty(Titre = "Name")]
