@@ -70,8 +70,43 @@
     <Compile Include="BLL\BaseBLO.cs" />
     <Compile Include="BLL\Class1.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
+    <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\ArticleCategory.cs" />
+    <Compile Include="Entities\Delivery.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderLine.cs" />
     <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\Resources\AppUser\AppUser.ar.Designer.cs">
+      <DependentUpon>AppUser.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\AppUser\AppUser.fr.Designer.cs">
+      <DependentUpon>AppUser.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\AppUser\AppUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppUser.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.ar.Designer.cs">
+      <DependentUpon>ArticleCategory.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.fr.Designer.cs">
+      <DependentUpon>ArticleCategory.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleCategory.resx</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Resources\Article\Article.ar.Designer.cs">
       <DependentUpon>Article.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -87,6 +122,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Article.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Resources\Delivery\Delivery.ar.Designer.cs">
+      <DependentUpon>Delivery.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Delivery\Delivery.fr.Designer.cs">
+      <DependentUpon>Delivery.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Delivery\Delivery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Delivery.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\OrderLine\OrderLine.ar.Designer.cs">
+      <DependentUpon>OrderLine.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\OrderLine\OrderLine.fr.Designer.cs">
+      <DependentUpon>OrderLine.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\OrderLine\OrderLine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderLine.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Order\Order.ar.Designer.cs">
+      <DependentUpon>Order.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Order\Order.fr.Designer.cs">
+      <DependentUpon>Order.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Order\Order.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Order.resx</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Resources\Provider\Provider.ar.Designer.cs">
       <DependentUpon>Provider.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -98,11 +178,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Entities\Resources\Provider\Provider.Designer.cs">
-      <DependentUpon>Provider.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\UserApp.cs" />
     <Compile Include="Migrations\201703171609225_Initial_Table.cs" />
     <Compile Include="Migrations\201703171609225_Initial_Table.Designer.cs">
       <DependentUpon>201703171609225_Initial_Table.cs</DependentUpon>
@@ -110,6 +189,62 @@
     <Compile Include="Migrations\201703171824448_Update1.cs" />
     <Compile Include="Migrations\201703171824448_Update1.Designer.cs">
       <DependentUpon>201703171824448_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172249572_Add_Table_AppUser.cs" />
+    <Compile Include="Migrations\201703172249572_Add_Table_AppUser.Designer.cs">
+      <DependentUpon>201703172249572_Add_Table_AppUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172310036_Add_Table_Order.cs" />
+    <Compile Include="Migrations\201703172310036_Add_Table_Order.Designer.cs">
+      <DependentUpon>201703172310036_Add_Table_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172313038_update_Table_Order.cs" />
+    <Compile Include="Migrations\201703172313038_update_Table_Order.Designer.cs">
+      <DependentUpon>201703172313038_update_Table_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172325497_up_Table_Order.cs" />
+    <Compile Include="Migrations\201703172325497_up_Table_Order.Designer.cs">
+      <DependentUpon>201703172325497_up_Table_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172337184_Add_Table_Delivery.cs" />
+    <Compile Include="Migrations\201703172337184_Add_Table_Delivery.Designer.cs">
+      <DependentUpon>201703172337184_Add_Table_Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172345251_Add_Table_ArticleCategory.cs" />
+    <Compile Include="Migrations\201703172345251_Add_Table_ArticleCategory.Designer.cs">
+      <DependentUpon>201703172345251_Add_Table_ArticleCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172354545_Add_Table_OrderLine.cs" />
+    <Compile Include="Migrations\201703172354545_Add_Table_OrderLine.Designer.cs">
+      <DependentUpon>201703172354545_Add_Table_OrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180013100_Update_Table_Article.cs" />
+    <Compile Include="Migrations\201703180013100_Update_Table_Article.Designer.cs">
+      <DependentUpon>201703180013100_Update_Table_Article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180016343_Update2_Table_Order.cs" />
+    <Compile Include="Migrations\201703180016343_Update2_Table_Order.Designer.cs">
+      <DependentUpon>201703180016343_Update2_Table_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180031234_Update_Table_Delivery.cs" />
+    <Compile Include="Migrations\201703180031234_Update_Table_Delivery.Designer.cs">
+      <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.cs" />
+    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.Designer.cs">
+      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.cs" />
+    <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.Designer.cs">
+      <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180045206_Update_RelationArticleLine.cs" />
+    <Compile Include="Migrations\201703180045206_Update_RelationArticleLine.Designer.cs">
+      <DependentUpon>201703180045206_Update_RelationArticleLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180047128_Delete-relation.cs" />
+    <Compile Include="Migrations\201703180047128_Delete-relation.Designer.cs">
+      <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -121,6 +256,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppUser.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppUser.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppUser.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ArticleCategory\ArticleCategory.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ArticleCategory.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ArticleCategory\ArticleCategory.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ArticleCategory.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ArticleCategory\ArticleCategory.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ArticleCategory.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Article\Article.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Article.ar.Designer.cs</LastGenOutput>
@@ -132,6 +291,42 @@
     <EmbeddedResource Include="Entities\Resources\Article\Article.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Article.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Delivery.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Delivery.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\OrderLine\OrderLine.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderLine.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\OrderLine\OrderLine.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderLine.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\OrderLine\OrderLine.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderLine.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Order\Order.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Order.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Order\Order.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Order.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Order\Order.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Order.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Provider\Provider.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +348,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703171824448_Update1.resx">
       <DependentUpon>201703171824448_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172249572_Add_Table_AppUser.resx">
+      <DependentUpon>201703172249572_Add_Table_AppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172310036_Add_Table_Order.resx">
+      <DependentUpon>201703172310036_Add_Table_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172313038_update_Table_Order.resx">
+      <DependentUpon>201703172313038_update_Table_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172325497_up_Table_Order.resx">
+      <DependentUpon>201703172325497_up_Table_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172337184_Add_Table_Delivery.resx">
+      <DependentUpon>201703172337184_Add_Table_Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172345251_Add_Table_ArticleCategory.resx">
+      <DependentUpon>201703172345251_Add_Table_ArticleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172354545_Add_Table_OrderLine.resx">
+      <DependentUpon>201703172354545_Add_Table_OrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180013100_Update_Table_Article.resx">
+      <DependentUpon>201703180013100_Update_Table_Article.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180016343_Update2_Table_Order.resx">
+      <DependentUpon>201703180016343_Update2_Table_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180031234_Update_Table_Delivery.resx">
+      <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.resx">
+      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180042291_Add_RelationArtcileLine.resx">
+      <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180045206_Update_RelationArticleLine.resx">
+      <DependentUpon>201703180045206_Update_RelationArticleLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180047128_Delete-relation.resx">
+      <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
