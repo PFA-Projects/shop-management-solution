@@ -46,8 +46,7 @@
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
         public virtual DbSet<OrderLine> OrderLines { get; set; }
-             //Sell
-        public virtual DbSet<Customer> Customers { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

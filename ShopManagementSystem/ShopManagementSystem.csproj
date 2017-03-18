@@ -73,7 +73,6 @@
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleCategory.cs" />
-    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Delivery.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderLine.cs" />
@@ -247,6 +246,10 @@
     <Compile Include="Migrations\201703180930562_Update2.Designer.cs">
       <DependentUpon>201703180930562_Update2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703181224213_Delete_table_customer.cs" />
+    <Compile Include="Migrations\201703181224213_Delete_table_customer.Designer.cs">
+      <DependentUpon>201703181224213_Delete_table_customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
@@ -391,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703180930562_Update2.resx">
       <DependentUpon>201703180930562_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703181224213_Delete_table_customer.resx">
+      <DependentUpon>201703181224213_Delete_table_customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
