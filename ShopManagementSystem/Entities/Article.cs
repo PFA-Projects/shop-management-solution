@@ -10,7 +10,7 @@ namespace ShopManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu(Group = "Articles")]
+    [Menu(Group = "Buy")]
     public class Article:BaseEntity
     {
 
