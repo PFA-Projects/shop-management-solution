@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopManagement.Entities.Resources.Provider {
+namespace ShopManagement.Entities.Resources.OrderLine {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ShopManagement.Entities.Resources.Provider {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Provider {
+    internal class OrderLine {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Provider() {
+        internal OrderLine() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ShopManagement.Entities.Resources.Provider {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShopManagement.Entities.Resources.Provider.Provider", typeof(Provider).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShopManagement.Entities.Resources.OrderLine.OrderLine", typeof(OrderLine).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,52 +61,7 @@ namespace ShopManagement.Entities.Resources.Provider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adresse.
-        /// </summary>
-        internal static string Adresse {
-            get {
-                return ResourceManager.GetString("Adresse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email.
-        /// </summary>
-        internal static string Email {
-            get {
-                return ResourceManager.GetString("Email", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to FirstName.
-        /// </summary>
-        internal static string FirstName {
-            get {
-                return ResourceManager.GetString("FirstName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LastName.
-        /// </summary>
-        internal static string LastName {
-            get {
-                return ResourceManager.GetString("LastName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Phone.
-        /// </summary>
-        internal static string Phone {
-            get {
-                return ResourceManager.GetString("Phone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Providers.
+        ///   Looks up a localized string similar to Order Line.
         /// </summary>
         internal static string PluralName {
             get {
@@ -115,7 +70,16 @@ namespace ShopManagement.Entities.Resources.Provider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provider.
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        internal static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Lines.
         /// </summary>
         internal static string SingularName {
             get {

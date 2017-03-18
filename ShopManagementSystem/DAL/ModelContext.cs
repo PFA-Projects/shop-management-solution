@@ -5,7 +5,6 @@
     using Gwin.Entities.ContactInformations;
     using Gwin.Entities.Secrurity.Authentication;
     using Gwin.Entities.Secrurity.Autorizations;
-    using ShopManagement.Entities;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -14,8 +13,8 @@
     public class ModelContext : DbContext
     {
 
-    // public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; integrated security =true ; MultipleActiveResultSets = True; App = EntityFramework")
-       public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; user=sa;password=admintp4 ; MultipleActiveResultSets = True; App = EntityFramework")
+     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; integrated security =true ; MultipleActiveResultSets = True; App = EntityFramework")
+
 
         {
             // Integrated Security = true
@@ -41,7 +40,11 @@
         //Shop Management System
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
-
+        public virtual DbSet<AppUser> AppUsers { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Delivery> Deliveries { get; set; }
+        public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
+        public virtual DbSet<OrderLine> OrderLines { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
