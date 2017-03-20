@@ -38,7 +38,7 @@
         public virtual DbSet<ApplicationName> ApplicationNames { get; set; }
 
         //Shop Management System
-            // Buy
+            
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
         public virtual DbSet<AppUser> AppUsers { get; set; }
@@ -46,7 +46,13 @@
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
         public virtual DbSet<OrderLine> OrderLines { get; set; }
-        
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<CustomerDelivery> CustomerDeliveries { get; set; }
+        public virtual DbSet<CustomerOrder> CustomerOrders { get; set; }
+        public virtual DbSet<CustomerOrderLine> CustomerOrderLines { get; set; }
+
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

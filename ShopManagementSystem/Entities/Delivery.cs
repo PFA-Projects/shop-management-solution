@@ -20,7 +20,7 @@ namespace ShopManagement.Entities
         [EntryForm]
         [DataGrid]
         [Filter]
-        public string DeliveryName { get; set; }
+        public string Name { get; set; }
 
         [DisplayProperty(Titre = "DeliveryDate")]
         [EntryForm]

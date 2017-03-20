@@ -3,7 +3,7 @@ namespace App.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Update_data : DbMigration
+    public partial class Create_data : DbMigration
     {
         public override void Up()
         {
@@ -65,8 +65,8 @@ namespace App.Migrations
                         Reference = c.String(),
                         Name = c.String(),
                         BuyingPrice = c.Single(nullable: false),
-                        SellPrice = c.Single(nullable: false),
-                        QuantityInStock = c.Single(nullable: false),
+                        SellingPrice = c.Single(nullable: false),
+                        Quantity = c.Single(nullable: false),
                         Ordre = c.Int(nullable: false),
                         DateCreation = c.DateTime(nullable: false),
                         DateModification = c.DateTime(nullable: false),

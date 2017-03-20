@@ -126,13 +126,13 @@
   <data name="PluralName" xml:space="preserve">
     <value>Articles</value>
   </data>
-  <data name="QuantityInStock" xml:space="preserve">
-    <value>Quantity En Stock</value>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantite</value>
   </data>
   <data name="Reference" xml:space="preserve">
     <value>Reference</value>
   </data>
-  <data name="SellPrice" xml:space="preserve">
+  <data name="SellingPrice" xml:space="preserve">
     <value>Prix de vente</value>
   </data>
   <data name="SingularName" xml:space="preserve">

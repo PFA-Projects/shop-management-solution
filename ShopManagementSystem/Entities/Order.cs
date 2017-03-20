@@ -19,7 +19,7 @@ namespace ShopManagement.Entities
         [EntryForm]
         [DataGrid]
         [Filter]
-        public string OrderName { get; set; }
+        public string Name { get; set; }
 
         [DisplayProperty(Titre = "orderDate")]
         [EntryForm]

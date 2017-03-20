@@ -73,6 +73,10 @@
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleCategory.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\CustomerDelivery.cs" />
+    <Compile Include="Entities\CustomerOrder.cs" />
+    <Compile Include="Entities\CustomerOrderLine.cs" />
     <Compile Include="Entities\Delivery.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderLine.cs" />
@@ -182,9 +186,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703201747327_Update_data.cs" />
-    <Compile Include="Migrations\201703201747327_Update_data.Designer.cs">
-      <DependentUpon>201703201747327_Update_data.cs</DependentUpon>
+    <Compile Include="Migrations\201703201828236_Create_data.cs" />
+    <Compile Include="Migrations\201703201828236_Create_data.Designer.cs">
+      <DependentUpon>201703201828236_Create_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201910173_Add_Table_Customer.cs" />
+    <Compile Include="Migrations\201703201910173_Add_Table_Customer.Designer.cs">
+      <DependentUpon>201703201910173_Add_Table_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201920002_Add_Table_CustomerDelivery.cs" />
+    <Compile Include="Migrations\201703201920002_Add_Table_CustomerDelivery.Designer.cs">
+      <DependentUpon>201703201920002_Add_Table_CustomerDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201921460_Update_Table_Customer.cs" />
+    <Compile Include="Migrations\201703201921460_Update_Table_Customer.Designer.cs">
+      <DependentUpon>201703201921460_Update_Table_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201928437_Add_Table_CustomerOrder.cs" />
+    <Compile Include="Migrations\201703201928437_Add_Table_CustomerOrder.Designer.cs">
+      <DependentUpon>201703201928437_Add_Table_CustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.cs" />
+    <Compile Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.Designer.cs">
+      <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -283,8 +307,23 @@
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201747327_Update_data.resx">
-      <DependentUpon>201703201747327_Update_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703201828236_Create_data.resx">
+      <DependentUpon>201703201828236_Create_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201910173_Add_Table_Customer.resx">
+      <DependentUpon>201703201910173_Add_Table_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201920002_Add_Table_CustomerDelivery.resx">
+      <DependentUpon>201703201920002_Add_Table_CustomerDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201921460_Update_Table_Customer.resx">
+      <DependentUpon>201703201921460_Update_Table_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201928437_Add_Table_CustomerOrder.resx">
+      <DependentUpon>201703201928437_Add_Table_CustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.resx">
+      <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -312,9 +351,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\Entrer En stock\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
