@@ -230,10 +230,6 @@
     <Compile Include="Migrations\201703180031234_Update_Table_Delivery.Designer.cs">
       <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.cs" />
-    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.Designer.cs">
-      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.cs" />
     <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.Designer.cs">
       <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
@@ -245,6 +241,10 @@
     <Compile Include="Migrations\201703180047128_Delete-relation.cs" />
     <Compile Include="Migrations\201703180047128_Delete-relation.Designer.cs">
       <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180930562_Update2.cs" />
+    <Compile Include="Migrations\201703180930562_Update2.Designer.cs">
+      <DependentUpon>201703180930562_Update2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -379,9 +379,6 @@
     <EmbeddedResource Include="Migrations\201703180031234_Update_Table_Delivery.resx">
       <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.resx">
-      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703180042291_Add_RelationArtcileLine.resx">
       <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703180047128_Delete-relation.resx">
       <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180930562_Update2.resx">
+      <DependentUpon>201703180930562_Update2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

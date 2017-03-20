@@ -7,13 +7,13 @@ namespace App.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Delete_Relation_Delivery_Order : IMigrationMetadata
+    public sealed partial class Update2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Delete_Relation_Delivery_Order));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Update2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703180040402_Delete_Relation_Delivery_Order"; }
+            get { return "201703180930562_Update2"; }
         }
         
         string IMigrationMetadata.Source

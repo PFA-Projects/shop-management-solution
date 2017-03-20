@@ -1,4 +1,6 @@
-﻿using App.Gwin.Attributes;
+﻿//Mariam Ait al
+
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,13 +10,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
-    /// <summary>
-    /// Mariam Ait al
-    /// </summary>
-    /// 
+    
 
     [GwinEntity(Localizable = true, DisplayMember = "DeliveryName")]
-    [Menu]
+    [Menu(Group = "Buy")]
     public class Delivery:BaseEntity
     {
         [DisplayProperty(Titre = "DeliveryName")]
@@ -30,5 +29,10 @@ namespace ShopManagement.Entities
         public DateTime DeliveryDate { get; set; }
 
         
+        //Iniitialiser DateTime
+        public Delivery()
+        {
+            this.DeliveryDate = DateTime.Now;
+        }
     }
 }

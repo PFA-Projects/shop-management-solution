@@ -1,4 +1,5 @@
-﻿using App.Gwin.Attributes;
+﻿//Mariam Ait al
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
-    /// <summary>
-    /// Mariam Ait al
-    /// </summary>
-    /// 
+    
 
     [GwinEntity(Localizable = true, DisplayMember = "OrderName")]
-    [Menu]
+    [Menu(Group = "Buy")]
     public class Order:BaseEntity
     {
         [DisplayProperty(Titre = "OrderName")]
@@ -40,6 +38,13 @@ namespace ShopManagement.Entities
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public Provider provider { get; set; }
+
+        //Initialisier Datetime
+        public Order()
+        {
+            this.DeliveryDateExpected = DateTime.Now;
+            this.orderDate = DateTime.Now;
+        }
 
        
     }
