@@ -12,7 +12,7 @@ namespace ShopManagement.Entities
     
 
     [GwinEntity(Localizable = true, DisplayMember = "Name")]
-    [Menu(Group = "Buy")]
+    [Menu(Group = "Configuration")]
     public class ArticleCategory:BaseEntity
     {
         [DisplayProperty(Titre = "Name")]

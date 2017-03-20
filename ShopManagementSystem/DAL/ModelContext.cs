@@ -13,12 +13,12 @@
     public class ModelContext : DbContext
     {
 
-     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; integrated security =true ; MultipleActiveResultSets = True; App = EntityFramework")
+     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; user = sa;password=admintp4 ; MultipleActiveResultSets = True; App = EntityFramework")
 
 
         {
             // Integrated Security = true
-            // 
+            // user = sa;password=admintp4
         }
 
         public ModelContext(string connectionString):base(connectionString)

@@ -11,6 +11,7 @@ namespace ShopManagement.Entities
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
     [Menu(Group = "Buy")]
+    [ManagementForm(FormTitle =("Article_Manager"))]
     public class Article:BaseEntity
     {
 

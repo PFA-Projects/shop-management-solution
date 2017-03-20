@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201703180930562_Update2.Designer.cs">
       <DependentUpon>201703180930562_Update2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703200830209_Update3.cs" />
+    <Compile Include="Migrations\201703200830209_Update3.Designer.cs">
+      <DependentUpon>201703200830209_Update3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
@@ -390,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703180930562_Update2.resx">
       <DependentUpon>201703180930562_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703200830209_Update3.resx">
+      <DependentUpon>201703200830209_Update3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
