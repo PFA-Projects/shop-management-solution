@@ -14,30 +14,46 @@ namespace ShopManagement.Entities
     [ManagementForm(FormTitle =("Article_Manager"))]
     public class Article:BaseEntity
     {
-
-        [EntryForm]
+        //
+        // References
+        //
+        [EntryForm(GroupeBox = "References")]
         [DataGrid]
         [Filter]
         public string Reference { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "References")]
+        [DataGrid]
+        [Filter]
+        public string Name { get; set; }
+
+
+        // 
+        // Price
+        //
+        [EntryForm(GroupeBox = "Price")]
         [DataGrid]
         [Filter]
         public float BuyingPrice { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "Price")]
         [DataGrid]
         [Filter]
         public float SellPrice { get; set; }
 
-        [EntryForm]
+        // 
+        //  fr_stock
+        //
+        [EntryForm(GroupeBox = "fr_stock")]
         [DataGrid]
         [Filter]
         public float QuantityInStock { get; set; }
 
-
+        // 
+        //  Classification
+        //
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm]
+        [EntryForm(GroupeBox = "Classification")]
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
