@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489829412" Name="ClassDiagram_GestionStock" Objects="64" Symbols="21" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489835346" Name="ClassDiagram_GestionStock" Objects="66" Symbols="21" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1439,7 +1439,7 @@ MULA 0 Arial,12,N</a:FontList>
 <o:AssociationSymbol Id="o14">
 <a:CreationDate>1489683770</a:CreationDate>
 <a:ModificationDate>1489684464</a:ModificationDate>
-<a:Rect>((-9444,17651), (6781,31063))</a:Rect>
+<a:Rect>((-9481,17651), (6818,31063))</a:Rect>
 <a:ListOfPoints>((-7607,17651),(-7607,22649),(4944,22649),(4944,31063))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1523,8 +1523,8 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o25">
 <a:CreationDate>1489764568</a:CreationDate>
 <a:ModificationDate>1489766402</a:ModificationDate>
-<a:Rect>((-43162,-8432), (-29813,3343))</a:Rect>
-<a:ListOfPoints>((-41175,-8432),(-41175,-2859),(-31650,-2859),(-31650,3343))</a:ListOfPoints>
+<a:Rect>((-43361,-7561), (-29776,3343))</a:Rect>
+<a:ListOfPoints>((-41175,-7561),(-41389,-2859),(-31650,-2859),(-31650,3343))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
@@ -1586,7 +1586,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o33">
 <a:CreationDate>1489764844</a:CreationDate>
 <a:ModificationDate>1489829412</a:ModificationDate>
-<a:Rect>((-30300,-13682), (-20850,4142))</a:Rect>
+<a:Rect>((-30300,-13682), (-20813,4142))</a:Rect>
 <a:ListOfPoints>((-20850,-13682),(-20850,2968),(-30300,2968))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1792,7 +1792,7 @@ LABL 0 Arial,12,N</a:FontList>
 <a:CreationDate>1489764487</a:CreationDate>
 <a:ModificationDate>1489765556</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-42819,-16044), (-32031,-6596))</a:Rect>
+<a:Rect>((-42819,-17469), (-32031,-5171))</a:Rect>
 <a:LineColor>16744448</a:LineColor>
 <a:FillColor>16777215</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2285,8 +2285,8 @@ LABL 0 Arial,12,N</a:FontList>
 <a:Code>Client</a:Code>
 <a:CreationDate>1489764487</a:CreationDate>
 <a:Creator>ok</a:Creator>
-<a:ModificationDate>1489764499</a:ModificationDate>
-<a:Modifier>ok</a:Modifier>
+<a:ModificationDate>1489835346</a:ModificationDate>
+<a:Modifier>TP</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
 <o:Attribute Id="o77">
@@ -2333,6 +2333,28 @@ LABL 0 Arial,12,N</a:FontList>
 <a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
+<o:Attribute Id="o81">
+<a:ObjectID>F55FA6BC-FF9B-4D68-9E62-BCEFD4A5121C</a:ObjectID>
+<a:Name>Nom</a:Name>
+<a:Code>nom</a:Code>
+<a:CreationDate>1489835301</a:CreationDate>
+<a:Creator>TP</a:Creator>
+<a:ModificationDate>1489835346</a:ModificationDate>
+<a:Modifier>TP</a:Modifier>
+<a:DataType>String</a:DataType>
+<a:Attribute.Visibility>-</a:Attribute.Visibility>
+</o:Attribute>
+<o:Attribute Id="o82">
+<a:ObjectID>6A4C1E87-1B07-4016-A5A5-CE574564195A</a:ObjectID>
+<a:Name>Prenom</a:Name>
+<a:Code>prenom</a:Code>
+<a:CreationDate>1489835301</a:CreationDate>
+<a:Creator>TP</a:Creator>
+<a:ModificationDate>1489835346</a:ModificationDate>
+<a:Modifier>TP</a:Modifier>
+<a:DataType>String</a:DataType>
+<a:Attribute.Visibility>-</a:Attribute.Visibility>
+</o:Attribute>
 </c:Attributes>
 </o:Class>
 <o:Class Id="o46">
@@ -2345,7 +2367,7 @@ LABL 0 Arial,12,N</a:FontList>
 <a:Modifier>ok</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
-<o:Attribute Id="o81">
+<o:Attribute Id="o83">
 <a:ObjectID>12BF268E-B371-4D66-A799-EA342A11B8DE</a:ObjectID>
 <a:Name>Id</a:Name>
 <a:Code>id</a:Code>
@@ -2356,7 +2378,7 @@ LABL 0 Arial,12,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
-<o:Attribute Id="o82">
+<o:Attribute Id="o84">
 <a:ObjectID>C04554BF-3B2F-4361-A678-A40E21CBF4F4</a:ObjectID>
 <a:Name>Quantite</a:Name>
 <a:Code>quantite</a:Code>
@@ -2379,7 +2401,7 @@ LABL 0 Arial,12,N</a:FontList>
 <a:Modifier>ok</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
-<o:Attribute Id="o83">
+<o:Attribute Id="o85">
 <a:ObjectID>046DA3C0-DF9C-4D4D-929B-2BF37338019B</a:ObjectID>
 <a:Name>Id</a:Name>
 <a:Code>id</a:Code>
@@ -2390,7 +2412,7 @@ LABL 0 Arial,12,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
-<o:Attribute Id="o84">
+<o:Attribute Id="o86">
 <a:ObjectID>C4963793-74A9-4389-980E-AC2C4EFD9D88</a:ObjectID>
 <a:Name>DateLaibraison</a:Name>
 <a:Code>dateLaibraison</a:Code>
@@ -2617,7 +2639,7 @@ LABL 0 Arial,12,N</a:FontList>
 </o:Association>
 </c:Associations>
 <c:TargetModels>
-<o:TargetModel Id="o85">
+<o:TargetModel Id="o87">
 <a:ObjectID>DFE30C7F-CEA4-4159-92F1-1F74BD5E1E62</a:ObjectID>
 <a:Name>C# 2.0</a:Name>
 <a:Code>C# 2</a:Code>
@@ -2632,7 +2654,7 @@ LABL 0 Arial,12,N</a:FontList>
 <o:Shortcut Ref="o3"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o86">
+<o:TargetModel Id="o88">
 <a:ObjectID>9B62057B-E46E-4E53-BEDE-7114A2D00B1F</a:ObjectID>
 <a:Name>WSDL for .NET</a:Name>
 <a:Code>WSDLDotNet</a:Code>
