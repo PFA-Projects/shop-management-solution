@@ -182,69 +182,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703171609225_Initial_Table.cs" />
-    <Compile Include="Migrations\201703171609225_Initial_Table.Designer.cs">
-      <DependentUpon>201703171609225_Initial_Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703171824448_Update1.cs" />
-    <Compile Include="Migrations\201703171824448_Update1.Designer.cs">
-      <DependentUpon>201703171824448_Update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172249572_Add_Table_AppUser.cs" />
-    <Compile Include="Migrations\201703172249572_Add_Table_AppUser.Designer.cs">
-      <DependentUpon>201703172249572_Add_Table_AppUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172310036_Add_Table_Order.cs" />
-    <Compile Include="Migrations\201703172310036_Add_Table_Order.Designer.cs">
-      <DependentUpon>201703172310036_Add_Table_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172313038_update_Table_Order.cs" />
-    <Compile Include="Migrations\201703172313038_update_Table_Order.Designer.cs">
-      <DependentUpon>201703172313038_update_Table_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172325497_up_Table_Order.cs" />
-    <Compile Include="Migrations\201703172325497_up_Table_Order.Designer.cs">
-      <DependentUpon>201703172325497_up_Table_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172337184_Add_Table_Delivery.cs" />
-    <Compile Include="Migrations\201703172337184_Add_Table_Delivery.Designer.cs">
-      <DependentUpon>201703172337184_Add_Table_Delivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172345251_Add_Table_ArticleCategory.cs" />
-    <Compile Include="Migrations\201703172345251_Add_Table_ArticleCategory.Designer.cs">
-      <DependentUpon>201703172345251_Add_Table_ArticleCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703172354545_Add_Table_OrderLine.cs" />
-    <Compile Include="Migrations\201703172354545_Add_Table_OrderLine.Designer.cs">
-      <DependentUpon>201703172354545_Add_Table_OrderLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180013100_Update_Table_Article.cs" />
-    <Compile Include="Migrations\201703180013100_Update_Table_Article.Designer.cs">
-      <DependentUpon>201703180013100_Update_Table_Article.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180016343_Update2_Table_Order.cs" />
-    <Compile Include="Migrations\201703180016343_Update2_Table_Order.Designer.cs">
-      <DependentUpon>201703180016343_Update2_Table_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180031234_Update_Table_Delivery.cs" />
-    <Compile Include="Migrations\201703180031234_Update_Table_Delivery.Designer.cs">
-      <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.cs" />
-    <Compile Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.Designer.cs">
-      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.cs" />
-    <Compile Include="Migrations\201703180042291_Add_RelationArtcileLine.Designer.cs">
-      <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180045206_Update_RelationArticleLine.cs" />
-    <Compile Include="Migrations\201703180045206_Update_RelationArticleLine.Designer.cs">
-      <DependentUpon>201703180045206_Update_RelationArticleLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703180047128_Delete-relation.cs" />
-    <Compile Include="Migrations\201703180047128_Delete-relation.Designer.cs">
-      <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
+    <Compile Include="Migrations\201703201747327_Update_data.cs" />
+    <Compile Include="Migrations\201703201747327_Update_data.Designer.cs">
+      <DependentUpon>201703201747327_Update_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -343,53 +283,8 @@
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703171609225_Initial_Table.resx">
-      <DependentUpon>201703171609225_Initial_Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703171824448_Update1.resx">
-      <DependentUpon>201703171824448_Update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172249572_Add_Table_AppUser.resx">
-      <DependentUpon>201703172249572_Add_Table_AppUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172310036_Add_Table_Order.resx">
-      <DependentUpon>201703172310036_Add_Table_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172313038_update_Table_Order.resx">
-      <DependentUpon>201703172313038_update_Table_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172325497_up_Table_Order.resx">
-      <DependentUpon>201703172325497_up_Table_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172337184_Add_Table_Delivery.resx">
-      <DependentUpon>201703172337184_Add_Table_Delivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172345251_Add_Table_ArticleCategory.resx">
-      <DependentUpon>201703172345251_Add_Table_ArticleCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703172354545_Add_Table_OrderLine.resx">
-      <DependentUpon>201703172354545_Add_Table_OrderLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180013100_Update_Table_Article.resx">
-      <DependentUpon>201703180013100_Update_Table_Article.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180016343_Update2_Table_Order.resx">
-      <DependentUpon>201703180016343_Update2_Table_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180031234_Update_Table_Delivery.resx">
-      <DependentUpon>201703180031234_Update_Table_Delivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180040402_Delete_Relation_Delivery_Order.resx">
-      <DependentUpon>201703180040402_Delete_Relation_Delivery_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180042291_Add_RelationArtcileLine.resx">
-      <DependentUpon>201703180042291_Add_RelationArtcileLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180045206_Update_RelationArticleLine.resx">
-      <DependentUpon>201703180045206_Update_RelationArticleLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180047128_Delete-relation.resx">
-      <DependentUpon>201703180047128_Delete-relation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703201747327_Update_data.resx">
+      <DependentUpon>201703201747327_Update_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -417,7 +312,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Entities\Entrer En stock\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

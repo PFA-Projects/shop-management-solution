@@ -1,4 +1,4 @@
-﻿//Mariam Aital
+﻿//Mariam Ait al
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
+     
     [GwinEntity(Localizable = true, DisplayMember = "Quantity")]
     [Menu(Group = "Buy")]
     public class OrderLine:BaseEntity

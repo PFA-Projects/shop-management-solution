@@ -1,4 +1,4 @@
-﻿//Mariam Aital
+﻿//Mariam Ait al
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
@@ -38,6 +38,13 @@ namespace ShopManagement.Entities
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public Provider provider { get; set; }
+
+        //Initialisier Datetime
+        public Order()
+        {
+            this.DeliveryDateExpected = DateTime.Now;
+            this.orderDate = DateTime.Now;
+        }
 
        
     }

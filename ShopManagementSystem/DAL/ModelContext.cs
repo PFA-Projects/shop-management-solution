@@ -13,12 +13,12 @@
     public class ModelContext : DbContext
     {
 
-     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; integrated security =true ; MultipleActiveResultSets = True; App = EntityFramework")
+     public ModelContext() : base(@"data source =DELL-PC; initial catalog = shop_management_system1; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
 
 
         {
             // Integrated Security = true
-            // 
+            // user = sa;password=admintp4
         }
 
         public ModelContext(string connectionString):base(connectionString)
@@ -38,6 +38,7 @@
         public virtual DbSet<ApplicationName> ApplicationNames { get; set; }
 
         //Shop Management System
+            // Buy
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
         public virtual DbSet<AppUser> AppUsers { get; set; }
@@ -45,7 +46,7 @@
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
         public virtual DbSet<OrderLine> OrderLines { get; set; }
-
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

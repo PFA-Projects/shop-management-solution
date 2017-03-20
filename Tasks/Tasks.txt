@@ -1,0 +1,4 @@
+1 - Résoudre du problème de la chîne de la connexion entre les poste de travail
+-- Enregistrement de la configuration dans le fichier Config
+-- Copier le fichier config comme old.config
+-- ingore le fichier configue de la serveur Git
