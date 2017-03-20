@@ -73,11 +73,15 @@
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleCategory.cs" />
+    <Compile Include="Entities\Configuration.cs" />
+    <Compile Include="Entities\Cost.cs" />
+    <Compile Include="Entities\CostCategory.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\CustomerDelivery.cs" />
     <Compile Include="Entities\CustomerOrder.cs" />
     <Compile Include="Entities\CustomerOrderLine.cs" />
     <Compile Include="Entities\Delivery.cs" />
+    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderLine.cs" />
     <Compile Include="Entities\Provider.cs" />
@@ -210,6 +214,22 @@
     <Compile Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.Designer.cs">
       <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703202054219_Add_Table_Configuration.cs" />
+    <Compile Include="Migrations\201703202054219_Add_Table_Configuration.Designer.cs">
+      <DependentUpon>201703202054219_Add_Table_Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703202104170_Add_Table_costcategory.cs" />
+    <Compile Include="Migrations\201703202104170_Add_Table_costcategory.Designer.cs">
+      <DependentUpon>201703202104170_Add_Table_costcategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703202106205_Add_Table_Cost.cs" />
+    <Compile Include="Migrations\201703202106205_Add_Table_Cost.Designer.cs">
+      <DependentUpon>201703202106205_Add_Table_Cost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703202112167_Add_Table_Notification.cs" />
+    <Compile Include="Migrations\201703202112167_Add_Table_Notification.Designer.cs">
+      <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
@@ -324,6 +344,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.resx">
       <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703202054219_Add_Table_Configuration.resx">
+      <DependentUpon>201703202054219_Add_Table_Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703202104170_Add_Table_costcategory.resx">
+      <DependentUpon>201703202104170_Add_Table_costcategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703202106205_Add_Table_Cost.resx">
+      <DependentUpon>201703202106205_Add_Table_Cost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703202112167_Add_Table_Notification.resx">
+      <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

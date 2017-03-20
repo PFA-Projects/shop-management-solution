@@ -50,8 +50,10 @@
         public virtual DbSet<CustomerDelivery> CustomerDeliveries { get; set; }
         public virtual DbSet<CustomerOrder> CustomerOrders { get; set; }
         public virtual DbSet<CustomerOrderLine> CustomerOrderLines { get; set; }
-
-
+        public virtual DbSet<Configuration> Configurations { get; set; }
+        public virtual DbSet<CostCategory> CostCategories { get; set; }
+        public virtual DbSet<Cost> Costs { get; set; }
+        public virtual DbSet<Notification> Notifications { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
