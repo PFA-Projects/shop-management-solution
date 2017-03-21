@@ -1,5 +1,6 @@
 ﻿using App;
 using GenericWinForm.Demo;
+using ShopManagement.Sell;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,9 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuApplication());
+            Application.Run(new FormSell());
         }
     }
+
+    
 }
