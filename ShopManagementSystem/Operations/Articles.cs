@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Operations
 {
+    /// <summary>
+    /// ??
+    /// </summary>
     public class Articles
     {
         ModelContext db = new ModelContext();
