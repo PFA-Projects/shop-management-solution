@@ -202,61 +202,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703180930562_Update2.cs" />
-    <Compile Include="Migrations\201703180930562_Update2.Designer.cs">
-      <DependentUpon>201703180930562_Update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703200830209_Update3.cs" />
-    <Compile Include="Migrations\201703200830209_Update3.Designer.cs">
-      <DependentUpon>201703200830209_Update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201258485_Update4.cs" />
-    <Compile Include="Migrations\201703201258485_Update4.Designer.cs">
-      <DependentUpon>201703201258485_Update4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703200817416_Update_code.cs" />
-    <Compile Include="Migrations\201703200817416_Update_code.Designer.cs">
-      <DependentUpon>201703200817416_Update_code.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201828236_Create_data.cs" />
-    <Compile Include="Migrations\201703201828236_Create_data.Designer.cs">
-      <DependentUpon>201703201828236_Create_data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201910173_Add_Table_Customer.cs" />
-    <Compile Include="Migrations\201703201910173_Add_Table_Customer.Designer.cs">
-      <DependentUpon>201703201910173_Add_Table_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201920002_Add_Table_CustomerDelivery.cs" />
-    <Compile Include="Migrations\201703201920002_Add_Table_CustomerDelivery.Designer.cs">
-      <DependentUpon>201703201920002_Add_Table_CustomerDelivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201921460_Update_Table_Customer.cs" />
-    <Compile Include="Migrations\201703201921460_Update_Table_Customer.Designer.cs">
-      <DependentUpon>201703201921460_Update_Table_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201928437_Add_Table_CustomerOrder.cs" />
-    <Compile Include="Migrations\201703201928437_Add_Table_CustomerOrder.Designer.cs">
-      <DependentUpon>201703201928437_Add_Table_CustomerOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.cs" />
-    <Compile Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.Designer.cs">
-      <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703202054219_Add_Table_Configuration.cs" />
-    <Compile Include="Migrations\201703202054219_Add_Table_Configuration.Designer.cs">
-      <DependentUpon>201703202054219_Add_Table_Configuration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703202104170_Add_Table_costcategory.cs" />
-    <Compile Include="Migrations\201703202104170_Add_Table_costcategory.Designer.cs">
-      <DependentUpon>201703202104170_Add_Table_costcategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703202106205_Add_Table_Cost.cs" />
-    <Compile Include="Migrations\201703202106205_Add_Table_Cost.Designer.cs">
-      <DependentUpon>201703202106205_Add_Table_Cost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703202112167_Add_Table_Notification.cs" />
-    <Compile Include="Migrations\201703202112167_Add_Table_Notification.Designer.cs">
-      <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
+    <Compile Include="Migrations\201703211336248_InitDataBase.cs" />
+    <Compile Include="Migrations\201703211336248_InitDataBase.Designer.cs">
+      <DependentUpon>201703211336248_InitDataBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -374,47 +322,8 @@
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703180930562_Update2.resx">
-      <DependentUpon>201703180930562_Update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703200830209_Update3.resx">
-      <DependentUpon>201703200830209_Update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201258485_Update4.resx">
-      <DependentUpon>201703201258485_Update4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703200817416_Update_code.resx">
-      <DependentUpon>201703200817416_Update_code.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201828236_Create_data.resx">
-      <DependentUpon>201703201828236_Create_data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201910173_Add_Table_Customer.resx">
-      <DependentUpon>201703201910173_Add_Table_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201920002_Add_Table_CustomerDelivery.resx">
-      <DependentUpon>201703201920002_Add_Table_CustomerDelivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201921460_Update_Table_Customer.resx">
-      <DependentUpon>201703201921460_Update_Table_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201928437_Add_Table_CustomerOrder.resx">
-      <DependentUpon>201703201928437_Add_Table_CustomerOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703201934562_Add_Table_CustomerOrderLine.resx">
-      <DependentUpon>201703201934562_Add_Table_CustomerOrderLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703202054219_Add_Table_Configuration.resx">
-      <DependentUpon>201703202054219_Add_Table_Configuration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703202104170_Add_Table_costcategory.resx">
-      <DependentUpon>201703202104170_Add_Table_costcategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703202106205_Add_Table_Cost.resx">
-      <DependentUpon>201703202106205_Add_Table_Cost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703202112167_Add_Table_Notification.resx">
-      <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703211336248_InitDataBase.resx">
+      <DependentUpon>201703211336248_InitDataBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

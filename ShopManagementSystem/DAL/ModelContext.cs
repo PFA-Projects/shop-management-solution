@@ -14,7 +14,7 @@
     {
 
 
-     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system1; user = sa;password=admintp4 ; MultipleActiveResultSets = True; App = EntityFramework")
+     public ModelContext() : base(@"data source =.\SQLEXPRESS; initial catalog = shop_management_system_3; user = sa;password=admintp4 ; MultipleActiveResultSets = True; App = EntityFramework")
 
 
 

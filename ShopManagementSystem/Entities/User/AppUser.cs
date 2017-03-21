@@ -10,9 +10,13 @@ using System.Threading.Tasks;
 namespace ShopManagement.Entities
 {
    
+    /// <summary>
+    /// User All Ready Exist !!
+    /// </summary>
 
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
     [Menu(Group = "UserApp")]
+    [Obsolete]
     public class AppUser:BaseEntity
     {
         [DisplayProperty(Titre = "FirstName")]
