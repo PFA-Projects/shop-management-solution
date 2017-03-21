@@ -70,13 +70,13 @@
     <Compile Include="BLL\BaseBLO.cs" />
     <Compile Include="BLL\Class1.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
-    <Compile Include="Entities\AppUser.cs" />
-    <Compile Include="Entities\Article.cs" />
-    <Compile Include="Entities\ArticleCategory.cs" />
-    <Compile Include="Entities\Delivery.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderLine.cs" />
-    <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\User\AppUser.cs" />
+    <Compile Include="Entities\Buy\Article.cs" />
+    <Compile Include="Entities\Buy\ArticleCategory.cs" />
+    <Compile Include="Entities\Buy\Delivery.cs" />
+    <Compile Include="Entities\Buy\Order.cs" />
+    <Compile Include="Entities\Buy\OrderLine.cs" />
+    <Compile Include="Entities\Buy\Provider.cs" />
     <Compile Include="Entities\Resources\AppUser\AppUser.ar.Designer.cs">
       <DependentUpon>AppUser.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -254,6 +254,10 @@
     <Compile Include="Migrations\201703201258485_Update4.Designer.cs">
       <DependentUpon>201703201258485_Update4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703200817416_Update_code.cs" />
+    <Compile Include="Migrations\201703200817416_Update_code.Designer.cs">
+      <DependentUpon>201703200817416_Update_code.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
@@ -405,6 +409,9 @@
     <EmbeddedResource Include="Migrations\201703201258485_Update4.resx">
       <DependentUpon>201703201258485_Update4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703200817416_Update_code.resx">
+      <DependentUpon>201703200817416_Update_code.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -431,7 +438,10 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Entities\Configuration\" />
+    <Folder Include="Entities\Sell\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
