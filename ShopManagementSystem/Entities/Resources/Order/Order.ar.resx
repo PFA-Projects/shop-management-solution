@@ -129,7 +129,7 @@
   <data name="SingularName" xml:space="preserve">
     <value>الطلب</value>
   </data>
-  <data name="OrderName" xml:space="preserve">
-    <value>اسم الطلب</value>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
   </data>
 </root>

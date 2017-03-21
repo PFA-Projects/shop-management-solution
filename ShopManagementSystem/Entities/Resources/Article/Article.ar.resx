@@ -123,14 +123,16 @@
   <data name="PluralName" xml:space="preserve">
     <value>البضائع</value>
   </data>
-  <data name="QuantityInStock" xml:space="preserve">
-    <value>الكمية في المخزن</value>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+    <comment>الكمية</comment>
   </data>
   <data name="Reference" xml:space="preserve">
     <value>المرجع</value>
   </data>
-  <data name="SellPrice" xml:space="preserve">
-    <value>ثمن البيع</value>
+  <data name="SellingPrice" xml:space="preserve">
+    <value>SellingPrice</value>
+    <comment>ثمن البيع</comment>
   </data>
   <data name="SingularName" xml:space="preserve">
     <value>البضاعة</value>

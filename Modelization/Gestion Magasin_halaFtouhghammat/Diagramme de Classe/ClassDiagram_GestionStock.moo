@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489835346" Name="ClassDiagram_GestionStock" Objects="66" Symbols="21" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{5B517535-8814-46E4-AF63-8B06550ADC06}" Label="" LastModificationDate="1489997972" Name="ClassDiagram_GestionStock" Objects="66" Symbols="21" Target="C# 2.0" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1523,7 +1523,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o25">
 <a:CreationDate>1489764568</a:CreationDate>
 <a:ModificationDate>1489766402</a:ModificationDate>
-<a:Rect>((-43361,-7561), (-29776,3343))</a:Rect>
+<a:Rect>((-43324,-7561), (-29813,3343))</a:Rect>
 <a:ListOfPoints>((-41175,-7561),(-41389,-2859),(-31650,-2859),(-31650,3343))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -2645,8 +2645,8 @@ LABL 0 Arial,12,N</a:FontList>
 <a:Code>C# 2</a:Code>
 <a:CreationDate>1489624180</a:CreationDate>
 <a:Creator>DELL</a:Creator>
-<a:ModificationDate>1489763824</a:ModificationDate>
-<a:Modifier>ok</a:Modifier>
+<a:ModificationDate>1489997972</a:ModificationDate>
+<a:Modifier>TP</a:Modifier>
 <a:TargetModelURL>file:///%_OBJLANG%/csharp2.xol</a:TargetModelURL>
 <a:TargetModelID>48DE8DAA-F163-416B-ACAA-3F3ABD6F9EE9</a:TargetModelID>
 <a:TargetModelClassID>1811206C-1A4B-11D1-83D9-444553540000</a:TargetModelClassID>
@@ -2660,8 +2660,8 @@ LABL 0 Arial,12,N</a:FontList>
 <a:Code>WSDLDotNet</a:Code>
 <a:CreationDate>1489624184</a:CreationDate>
 <a:Creator>DELL</a:Creator>
-<a:ModificationDate>1489763824</a:ModificationDate>
-<a:Modifier>ok</a:Modifier>
+<a:ModificationDate>1489997972</a:ModificationDate>
+<a:Modifier>TP</a:Modifier>
 <a:TargetModelURL>file:///%_XEM%/WSDLDotNet.xem</a:TargetModelURL>
 <a:TargetModelID>3287C7D6-062E-4BEA-AF1F-1634ED585124</a:TargetModelID>
 <a:TargetModelClassID>186C8AC3-D3DC-11D3-881C-00508B03C75C</a:TargetModelClassID>
