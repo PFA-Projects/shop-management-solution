@@ -70,20 +70,20 @@ namespace ShopManagement.Entities.Resources.Order {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to order Date.
         /// </summary>
         internal static string orderDate {
             get {
                 return ResourceManager.GetString("orderDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order Name.
-        /// </summary>
-        internal static string OrderName {
-            get {
-                return ResourceManager.GetString("OrderName", resourceCulture);
             }
         }
         
