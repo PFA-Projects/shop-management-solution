@@ -28,6 +28,7 @@ namespace ShopManagement.Entities
         public string Name { get; set; }
 
 
+
         // 
         // Price
         //
@@ -36,18 +37,18 @@ namespace ShopManagement.Entities
         [Filter]
         public float BuyingPrice { get; set; }
 
+
         [EntryForm(GroupeBox = "Price")]
         [DataGrid]
         [Filter]
-        public float SellPrice { get; set; }
+        public float SellingPrice { get; set; }
 
-        // 
         //  fr_stock
         //
         [EntryForm(GroupeBox = "fr_stock")]
         [DataGrid]
         [Filter]
-        public float QuantityInStock { get; set; }
+        public float Quantity { get; set; }
 
         // 
         //  Classification

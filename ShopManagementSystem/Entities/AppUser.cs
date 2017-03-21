@@ -12,7 +12,8 @@ namespace ShopManagement.Entities
    
 
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
-    [Menu(Group = "Buy")]
+
+    [Menu(Group = "UserApp")]
     public class AppUser:BaseEntity
     {
         [DisplayProperty(Titre = "FirstName")]
