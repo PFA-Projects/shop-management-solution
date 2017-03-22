@@ -1,10 +1,5 @@
-﻿using App;
-using GenericWinForm.Demo;
-using ShopManagement.Sell;
+﻿using ShopManagement.Commande_Vente;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GenericWinFormApplication
@@ -19,7 +14,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSell());
+            Application.Run(new FormOrder_Sell());
         }
     }
 

@@ -70,6 +70,14 @@
     <Compile Include="BLL\BaseBLO.cs" />
     <Compile Include="BLL\Class1.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
+    <Compile Include="Operations\ArticleCategories.cs" />
+    <Compile Include="Operations\Customers.cs" />
+    <Compile Include="Order_Sell\FormOrder_Sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Sell\FormOrder_Sell.Designer.cs">
+      <DependentUpon>FormOrder_Sell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleCategory.cs" />
@@ -301,12 +309,6 @@
     <Compile Include="Operations\Articles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sell\FormSell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sell\FormSell.Designer.cs">
-      <DependentUpon>FormSell.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppUser.ar.Designer.cs</LastGenOutput>
@@ -472,6 +474,9 @@
     <EmbeddedResource Include="Migrations\201703202112167_Add_Table_Notification.resx">
       <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order_Sell\FormOrder_Sell.resx">
+      <DependentUpon>FormOrder_Sell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -482,10 +487,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sell\FormSell.resx">
-      <DependentUpon>FormSell.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.Entity.Migrations.DbMigration.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,4 +1,5 @@
-﻿using App;
+﻿//Mariam Ait Al
+using App;
 using ShopManagement.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,16 @@ namespace ShopManagement.Operations
             var query = from a in db.Articles
                         select a;
             return query.ToList<Article>();
+        }
+
+        //Filters
+        public List<Article> Filtrer()
+        {
+            var liste = from a in db.Articles
+                        where a.Reference.Contains("reference")
+                        select a;
+            return liste;
+            
         }
     }
 }
