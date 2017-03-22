@@ -5,6 +5,7 @@ using App.Gwin;
 using App.Gwin.Entities.Secrurity.Authentication;
 using GenericWinForm.Demo;
 using ShopManagement.BAL;
+using ShopManagement.Entities;
 using ShopManagement.Operations;
 using System;
 using System.Collections.Generic;
@@ -99,17 +100,30 @@ namespace ShopManagement.Commande_Vente
 
         private void CategoriesArticle_ListBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void tab_vente_Click(object sender, EventArgs e)
-        {
 
         }
+
+        
 
         private void Ref_Article_TextBox_TextChanged(object sender, EventArgs e)
         {
-            
+            Articles_datagridview.DataSource = null;
+            Articles_datagridview.DataSource = new Articles().Filtrer(Ref_Article_TextBox.Text);
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            Articles_datagridview.DataSource = null;
+            Articles_datagridview.DataSource = new Articles().Filtrer(Ref_Article_TextBox.Text);
+
+        }
+
+        
+
+        private void CategoriesArticle_ListBox_DoubleClick(object sender, EventArgs e)
+        {
+            Articles_datagridview.DataSource = null;
+            Articles_datagridview.DataSource = new Articles().SearchByCateory(Convert.ToInt32(CategoriesArticle_ListBox.SelectedValue));
         }
     }
 }

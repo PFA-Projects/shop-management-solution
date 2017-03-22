@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tab_vente = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.Ref_Article_TextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CustomerNumber_Label = new System.Windows.Forms.Label();
@@ -36,17 +37,19 @@
             this.CustomerId_rdb = new System.Windows.Forms.RadioButton();
             this.CustomerName_rdb = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Articles_datagridview = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_vente = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.CategoriesArticle_ListBox = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Articles_datagridview = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.tab_vente.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Articles_datagridview)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Articles_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_vente
@@ -62,7 +65,15 @@
             this.tab_vente.TabIndex = 0;
             this.tab_vente.Text = "vente";
             this.tab_vente.UseVisualStyleBackColor = true;
-            this.tab_vente.Click += new System.EventHandler(this.tab_vente_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Reference : ";
             // 
             // Ref_Article_TextBox
             // 
@@ -127,9 +138,10 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.72046F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.27954F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.43996F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.56004F));
             this.tableLayoutPanel2.Controls.Add(this.Articles_datagridview, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(200, 168);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -138,6 +150,39 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1041, 275);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // Articles_datagridview
+            // 
+            this.Articles_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Articles_datagridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Articles_datagridview.Location = new System.Drawing.Point(3, 3);
+            this.Articles_datagridview.Name = "Articles_datagridview";
+            this.Articles_datagridview.Size = new System.Drawing.Size(643, 269);
+            this.Articles_datagridview.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.98473F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.01527F));
+            this.tableLayoutPanel3.Controls.Add(this.btn_vente, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(652, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.75836F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.24164F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(386, 269);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // btn_vente
+            // 
+            this.btn_vente.Location = new System.Drawing.Point(3, 230);
+            this.btn_vente.Name = "btn_vente";
+            this.btn_vente.Size = new System.Drawing.Size(59, 23);
+            this.btn_vente.TabIndex = 0;
+            this.btn_vente.Text = "Vente";
+            this.btn_vente.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -163,6 +208,7 @@
             this.CategoriesArticle_ListBox.Size = new System.Drawing.Size(194, 437);
             this.CategoriesArticle_ListBox.TabIndex = 0;
             this.CategoriesArticle_ListBox.SelectedValueChanged += new System.EventHandler(this.CategoriesArticle_ListBox_SelectedValueChanged);
+            this.CategoriesArticle_ListBox.DoubleClick += new System.EventHandler(this.CategoriesArticle_ListBox_DoubleClick);
             // 
             // tabControl1
             // 
@@ -173,24 +219,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1249, 469);
             this.tabControl1.TabIndex = 0;
-            // 
-            // Articles_datagridview
-            // 
-            this.Articles_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Articles_datagridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Articles_datagridview.Location = new System.Drawing.Point(3, 3);
-            this.Articles_datagridview.Name = "Articles_datagridview";
-            this.Articles_datagridview.Size = new System.Drawing.Size(522, 269);
-            this.Articles_datagridview.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Reference : ";
             // 
             // FormOrder_Sell
             // 
@@ -205,9 +233,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Articles_datagridview)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Articles_datagridview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +255,7 @@
         private System.Windows.Forms.TextBox Ref_Article_TextBox;
         private System.Windows.Forms.DataGridView Articles_datagridview;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btn_vente;
     }
 }

@@ -3,9 +3,11 @@ using App;
 using ShopManagement.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Linq.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ShopManagement.Operations
 {
@@ -20,13 +22,20 @@ namespace ShopManagement.Operations
             return query.ToList<Article>();
         }
 
-        //Filters
-        public List<Article> Filtrer()
+        //Filter search by refrence
+        public List<Article> Filtrer(string message)
         {
-            var liste = from a in db.Articles
-                        where a.Reference.Contains("reference")
+            var resultat = db.Articles.AsQueryable().Where(a => a.Reference.Contains(message));
+            return resultat.ToList<Article>();
+        }
+
+        //Search Articles By Category
+        public List<Article> SearchByCateory(int CategoryArticleId)
+        {
+            var query = from a in db.Articles
+                        where a.articleCategory.Id == CategoryArticleId
                         select a;
-            return liste;
+            return query.ToList<Article>();
             
         }
     }
