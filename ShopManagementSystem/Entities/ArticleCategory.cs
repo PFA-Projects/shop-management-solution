@@ -26,5 +26,11 @@ namespace ShopManagement.Entities
         [DataGrid]
         [Filter]
         public string Description { get; set; }
+
+        //Tostring 
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

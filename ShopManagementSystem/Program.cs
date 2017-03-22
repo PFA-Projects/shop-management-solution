@@ -1,4 +1,4 @@
-﻿using ShopManagement.Commande_Vente;
+﻿using ShopManagement.Form_Sell_Order;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +14,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormOrder_Sell());
+            Application.Run(new FormSellOrder());
         }
     }
 

@@ -68,16 +68,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ArticlesBLO.cs" />
+    <Compile Include="BLL\ArticlesCategoryBLO.cs" />
     <Compile Include="BLL\BaseBLO.cs" />
-    <Compile Include="BLL\Class1.cs" />
+    <Compile Include="BLL\CustomersBLO.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
-    <Compile Include="Operations\ArticleCategories.cs" />
-    <Compile Include="Operations\Customers.cs" />
-    <Compile Include="Order_Sell\FormOrder_Sell.cs">
+    <Compile Include="Form_Sell_Order\FormSellOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order_Sell\FormOrder_Sell.Designer.cs">
-      <DependentUpon>FormOrder_Sell.cs</DependentUpon>
+    <Compile Include="Form_Sell_Order\FormSellOrder.Designer.cs">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
@@ -307,7 +307,6 @@
     <Compile Include="FormMenuApplication.Designer.cs">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Operations\Articles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.ar.resx">
@@ -445,6 +444,9 @@
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Sell_Order\FormSellOrder.resx">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703201828236_Create_data.resx">
       <DependentUpon>201703201828236_Create_data.cs</DependentUpon>
     </EmbeddedResource>
@@ -474,9 +476,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703202112167_Add_Table_Notification.resx">
       <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Order_Sell\FormOrder_Sell.resx">
-      <DependentUpon>FormOrder_Sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
