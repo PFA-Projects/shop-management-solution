@@ -27,11 +27,14 @@ namespace ShopManagement.Form_Sell_Order
         {
             InitializeComponent();
         }
+        //Variables and instanciations
+        string CustomerEtat = "";
+
 
         private void FormSellOrder_Load(object sender, EventArgs e)
         {
             //App Gwin Must be Executed First 
-                 // Application User
+            // Application User
             User user = new User();
             user.Language = GwinApp.Languages.fr;
 
@@ -61,6 +64,8 @@ namespace ShopManagement.Form_Sell_Order
             ArticlesDataGridView.DataSource = new ArticlesBLO(db).GetAll();
             //Disabled part result_groupbox
             result_groupbox.Enabled = false;
+            //initialise liste articles selected (ListBox)
+            ArticlesListSelected.DataSource = null;
         }
 
         //The CustomerClient 's Radio Button Click event
@@ -69,6 +74,8 @@ namespace ShopManagement.Form_Sell_Order
             CustomerssCombo.Enabled = true;
             CustomerLabel.Text = "------";
             CustomerLabel.Enabled = false;
+            CustomerEtat = "Object";
+            
         }
 
         private void IdClientRadioButton_Click(object sender, EventArgs e)
@@ -77,6 +84,7 @@ namespace ShopManagement.Form_Sell_Order
             CustomerLabel.Enabled = true;
             //The next Customer id value
             CustomerLabel.Text = (db.Customers.Count() + 1).ToString();
+            CustomerEtat = "Id";
         }
 
         //ArticlesCategoryListBox event click 
@@ -105,26 +113,53 @@ namespace ShopManagement.Form_Sell_Order
 
         private void ArticlesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //List Article to collecte the articles selected in the ArticlesDataGridView
-            List<Article> listeArticles = new List<Article>();
+            ////We make DataGridCheckBoxColumn commit changes with single click
+            //if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            //    this.ArticlesDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
 
-            //We make DataGridCheckBoxColumn commit changes with single click
-            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
-                this.ArticlesDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            ////Check the value of cell
+            //if ((bool)this.ArticlesDataGridView.CurrentCell.Value == true)
+            //{
+            //    //Checked = true
+            //    //MessageBox.Show("Checked : " + ArticlesDataGridView.Rows[e.RowIndex].Cells[0].Value);
 
-            //Check the value of cell
-            if ((bool)this.ArticlesDataGridView.CurrentCell.Value == true)
+
+            //}
+            //else
+            //{
+            //    //Unchecked = False
+            //   // MessageBox.Show("Checked : " + ArticlesDataGridView.Rows[e.RowIndex].Cells[0].Value);
+            //    //ArticlesDataGridView.CurrentRow.Cells[1].Value
+
+
+            //}
+
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
             {
-                //Checked = true
-                MessageBox.Show("Checked : " + ArticlesDataGridView.Rows[e.RowIndex].Cells[0].Value);
-               // MessageBox.Show("Reference : " + ArticlesDataGridView.CurrentCell.Value);
+                MessageBox.Show("Count Before : " + new CustomerOrdersBLO(db).Count().ToString());
+              //  MessageBox.Show("Id :" + ArticlesDataGridView.CurrentRow.Cells[0].Value);
+                Article article = new ArticlesBLO(db).GetByID(Convert.ToInt32(ArticlesDataGridView.CurrentRow.Cells[0].Value));
+                if(CustomerEtat == "Object")
+                {
+                    //MessageBox.Show("Id : " + CustomerssCombo.SelectedValue);
+                    Customer customer = new CustomersBLO(db).GetByID(Convert.ToInt32(CustomerssCombo.SelectedValue));
+                    CustomerOrder co = new CustomerOrder();
+                    co.customer = customer;
+                    co.OrderDate = DateTime.Now;
+                    new CustomerOrdersBLO(db).Save(co);
+                    MessageBox.Show("Count After : " + new CustomerOrdersBLO(db).Count().ToString());
+                }
             }
-            else
-            {
-                //Unchecked = False
-                MessageBox.Show("Checked : " + ArticlesDataGridView.Rows[e.RowIndex].Cells[0].Value);
-                
-            }
+
+
+        }
+
+        private void ArticlesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

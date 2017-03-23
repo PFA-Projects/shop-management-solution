@@ -71,6 +71,7 @@
     <Compile Include="BLL\ArticlesBLO.cs" />
     <Compile Include="BLL\ArticlesCategoryBLO.cs" />
     <Compile Include="BLL\BaseBLO.cs" />
+    <Compile Include="BLL\CustomerOrdersBLO.cs" />
     <Compile Include="BLL\CustomersBLO.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
     <Compile Include="Form_Sell_Order\FormSellOrder.cs">
@@ -299,6 +300,26 @@
     <Compile Include="Migrations\201703202112167_Add_Table_Notification.Designer.cs">
       <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703222238454_Update_Table_Customer1.cs" />
+    <Compile Include="Migrations\201703222238454_Update_Table_Customer1.Designer.cs">
+      <DependentUpon>201703222238454_Update_Table_Customer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222248184_Update2_Table_Customer.cs" />
+    <Compile Include="Migrations\201703222248184_Update2_Table_Customer.Designer.cs">
+      <DependentUpon>201703222248184_Update2_Table_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222252018_Update_Table_CustomerOrder.cs" />
+    <Compile Include="Migrations\201703222252018_Update_Table_CustomerOrder.Designer.cs">
+      <DependentUpon>201703222252018_Update_Table_CustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222304093_Update3_Table_CustomerOrder.cs" />
+    <Compile Include="Migrations\201703222304093_Update3_Table_CustomerOrder.Designer.cs">
+      <DependentUpon>201703222304093_Update3_Table_CustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703230249562_Update4_Table_CustomerOrder.cs" />
+    <Compile Include="Migrations\201703230249562_Update4_Table_CustomerOrder.Designer.cs">
+      <DependentUpon>201703230249562_Update4_Table_CustomerOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
@@ -476,6 +497,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703202112167_Add_Table_Notification.resx">
       <DependentUpon>201703202112167_Add_Table_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222238454_Update_Table_Customer1.resx">
+      <DependentUpon>201703222238454_Update_Table_Customer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222248184_Update2_Table_Customer.resx">
+      <DependentUpon>201703222248184_Update2_Table_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222252018_Update_Table_CustomerOrder.resx">
+      <DependentUpon>201703222252018_Update_Table_CustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222304093_Update3_Table_CustomerOrder.resx">
+      <DependentUpon>201703222304093_Update3_Table_CustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703230249562_Update4_Table_CustomerOrder.resx">
+      <DependentUpon>201703230249562_Update4_Table_CustomerOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

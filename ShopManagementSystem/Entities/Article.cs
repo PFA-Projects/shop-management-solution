@@ -2,6 +2,7 @@
 // Name : ES-SARRAJ Fouad
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
+using System.Collections.Generic;
 
 namespace ShopManagement.Entities
 {
@@ -57,5 +58,8 @@ namespace ShopManagement.Entities
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
+
+       
+       
     }
 }

@@ -39,6 +39,8 @@ namespace ShopManagement.Entities
         [DataGrid(WidthColonne = 100)]
         public Provider provider { get; set; }
 
+
+        
         //Initialisier Datetime
         public Order()
         {
