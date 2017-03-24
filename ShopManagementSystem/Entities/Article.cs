@@ -59,7 +59,8 @@ namespace ShopManagement.Entities
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
 
-       
-       
+        //
+        public CustomerOrderLine customerorderline { get; set; }
+
     }
 }

@@ -28,5 +28,17 @@ namespace ShopManagement.BLL
                         select a;
             return query.ToList<Article>();
         }
+        //Search Articles By CustomerOrderLine
+        //public List<Article> SearchByCustomerOrderLine(CustomerOrderLine col)
+        //{
+        //    var query = from a in db.Articles
+        //                where a.customerorderline.Id == col.Id
+        //                select a;
+        //    return query.ToList<Article>();
+        //}
+        
+       
+
+        
     }
 }
