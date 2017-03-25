@@ -38,7 +38,12 @@ namespace ShopManagement.BLL
         //}
         
        
-
+        //Difference between 2 listes
+        public List<Article> differenceListes(List<Article> liste1 , List<Article> liste2)
+        {
+            var query = liste1.Where(a => !liste2.Any(a2 => a2.Id == a.Id));
+            return query.ToList<Article>();
+        }
         
     }
 }

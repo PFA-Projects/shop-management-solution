@@ -1,5 +1,4 @@
-﻿using GenericWinForm.Demo;
-using ShopManagement.Sell_Order;
+﻿using ShopManagement.Test;
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +14,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSellOrder());
+            Application.Run(new FormSO());
         }
     }
 
