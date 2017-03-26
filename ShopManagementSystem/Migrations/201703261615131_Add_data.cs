@@ -3,7 +3,7 @@ namespace App.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Create_data : DbMigration
+    public partial class Add_data : DbMigration
     {
         public override void Up()
         {
@@ -71,10 +71,78 @@ namespace App.Migrations
                         DateCreation = c.DateTime(nullable: false),
                         DateModification = c.DateTime(nullable: false),
                         articleCategory_Id = c.Long(),
+                        customerorderline_Id = c.Long(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ArticleCategories", t => t.articleCategory_Id)
-                .Index(t => t.articleCategory_Id);
+                .ForeignKey("dbo.CustomerOrderLines", t => t.customerorderline_Id)
+                .Index(t => t.articleCategory_Id)
+                .Index(t => t.customerorderline_Id);
+            
+            CreateTable(
+                "dbo.CustomerOrderLines",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Quantity = c.Single(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                        customerOrder_Id = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.CustomerOrders", t => t.customerOrder_Id)
+                .Index(t => t.customerOrder_Id);
+            
+            CreateTable(
+                "dbo.CustomerOrders",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        OrderDate = c.DateTime(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                        customer_Id = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Customers", t => t.customer_Id)
+                .Index(t => t.customer_Id);
+            
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Adress = c.String(),
+                        Phone = c.String(),
+                        Email = c.String(),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                        customerDelivery_Id = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.CustomerDeliveries", t => t.customerDelivery_Id)
+                .Index(t => t.customerDelivery_Id);
+            
+            CreateTable(
+                "dbo.CustomerDeliveries",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        DeliveryDate = c.DateTime(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Cities",
@@ -116,6 +184,22 @@ namespace App.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Configurations",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        value = c.Single(nullable: false),
+                        TypeValue = c.String(),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.ContactInformations",
                 c => new
                     {
@@ -137,11 +221,42 @@ namespace App.Migrations
                 .Index(t => t.City_Id);
             
             CreateTable(
+                "dbo.CostCategories",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Costs",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                        costcategory_Id = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.CostCategories", t => t.costcategory_Id)
+                .Index(t => t.costcategory_Id);
+            
+            CreateTable(
                 "dbo.Deliveries",
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
-                        DeliveryName = c.String(),
+                        Name = c.String(),
                         DeliveryDate = c.DateTime(nullable: false),
                         Reference = c.String(),
                         Ordre = c.Int(nullable: false),
@@ -209,6 +324,21 @@ namespace App.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Notifications",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        creationDate = c.DateTime(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.OrderLines",
                 c => new
                     {
@@ -229,7 +359,7 @@ namespace App.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
-                        OrderName = c.String(),
+                        Name = c.String(),
                         orderDate = c.DateTime(nullable: false),
                         DeliveryDateExpected = c.DateTime(nullable: false),
                         Reference = c.String(),
@@ -327,8 +457,13 @@ namespace App.Migrations
             DropForeignKey("dbo.RoleMenuItemApplications", "Role_Id", "dbo.Roles");
             DropForeignKey("dbo.AuthorizationRoles", "Role_Id", "dbo.Roles");
             DropForeignKey("dbo.AuthorizationRoles", "Authorization_Id", "dbo.Authorizations");
+            DropForeignKey("dbo.Costs", "costcategory_Id", "dbo.CostCategories");
             DropForeignKey("dbo.ContactInformations", "City_Id", "dbo.Cities");
             DropForeignKey("dbo.Cities", "Country_Id", "dbo.Countries");
+            DropForeignKey("dbo.Articles", "customerorderline_Id", "dbo.CustomerOrderLines");
+            DropForeignKey("dbo.CustomerOrderLines", "customerOrder_Id", "dbo.CustomerOrders");
+            DropForeignKey("dbo.CustomerOrders", "customer_Id", "dbo.Customers");
+            DropForeignKey("dbo.Customers", "customerDelivery_Id", "dbo.CustomerDeliveries");
             DropForeignKey("dbo.Articles", "articleCategory_Id", "dbo.ArticleCategories");
             DropIndex("dbo.RoleMenuItemApplications", new[] { "MenuItemApplication_Id" });
             DropIndex("dbo.RoleMenuItemApplications", new[] { "Role_Id" });
@@ -339,8 +474,13 @@ namespace App.Migrations
             DropIndex("dbo.OrderLines", new[] { "article_Id" });
             DropIndex("dbo.Roles", new[] { "User_Id" });
             DropIndex("dbo.MenuItemApplications", new[] { "Code" });
+            DropIndex("dbo.Costs", new[] { "costcategory_Id" });
             DropIndex("dbo.ContactInformations", new[] { "City_Id" });
             DropIndex("dbo.Cities", new[] { "Country_Id" });
+            DropIndex("dbo.Customers", new[] { "customerDelivery_Id" });
+            DropIndex("dbo.CustomerOrders", new[] { "customer_Id" });
+            DropIndex("dbo.CustomerOrderLines", new[] { "customerOrder_Id" });
+            DropIndex("dbo.Articles", new[] { "customerorderline_Id" });
             DropIndex("dbo.Articles", new[] { "articleCategory_Id" });
             DropTable("dbo.RoleMenuItemApplications");
             DropTable("dbo.AuthorizationRoles");
@@ -348,13 +488,21 @@ namespace App.Migrations
             DropTable("dbo.Providers");
             DropTable("dbo.Orders");
             DropTable("dbo.OrderLines");
+            DropTable("dbo.Notifications");
             DropTable("dbo.Authorizations");
             DropTable("dbo.Roles");
             DropTable("dbo.MenuItemApplications");
             DropTable("dbo.Deliveries");
+            DropTable("dbo.Costs");
+            DropTable("dbo.CostCategories");
             DropTable("dbo.ContactInformations");
+            DropTable("dbo.Configurations");
             DropTable("dbo.Countries");
             DropTable("dbo.Cities");
+            DropTable("dbo.CustomerDeliveries");
+            DropTable("dbo.Customers");
+            DropTable("dbo.CustomerOrders");
+            DropTable("dbo.CustomerOrderLines");
             DropTable("dbo.Articles");
             DropTable("dbo.ArticleCategories");
             DropTable("dbo.AppUsers");

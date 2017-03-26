@@ -7,13 +7,13 @@ namespace App.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Update6_Table_Article : IMigrationMetadata
+    public sealed partial class Add_data : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Update6_Table_Article));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_data));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703240141010_Update6_Table_Article"; }
+            get { return "201703261615131_Add_data"; }
         }
         
         string IMigrationMetadata.Source
