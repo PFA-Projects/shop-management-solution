@@ -117,65 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Customer_groupbox.Text" xml:space="preserve">
-    <value>Client : </value>
-  </data>
-  <data name="OrderDate_groupebox.Text" xml:space="preserve">
-    <value>Date Commande : </value>
-  </data>
-  <data name="OperationType_groupbox.Text" xml:space="preserve">
-    <value>Type Operation : </value>
-  </data>
-  <data name="DeliveryDate_dtp.Text" xml:space="preserve">
-    <value>Date Livraison : </value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 387</value>
-  </data>
-  <data name="Articles_datagridview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 341</value>
-  </data>
-  <data name="ArticlesSelected_grpbx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>638, 3</value>
-  </data>
-  <data name="ArticlesSelected_grpbx.Text" xml:space="preserve">
-    <value>Articles Selectioné :</value>
-  </data>
-  <data name="btn_pass.Text" xml:space="preserve">
-    <value>Passer</value>
-  </data>
-  <data name="Result_grpbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>757, 3</value>
-  </data>
-  <data name="Result_grpbox.Text" xml:space="preserve">
-    <value>Resultat : </value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Prix Total :</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 13</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Nombre d'articles : </value>
-  </data>
-  <data name="btn_cancel.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="btn_confirm.Text" xml:space="preserve">
-    <value>Confirmer</value>
-  </data>
-  <data name="articleCategory.HeaderText" xml:space="preserve">
-    <value>Categorie Article </value>
-  </data>
-  <data name="SellingPrice.HeaderText" xml:space="preserve">
-    <value>Prix de vente</value>
-  </data>
-  <data name="Quantity.HeaderText" xml:space="preserve">
-    <value>Quantite(Obligè de remplire ce champ )</value>
-  </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

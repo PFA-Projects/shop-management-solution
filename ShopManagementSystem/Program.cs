@@ -1,4 +1,5 @@
 ﻿
+using ShopManagement.Forms.Form_Menu;
 using ShopManagement.Test;
 using System;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSO());
+            Application.Run(new FormMenu());
         }
     }
 

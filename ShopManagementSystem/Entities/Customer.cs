@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace ShopManagement.Entities
 {
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
-    [Menu]
+   // [Menu]
     public class Customer:BaseEntity
     {
         [DisplayProperty(Titre = "Adress")]

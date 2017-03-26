@@ -258,6 +258,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form Menu\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Menu\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201703261621572_Add-data.cs" />
     <Compile Include="Migrations\201703261621572_Add-data.Designer.cs">
       <DependentUpon>201703261621572_Add-data.cs</DependentUpon>
@@ -272,10 +278,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form Sell Order\FormSO.cs">
+    <Compile Include="Forms\Form Sell Order\FormSO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Sell Order\FormSO.Designer.cs">
+    <Compile Include="Forms\Form Sell Order\FormSO.Designer.cs">
       <DependentUpon>FormSO.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.ar.resx">
@@ -410,10 +416,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Sell Order\FormSO.ar.resx">
-      <DependentUpon>FormSO.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Sell Order\FormSO.fr.resx">
+    <EmbeddedResource Include="Forms\Form Sell Order\FormSO.ar.resx">
       <DependentUpon>FormSO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx">
@@ -432,7 +438,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Form Sell Order\FormSO.resx">
+    <EmbeddedResource Include="Forms\Form Sell Order\FormSO.resx">
       <DependentUpon>FormSO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
