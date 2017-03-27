@@ -37,8 +37,8 @@ namespace ShopManagement.Test
             user.Language = GwinApp.Languages.en;
 
             // Start Gwin Application
-            FormMenuApplication f = new FormMenuApplication();
-            GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), f, user);
+            //FormMenuApplication f = new FormMenuApplication();
+            //GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), f, user);
 
 
             //Customer Type is disabled before completing the operation type part

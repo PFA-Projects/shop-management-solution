@@ -71,10 +71,13 @@
     <Compile Include="BLL\ArticlesBLO.cs" />
     <Compile Include="BLL\ArticlesCategoryBLO.cs" />
     <Compile Include="BLL\BaseBLO.cs" />
+    <Compile Include="BLL\ConfigBLO.cs" />
     <Compile Include="BLL\CustomerDeliveryBLO.cs" />
     <Compile Include="BLL\CustomerOrderLineBLO.cs" />
     <Compile Include="BLL\CustomerOrdersBLO.cs" />
     <Compile Include="BLL\CustomersBLO.cs" />
+    <Compile Include="BLL\DeponseCategoryBLO.cs" />
+    <Compile Include="BLL\DeponsesBLO.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
@@ -212,6 +215,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Delivery.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\DeponseCategory\DeponseCategory.fr.Designer.cs">
+      <DependentUpon>DeponseCategory.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\DeponseCategory\DeponseCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeponseCategory.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Deponse\Deponse.fr.Designer.cs">
+      <DependentUpon>Deponse.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Deponse\Deponse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Deponse.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\OrderLine\OrderLine.ar.Designer.cs">
       <DependentUpon>OrderLine.ar.resx</DependentUpon>
@@ -379,6 +402,22 @@
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DeponseCategory\DeponseCategory.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DeponseCategory.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DeponseCategory\DeponseCategory.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DeponseCategory.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Deponse\Deponse.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Deponse.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Deponse\Deponse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Deponse.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\OrderLine\OrderLine.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>

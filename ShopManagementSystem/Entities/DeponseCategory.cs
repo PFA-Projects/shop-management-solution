@@ -13,6 +13,7 @@ namespace ShopManagement.Entities
     [Menu]
     public class DeponseCategory:BaseEntity
     {
+
         [DisplayProperty(Titre = "Name")]
         [EntryForm]
         [DataGrid]
@@ -23,5 +24,8 @@ namespace ShopManagement.Entities
         [DataGrid]
         [Filter]
         public string Description { get; set; }
+
+        ///
+        
     }
 }

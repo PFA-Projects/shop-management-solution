@@ -5,7 +5,9 @@ using App.Gwin.Application.Presentation;
 using App.Gwin.Application.Presentation.EntityManagement;
 using App.Gwin.Entities.Secrurity.Authentication;
 using ShopManagement.BAL;
+using ShopManagement.BLL;
 using ShopManagement.Entities;
+using ShopManagement.Test;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,16 +31,45 @@ namespace ShopManagement.Forms.Form_Menu
         {
             // Application User
             User user = new User();
-            user.Language = GwinApp.Languages.ar;
+            user.Language = GwinApp.Languages.fr;
 
             // Start Gwin Application
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
         }
 
-        private void toolStrip1_Click(object sender, EventArgs e)
+        private void sellToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManagerForm form = new ManagerForm(new BaseBLO<Customer>(), null, this);
+            FormSO fso = new FormSO();
+            //ManagerForm form = new ManagerForm(new BaseBLO<Customer>(), null, this);
+            //
             this.IsMdiContainer = true;
+            //
+            fso.MdiParent = this;
+            fso.Show();
+            //fso.Show();
+        }
+
+        private void FormMenu_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void deponsesManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new DeponsesBLO(), null, this);
+            //
+            this.IsMdiContainer = true;
+            //
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void deponseCategoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new DeponseCategoryBLO(), null, this);
+            //
+            this.IsMdiContainer = true;
+            //
             form.MdiParent = this;
             form.Show();
         }

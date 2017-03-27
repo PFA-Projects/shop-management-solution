@@ -34,6 +34,12 @@ namespace ShopManagement.Entities
         [Filter]
         public float prix { get; set; }
 
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        // [EntryForm(GroupeBox = "Classification")]
+        [EntryForm]
+        [DisplayProperty(Titre = "deponseCategory")]
+        [Filter]
+        [DataGrid(WidthColonne = 100)]
         public DeponseCategory deponseCategory { get; set; }
 
         //Initilise the datetime

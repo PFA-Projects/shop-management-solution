@@ -10,9 +10,11 @@ namespace ShopManagement.Entities
 {
     public class Configuration:BaseEntity
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public float value { get; set; }
-        public string TypeValue { get; set; }
+        //public string Name { get; set; }
+        //public string Description { get; set; }
+        //public float value { get; set; }
+        //public string TypeValue { get; set; }
+        public float RiskOfStock { get; set; }
+        public float TVA { get; set; }
     }
 }
