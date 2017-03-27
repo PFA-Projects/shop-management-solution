@@ -1,26 +1,25 @@
-﻿//Mariam Ait Al
-
-using App;
+﻿using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
-    public class ArticlesCategoryBLO:BaseBLO<ArticleCategory>
+    public class ExpensesBLO : BaseBLO<Expense>
     {
         ModelContext db = new ModelContext();
 
-        public ArticlesCategoryBLO(DbContext context) : base(context)
+        public ExpensesBLO() : base()
         {
         }
 
-        public ArticlesCategoryBLO() : base()
+        public ExpensesBLO(DbContext context) : base(context)
         {
         }
     }

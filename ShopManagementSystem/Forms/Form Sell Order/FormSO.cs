@@ -84,6 +84,7 @@ namespace ShopManagement.Test
             if (OperationType == "Order")
             {
                 OrderDate_groupebox.Enabled = true;
+                MessageBox.Show(" delivery order Date !!");
             }
             if (OperationType == "Buy")
             {

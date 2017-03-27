@@ -19,6 +19,10 @@ namespace ShopManagement.BLL
         {
         }
 
+        public ArticlesBLO() : base()
+        {
+        }
+
         //Search Articles By Category
         public List<Article> SearchByCateory(ArticleCategory articlecategory)
         {

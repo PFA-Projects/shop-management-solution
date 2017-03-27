@@ -1,6 +1,4 @@
-﻿//Mariam Ait Al
-
-using App;
+﻿using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
 using System;
@@ -12,15 +10,15 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
-    public class ArticlesCategoryBLO:BaseBLO<ArticleCategory>
+    public class ExpenseCategoryBLO : BaseBLO<ExpenseCategory>
     {
         ModelContext db = new ModelContext();
 
-        public ArticlesCategoryBLO(DbContext context) : base(context)
+        public ExpenseCategoryBLO() : base()
         {
         }
 
-        public ArticlesCategoryBLO() : base()
+        public ExpenseCategoryBLO(DbContext context) : base(context)
         {
         }
     }

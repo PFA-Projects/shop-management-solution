@@ -9,6 +9,7 @@
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
+    using Migrations;
 
     public class ModelContext : DbContext
     {
@@ -41,7 +42,6 @@
             
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
-        public virtual DbSet<AppUser> AppUsers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
@@ -50,12 +50,12 @@
         public virtual DbSet<CustomerDelivery> CustomerDeliveries { get; set; }
         public virtual DbSet<CustomerOrder> CustomerOrders { get; set; }
         public virtual DbSet<CustomerOrderLine> CustomerOrderLines { get; set; }
-        public virtual DbSet<Configuration> Configurations { get; set; }
-        public virtual DbSet<CostCategory> CostCategories { get; set; }
-        public virtual DbSet<Cost> Costs { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
-        public virtual DbSet<Deponse> Deponses { get; set; }
-        public virtual DbSet<DeponseCategory> DeponseCategories { get; set; }
+        public virtual DbSet<ExpenseCategory> ExpensesCategories { get; set; }
+        public virtual DbSet<Expense> Expenses { get; set; }
+        public virtual DbSet<configuration> configurations { get; set; }
+        public virtual DbSet<ProviderDelivery> ProviderDeliveries { get; set; }
+        public virtual DbSet<ProviderOrderLine> ProviderOrderLines { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

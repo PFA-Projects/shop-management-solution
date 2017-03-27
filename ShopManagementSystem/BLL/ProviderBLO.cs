@@ -12,15 +12,15 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
-    public class ArticlesCategoryBLO:BaseBLO<ArticleCategory>
+    public class ProviderBLO : BaseBLO<Provider>
     {
         ModelContext db = new ModelContext();
 
-        public ArticlesCategoryBLO(DbContext context) : base(context)
+        public ProviderBLO(DbContext context) : base(context)
         {
         }
 
-        public ArticlesCategoryBLO() : base()
+        public ProviderBLO() : base()
         {
         }
     }

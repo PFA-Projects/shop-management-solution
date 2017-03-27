@@ -54,13 +54,16 @@ namespace ShopManagement.Entities
         //  Classification
         //
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Classification")]
+        [EntryForm]
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
 
-        //
+       
         public CustomerOrderLine customerorderline { get; set; }
+
+
+        
 
     }
 }

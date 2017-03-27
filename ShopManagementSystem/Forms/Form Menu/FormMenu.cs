@@ -31,7 +31,7 @@ namespace ShopManagement.Forms.Form_Menu
         {
             // Application User
             User user = new User();
-            user.Language = GwinApp.Languages.fr;
+            user.Language = GwinApp.Languages.en;
 
             // Start Gwin Application
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
@@ -54,22 +54,52 @@ namespace ShopManagement.Forms.Form_Menu
            
         }
 
-        private void deponsesManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void expensesManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManagerForm form = new ManagerForm(new DeponsesBLO(), null, this);
-            //
+            ManagerForm form = new ManagerForm(new ExpensesBLO(), null, this);
             this.IsMdiContainer = true;
-            //
             form.MdiParent = this;
             form.Show();
         }
 
-        private void deponseCategoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        private void expensesCategoriesManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManagerForm form = new ManagerForm(new DeponseCategoryBLO(), null, this);
-            //
+            ManagerForm form = new ManagerForm(new  ExpenseCategoryBLO(), null, this);
             this.IsMdiContainer = true;
-            //
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new configurationBLO(), null, this);
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void providersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new ProviderBLO(), null, this);
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void articlesManagementToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new ArticlesBLO(), null, this);
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void articlesCategoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerForm form = new ManagerForm(new ArticlesCategoryBLO(), null, this);
+            this.IsMdiContainer = true;
             form.MdiParent = this;
             form.Show();
         }
