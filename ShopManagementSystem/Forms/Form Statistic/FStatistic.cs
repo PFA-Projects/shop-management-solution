@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopManagement.Forms.Form_Etat_de_Stock
+namespace ShopManagement.Forms.Form_Statistic
 {
-    public partial class FormStateStock : Form
+    public partial class FStatistic : Form
     {
-        public FormStateStock()
+        public FStatistic()
         {
             InitializeComponent();
         }

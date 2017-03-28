@@ -312,6 +312,12 @@
     <Compile Include="Forms\Form Menu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form Statistic\FStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Statistic\FStatistic.Designer.cs">
+      <DependentUpon>FStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201703272221183_Add_Data.cs" />
     <Compile Include="Migrations\201703272221183_Add_Data.Designer.cs">
       <DependentUpon>201703272221183_Add_Data.cs</DependentUpon>
@@ -347,6 +353,14 @@
     <Compile Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.cs" />
     <Compile Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.Designer.cs">
       <DependentUpon>201703272338036_Add_Table_ProviderOrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703280007482_Add_Table_Statistic.cs" />
+    <Compile Include="Migrations\201703280007482_Add_Table_Statistic.Designer.cs">
+      <DependentUpon>201703280007482_Add_Table_Statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703280009102_Delete_Table_statistic.cs" />
+    <Compile Include="Migrations\201703280009102_Delete_Table_statistic.Designer.cs">
+      <DependentUpon>201703280009102_Delete_Table_statistic.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -541,6 +555,9 @@
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Statistic\FStatistic.resx">
+      <DependentUpon>FStatistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703272221183_Add_Data.resx">
       <DependentUpon>201703272221183_Add_Data.cs</DependentUpon>
     </EmbeddedResource>
@@ -567,6 +584,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.resx">
       <DependentUpon>201703272338036_Add_Table_ProviderOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703280007482_Add_Table_Statistic.resx">
+      <DependentUpon>201703280007482_Add_Table_Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703280009102_Delete_Table_statistic.resx">
+      <DependentUpon>201703280009102_Delete_Table_statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -598,9 +621,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Form Etat de Stock\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

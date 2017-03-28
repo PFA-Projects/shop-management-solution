@@ -38,6 +38,7 @@
             this.articlesManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articlesManagementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.articlesCategoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.expensesToolStripMenuItem,
             this.configurationToolStripMenuItem,
             this.providersToolStripMenuItem,
-            this.articlesManagementToolStripMenuItem});
+            this.articlesManagementToolStripMenuItem,
+            this.statisticsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(727, 24);
@@ -122,6 +124,13 @@
             this.articlesCategoryManagementToolStripMenuItem.Text = "Articles Category Management";
             this.articlesCategoryManagementToolStripMenuItem.Click += new System.EventHandler(this.articlesCategoryManagementToolStripMenuItem_Click);
             // 
+            // statisticsToolStripMenuItem
+            // 
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.statisticsToolStripMenuItem.Text = "Statistics";
+           // this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,5 +161,6 @@
         private System.Windows.Forms.ToolStripMenuItem articlesManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem articlesManagementToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem articlesCategoryManagementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
     }
 }
