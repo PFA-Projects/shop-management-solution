@@ -305,11 +305,11 @@
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Statistic.cs" />
-    <Compile Include="Forms\Form Buy Order\FormBuy.cs">
+    <Compile Include="Forms\Form Buy Order\FormBuyOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Buy Order\FormBuy.Designer.cs">
-      <DependentUpon>FormBuy.cs</DependentUpon>
+    <Compile Include="Forms\Form Buy Order\FormBuyOrder.Designer.cs">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Menu\FormMenu.cs">
       <SubType>Form</SubType>
@@ -326,6 +326,14 @@
     <Compile Include="Migrations\201703281621174_Add_data.cs" />
     <Compile Include="Migrations\201703281621174_Add_data.Designer.cs">
       <DependentUpon>201703281621174_Add_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703282122334_Update_Table_ProviderOrderLine.cs" />
+    <Compile Include="Migrations\201703282122334_Update_Table_ProviderOrderLine.Designer.cs">
+      <DependentUpon>201703282122334_Update_Table_ProviderOrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703282125081_Update_Table_Article.cs" />
+    <Compile Include="Migrations\201703282125081_Update_Table_Article.Designer.cs">
+      <DependentUpon>201703282125081_Update_Table_Article.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -511,8 +519,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Buy Order\FormBuy.resx">
-      <DependentUpon>FormBuy.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Buy Order\FormBuyOrder.resx">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -528,6 +536,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703281621174_Add_data.resx">
       <DependentUpon>201703281621174_Add_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703282122334_Update_Table_ProviderOrderLine.resx">
+      <DependentUpon>201703282122334_Update_Table_ProviderOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703282125081_Update_Table_Article.resx">
+      <DependentUpon>201703282125081_Update_Table_Article.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

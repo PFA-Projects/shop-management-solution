@@ -1,5 +1,6 @@
 ﻿
 using GenericWinForm.Demo;
+using ShopManagement.Forms.Form_Buy_Order;
 using ShopManagement.Forms.Form_Menu;
 using ShopManagement.Test;
 using System;
@@ -17,7 +18,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new FormBuyOrder());
         }
     }
 

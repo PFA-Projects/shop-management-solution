@@ -62,7 +62,7 @@ namespace ShopManagement.Entities
        
         public CustomerOrderLine customerorderline { get; set; }
 
-
+        public ProviderOrderLine providerorderline { get; set; }
         
 
     }

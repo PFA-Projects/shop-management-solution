@@ -125,7 +125,7 @@ namespace ShopManagement.Forms.Form_Menu
 
         private void buyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormBuy fb = new FormBuy();
+            FormBuyOrder fb = new FormBuyOrder();
             ManagerForm form = new ManagerForm(new BaseBLO<Provider>(), null, this);
             this.IsMdiContainer = true;
             fb.MdiParent = this;

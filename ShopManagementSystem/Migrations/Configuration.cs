@@ -32,12 +32,7 @@ namespace App.Migrations
                 new ArticleCategory() { Reference = "ref_ac3", Name = "n_ac3", Description = "dec_ac3" },
                 new ArticleCategory() { Reference = "ref_ac4", Name = "n_ac4", Description = "dec_ac4" }
                 );
-            //Default Articles
-            context.Articles.AddOrUpdate(
-                a => a.Reference ,
-                new Article() { Name = "n_a1" , SellingPrice = 18 ,articleCategory = db.ArticleCategories.Find(1)},
-                new Article() { Name = "n_a2", SellingPrice = 14, articleCategory = db.ArticleCategories.Find(1) }
-                );
+            
         }
         
     }
