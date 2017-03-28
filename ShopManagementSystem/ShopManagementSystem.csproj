@@ -87,15 +87,13 @@
     <Compile Include="Entities\CustomerDelivery.cs" />
     <Compile Include="Entities\CustomerOrder.cs" />
     <Compile Include="Entities\CustomerOrderLine.cs" />
-    <Compile Include="Entities\Delivery.cs" />
     <Compile Include="Entities\Expense.cs" />
     <Compile Include="Entities\ExpenseCategory.cs" />
     <Compile Include="Entities\Notification.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderLine.cs" />
+    <Compile Include="Entities\ProviderOrder.cs" />
+    <Compile Include="Entities\ProviderOrderLine.cs" />
     <Compile Include="Entities\Provider.cs" />
     <Compile Include="Entities\ProviderDelivery.cs" />
-    <Compile Include="Entities\ProviderOrderLine.cs" />
     <Compile Include="Entities\Resources\AppUser\AppUser.ar.Designer.cs">
       <DependentUpon>AppUser.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -306,6 +304,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Statistic.cs" />
+    <Compile Include="Forms\Form Buy Order\FormBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Buy Order\FormBuy.Designer.cs">
+      <DependentUpon>FormBuy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form Menu\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,49 +323,9 @@
     <Compile Include="Forms\Form Statistic\FStatistic.Designer.cs">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703272221183_Add_Data.cs" />
-    <Compile Include="Migrations\201703272221183_Add_Data.Designer.cs">
-      <DependentUpon>201703272221183_Add_Data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272229290_Delete_Table_configuration.cs" />
-    <Compile Include="Migrations\201703272229290_Delete_Table_configuration.Designer.cs">
-      <DependentUpon>201703272229290_Delete_Table_configuration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272231069_Add_Table_Configuration.cs" />
-    <Compile Include="Migrations\201703272231069_Add_Table_Configuration.Designer.cs">
-      <DependentUpon>201703272231069_Add_Table_Configuration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272232289_Delete_Table_AppUser.cs" />
-    <Compile Include="Migrations\201703272232289_Delete_Table_AppUser.Designer.cs">
-      <DependentUpon>201703272232289_Delete_Table_AppUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272306287_Update_Table_configuration.cs" />
-    <Compile Include="Migrations\201703272306287_Update_Table_configuration.Designer.cs">
-      <DependentUpon>201703272306287_Update_Table_configuration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272312243_Update_Table_Article.cs" />
-    <Compile Include="Migrations\201703272312243_Update_Table_Article.Designer.cs">
-      <DependentUpon>201703272312243_Update_Table_Article.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272315245_Update5.cs" />
-    <Compile Include="Migrations\201703272315245_Update5.Designer.cs">
-      <DependentUpon>201703272315245_Update5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272333414_Add_Table_ProviderDelivery.cs" />
-    <Compile Include="Migrations\201703272333414_Add_Table_ProviderDelivery.Designer.cs">
-      <DependentUpon>201703272333414_Add_Table_ProviderDelivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.cs" />
-    <Compile Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.Designer.cs">
-      <DependentUpon>201703272338036_Add_Table_ProviderOrderLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703280007482_Add_Table_Statistic.cs" />
-    <Compile Include="Migrations\201703280007482_Add_Table_Statistic.Designer.cs">
-      <DependentUpon>201703280007482_Add_Table_Statistic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703280009102_Delete_Table_statistic.cs" />
-    <Compile Include="Migrations\201703280009102_Delete_Table_statistic.Designer.cs">
-      <DependentUpon>201703280009102_Delete_Table_statistic.cs</DependentUpon>
+    <Compile Include="Migrations\201703281621174_Add_data.cs" />
+    <Compile Include="Migrations\201703281621174_Add_data.Designer.cs">
+      <DependentUpon>201703281621174_Add_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -546,6 +511,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Buy Order\FormBuy.resx">
+      <DependentUpon>FormBuy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,38 +526,8 @@
     <EmbeddedResource Include="Forms\Form Statistic\FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272221183_Add_Data.resx">
-      <DependentUpon>201703272221183_Add_Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272229290_Delete_Table_configuration.resx">
-      <DependentUpon>201703272229290_Delete_Table_configuration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272231069_Add_Table_Configuration.resx">
-      <DependentUpon>201703272231069_Add_Table_Configuration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272232289_Delete_Table_AppUser.resx">
-      <DependentUpon>201703272232289_Delete_Table_AppUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272306287_Update_Table_configuration.resx">
-      <DependentUpon>201703272306287_Update_Table_configuration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272312243_Update_Table_Article.resx">
-      <DependentUpon>201703272312243_Update_Table_Article.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272315245_Update5.resx">
-      <DependentUpon>201703272315245_Update5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272333414_Add_Table_ProviderDelivery.resx">
-      <DependentUpon>201703272333414_Add_Table_ProviderDelivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703272338036_Add_Table_ProviderOrderLine.resx">
-      <DependentUpon>201703272338036_Add_Table_ProviderOrderLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703280007482_Add_Table_Statistic.resx">
-      <DependentUpon>201703280007482_Add_Table_Statistic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703280009102_Delete_Table_statistic.resx">
-      <DependentUpon>201703280009102_Delete_Table_statistic.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703281621174_Add_data.resx">
+      <DependentUpon>201703281621174_Add_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

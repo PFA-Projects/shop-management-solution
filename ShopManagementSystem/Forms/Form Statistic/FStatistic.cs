@@ -16,5 +16,10 @@ namespace ShopManagement.Forms.Form_Statistic
         {
             InitializeComponent();
         }
+
+        private void end_date_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

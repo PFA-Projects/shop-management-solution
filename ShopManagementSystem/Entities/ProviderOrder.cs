@@ -13,7 +13,7 @@ namespace ShopManagement.Entities
 
     [GwinEntity(Localizable = true, DisplayMember = "OrderName")]
     [Menu(Group = "Buy")]
-    public class Order:BaseEntity
+    public class ProviderOrder:BaseEntity
     {
         [DisplayProperty(Titre = "OrderName")]
         [EntryForm]
@@ -42,7 +42,7 @@ namespace ShopManagement.Entities
 
         
         //Initialisier Datetime
-        public Order()
+        public ProviderOrder()
         {
             this.DeliveryDateExpected = DateTime.Now;
             this.orderDate = DateTime.Now;

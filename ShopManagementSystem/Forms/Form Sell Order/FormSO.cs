@@ -231,7 +231,7 @@ namespace ShopManagement.Test
                         listeArticles.Add(article);
                         ListeArticles_selected_listbox.DataSource = null;
                         ListeArticles_selected_listbox.DataSource = listeArticles;
-                        
+                            article.Quantity--;
                     }
                 }
             }

@@ -7,13 +7,13 @@ namespace App.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Delete_Table_AppUser : IMigrationMetadata
+    public sealed partial class Add_data : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Delete_Table_AppUser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_data));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703272232289_Delete_Table_AppUser"; }
+            get { return "201703281621174_Add_data"; }
         }
         
         string IMigrationMetadata.Source

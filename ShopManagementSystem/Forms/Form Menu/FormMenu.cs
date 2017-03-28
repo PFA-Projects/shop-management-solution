@@ -7,6 +7,8 @@ using App.Gwin.Entities.Secrurity.Authentication;
 using ShopManagement.BAL;
 using ShopManagement.BLL;
 using ShopManagement.Entities;
+using ShopManagement.Forms.Form_Buy_Order;
+using ShopManagement.Forms.Form_Statistic;
 using ShopManagement.Test;
 using System;
 using System.Collections.Generic;
@@ -102,6 +104,32 @@ namespace ShopManagement.Forms.Form_Menu
             this.IsMdiContainer = true;
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //FormSO fso = new FormSO();
+            ////ManagerForm form = new ManagerForm(new BaseBLO<Customer>(), null, this);
+            ////
+            //this.IsMdiContainer = true;
+            ////
+            //fso.MdiParent = this;
+            //fso.Show();
+            ////fso.Show();
+            FStatistic f = new FStatistic();
+            ManagerForm form = new ManagerForm(new BaseBLO<Statistic>(),null,this);
+            this.IsMdiContainer = true;
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void buyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuy fb = new FormBuy();
+            ManagerForm form = new ManagerForm(new BaseBLO<Provider>(), null, this);
+            this.IsMdiContainer = true;
+            fb.MdiParent = this;
+            fb.Show();
         }
     }
 }

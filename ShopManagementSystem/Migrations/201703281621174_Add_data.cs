@@ -3,7 +3,7 @@ namespace App.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Add_Data : DbMigration
+    public partial class Add_data : DbMigration
     {
         public override void Up()
         {
@@ -18,24 +18,6 @@ namespace App.Migrations
                         Description_French = c.String(),
                         Description_English = c.String(),
                         Description_Arab = c.String(),
-                        Reference = c.String(),
-                        Ordre = c.Int(nullable: false),
-                        DateCreation = c.DateTime(nullable: false),
-                        DateModification = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.AppUsers",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
-                        Email = c.String(),
-                        Login = c.String(),
-                        Password = c.String(),
-                        Tel = c.String(),
                         Reference = c.String(),
                         Ordre = c.Int(nullable: false),
                         DateCreation = c.DateTime(nullable: false),
@@ -184,12 +166,12 @@ namespace App.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Configurations",
+                "dbo.configurations",
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
-                        RiskOfStock = c.Single(nullable: false),
                         TVA = c.Single(nullable: false),
+                        RiskOfStock = c.Int(nullable: false),
                         Reference = c.String(),
                         Ordre = c.Int(nullable: false),
                         DateCreation = c.DateTime(nullable: false),
@@ -217,20 +199,6 @@ namespace App.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Cities", t => t.City_Id)
                 .Index(t => t.City_Id);
-            
-            CreateTable(
-                "dbo.Deliveries",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        Name = c.String(),
-                        DeliveryDate = c.DateTime(nullable: false),
-                        Reference = c.String(),
-                        Ordre = c.Int(nullable: false),
-                        DateCreation = c.DateTime(nullable: false),
-                        DateModification = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Expenses",
@@ -339,23 +307,7 @@ namespace App.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.OrderLines",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        Quantity = c.Int(nullable: false),
-                        Reference = c.String(),
-                        Ordre = c.Int(nullable: false),
-                        DateCreation = c.DateTime(nullable: false),
-                        DateModification = c.DateTime(nullable: false),
-                        article_Id = c.Long(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Articles", t => t.article_Id)
-                .Index(t => t.article_Id);
-            
-            CreateTable(
-                "dbo.Orders",
+                "dbo.ProviderOrders",
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
@@ -382,6 +334,47 @@ namespace App.Migrations
                         Adresse = c.String(),
                         Phone = c.String(),
                         Email = c.String(),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.ProviderDeliveries",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        DeliveryDate = c.DateTime(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.ProviderOrderLines",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        Quantity = c.Int(nullable: false),
+                        Reference = c.String(),
+                        Ordre = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        DateModification = c.DateTime(nullable: false),
+                        article_Id = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Articles", t => t.article_Id)
+                .Index(t => t.article_Id);
+            
+            CreateTable(
+                "dbo.Statistics",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
                         Reference = c.String(),
                         Ordre = c.Int(nullable: false),
                         DateCreation = c.DateTime(nullable: false),
@@ -451,8 +444,8 @@ namespace App.Migrations
         {
             DropForeignKey("dbo.Roles", "User_Id", "dbo.Users");
             DropForeignKey("dbo.Users", "City_Id", "dbo.Cities");
-            DropForeignKey("dbo.Orders", "provider_Id", "dbo.Providers");
-            DropForeignKey("dbo.OrderLines", "article_Id", "dbo.Articles");
+            DropForeignKey("dbo.ProviderOrderLines", "article_Id", "dbo.Articles");
+            DropForeignKey("dbo.ProviderOrders", "provider_Id", "dbo.Providers");
             DropForeignKey("dbo.RoleMenuItemApplications", "MenuItemApplication_Id", "dbo.MenuItemApplications");
             DropForeignKey("dbo.RoleMenuItemApplications", "Role_Id", "dbo.Roles");
             DropForeignKey("dbo.AuthorizationRoles", "Role_Id", "dbo.Roles");
@@ -470,8 +463,8 @@ namespace App.Migrations
             DropIndex("dbo.AuthorizationRoles", new[] { "Role_Id" });
             DropIndex("dbo.AuthorizationRoles", new[] { "Authorization_Id" });
             DropIndex("dbo.Users", new[] { "City_Id" });
-            DropIndex("dbo.Orders", new[] { "provider_Id" });
-            DropIndex("dbo.OrderLines", new[] { "article_Id" });
+            DropIndex("dbo.ProviderOrderLines", new[] { "article_Id" });
+            DropIndex("dbo.ProviderOrders", new[] { "provider_Id" });
             DropIndex("dbo.Roles", new[] { "User_Id" });
             DropIndex("dbo.MenuItemApplications", new[] { "Code" });
             DropIndex("dbo.Expenses", new[] { "expenseCategory_Id" });
@@ -485,18 +478,19 @@ namespace App.Migrations
             DropTable("dbo.RoleMenuItemApplications");
             DropTable("dbo.AuthorizationRoles");
             DropTable("dbo.Users");
+            DropTable("dbo.Statistics");
+            DropTable("dbo.ProviderOrderLines");
+            DropTable("dbo.ProviderDeliveries");
             DropTable("dbo.Providers");
-            DropTable("dbo.Orders");
-            DropTable("dbo.OrderLines");
+            DropTable("dbo.ProviderOrders");
             DropTable("dbo.Notifications");
             DropTable("dbo.Authorizations");
             DropTable("dbo.Roles");
             DropTable("dbo.MenuItemApplications");
             DropTable("dbo.ExpenseCategories");
             DropTable("dbo.Expenses");
-            DropTable("dbo.Deliveries");
             DropTable("dbo.ContactInformations");
-            DropTable("dbo.Configurations");
+            DropTable("dbo.configurations");
             DropTable("dbo.Countries");
             DropTable("dbo.Cities");
             DropTable("dbo.CustomerDeliveries");
@@ -505,7 +499,6 @@ namespace App.Migrations
             DropTable("dbo.CustomerOrderLines");
             DropTable("dbo.Articles");
             DropTable("dbo.ArticleCategories");
-            DropTable("dbo.AppUsers");
             DropTable("dbo.ApplicationNames");
         }
     }

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Purchases_dgv = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.start_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.startdate_dtp = new System.Windows.Forms.DateTimePicker();
-            this.endate_dtp = new System.Windows.Forms.DateTimePicker();
+            this.end_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Purchases_dgv)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -45,21 +47,31 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.Purchases_dgv, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.26203F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.73797F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.33155F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.66845F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(837, 374);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // Purchases_dgv
+            // 
+            this.Purchases_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Purchases_dgv.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Purchases_dgv.Location = new System.Drawing.Point(3, 93);
+            this.Purchases_dgv.Name = "Purchases_dgv";
+            this.Purchases_dgv.Size = new System.Drawing.Size(570, 278);
+            this.Purchases_dgv.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.1059F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.8941F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.17208F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.82792F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -68,44 +80,45 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(831, 80);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(831, 84);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.startdate_dtp);
+            this.groupBox1.Controls.Add(this.start_date_dtp);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(426, 74);
+            this.groupBox1.Size = new System.Drawing.Size(385, 78);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Start Date : ";
             // 
+            // start_date_dtp
+            // 
+            this.start_date_dtp.Location = new System.Drawing.Point(39, 36);
+            this.start_date_dtp.Name = "start_date_dtp";
+            this.start_date_dtp.Size = new System.Drawing.Size(306, 20);
+            this.start_date_dtp.TabIndex = 1;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.endate_dtp);
+            this.groupBox2.Controls.Add(this.end_date_dtp);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(435, 3);
+            this.groupBox2.Location = new System.Drawing.Point(394, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(393, 74);
+            this.groupBox2.Size = new System.Drawing.Size(434, 78);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "End Date : ";
             // 
-            // startdate_dtp
+            // end_date_dtp
             // 
-            this.startdate_dtp.Location = new System.Drawing.Point(74, 32);
-            this.startdate_dtp.Name = "startdate_dtp";
-            this.startdate_dtp.Size = new System.Drawing.Size(285, 20);
-            this.startdate_dtp.TabIndex = 0;
-            // 
-            // endate_dtp
-            // 
-            this.endate_dtp.Location = new System.Drawing.Point(53, 32);
-            this.endate_dtp.Name = "endate_dtp";
-            this.endate_dtp.Size = new System.Drawing.Size(285, 20);
-            this.endate_dtp.TabIndex = 1;
+            this.end_date_dtp.Location = new System.Drawing.Point(35, 36);
+            this.end_date_dtp.Name = "end_date_dtp";
+            this.end_date_dtp.Size = new System.Drawing.Size(306, 20);
+            this.end_date_dtp.TabIndex = 0;
+            this.end_date_dtp.ValueChanged += new System.EventHandler(this.end_date_dtp_ValueChanged);
             // 
             // FStatistic
             // 
@@ -116,6 +129,7 @@
             this.Name = "FStatistic";
             this.Text = "Statistic";
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Purchases_dgv)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -126,10 +140,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView Purchases_dgv;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker startdate_dtp;
+        private System.Windows.Forms.DateTimePicker start_date_dtp;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker endate_dtp;
+        private System.Windows.Forms.DateTimePicker end_date_dtp;
     }
 }

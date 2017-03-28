@@ -14,11 +14,7 @@ namespace ShopManagement.Entities
     [Menu]
     public class configuration:BaseEntity
     {
-        [DisplayProperty(Titre = "RiskOfStock")]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        public int RiskOfStock { get; set; }
+        
 
         [DisplayProperty(Titre = "TVA")]
         [EntryForm]
@@ -26,11 +22,17 @@ namespace ShopManagement.Entities
         [Filter]
         public float TVA { get; set; }
 
-
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [DisplayProperty(Titre = "RiskOfStock")]
         [EntryForm]
+        [DataGrid]
         [Filter]
-        [DataGrid(WidthColonne = 100)]
-        public Article article { get; set; }
+        public int RiskOfStock { get; set; }
+
+        public configuration()
+        {
+            TVA = 20 ;
+            RiskOfStock = 10;
+        }
+
     }
 }

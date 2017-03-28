@@ -6,8 +6,11 @@ using App.Gwin.Entities;
 using App.Gwin.Entities.Application;
 using App.Gwin.Entities.Secrurity.Authentication;
 using ShopManagement.BAL;
+using ShopManagement.BLL;
+using ShopManagement.Entities;
 using SplashScreen;
 using System;
+using System.Data.Entity.Migrations;
 using System.Windows.Forms;
 
 namespace GenericWinForm.Demo
@@ -18,9 +21,11 @@ namespace GenericWinForm.Demo
         {
             InitializeComponent();
         }
-
+        
         private void FormMenuApplication_Load(object sender, EventArgs e)
         {
+
+
             // Application User
             User user = new User();
             user.Language = GwinApp.Languages.fr;

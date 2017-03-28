@@ -23,5 +23,14 @@ namespace ShopManagement.BLL
         public ArticlesCategoryBLO() : base()
         {
         }
+
+        //Search LArticlesCategory List By Reference
+        public ArticleCategory SearchByReference(string articleCategory_reference)
+        {
+            var query = from ac in db.ArticleCategories
+                        where articleCategory_reference == ac.Reference
+                        select ac;
+            return query.ElementAt(0);
+        }
     }
 }

@@ -42,10 +42,8 @@
             
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Delivery> Deliveries { get; set; }
+        public virtual DbSet<ProviderOrder> Orders { get; set; }
         public virtual DbSet<ArticleCategory> ArticleCategories { get; set; }
-        public virtual DbSet<OrderLine> OrderLines { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<CustomerDelivery> CustomerDeliveries { get; set; }
         public virtual DbSet<CustomerOrder> CustomerOrders { get; set; }
@@ -56,6 +54,7 @@
         public virtual DbSet<configuration> configurations { get; set; }
         public virtual DbSet<ProviderDelivery> ProviderDeliveries { get; set; }
         public virtual DbSet<ProviderOrderLine> ProviderOrderLines { get; set; }
+        public virtual DbSet<Statistic> Statistics { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
