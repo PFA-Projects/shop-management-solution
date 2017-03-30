@@ -1,4 +1,0 @@
-Fixed -1 Title of Entity in Menu not Work
-2-Fload not work
-Fixed -3 Changer Ressource file Name : Provider1 to Provider
-4- Write Fload cant convert
