@@ -60,11 +60,8 @@ namespace ShopManagement.Entities
 
        
         public CustomerOrderLine customerorderline { get; set; }
+        
 
-        public string LineState { get; set; }
-        public Article()
-        {
-            LineState = "";
-        }
+        
     }
 }

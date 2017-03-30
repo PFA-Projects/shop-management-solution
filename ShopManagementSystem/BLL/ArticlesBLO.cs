@@ -32,6 +32,9 @@ namespace ShopManagement.BLL
                         select a;
             return query.ToList<Article>();
         }
+
+        //Get Articles By Provider and the state article is order
+        
         //Search articles By Providers
         //public List<Article> SearchByProvider(Provider provider)
         //{

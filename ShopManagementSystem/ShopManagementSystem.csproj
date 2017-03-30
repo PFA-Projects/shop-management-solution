@@ -312,6 +312,12 @@
     <Compile Include="Forms\Form Buy Order\FormBuyOrder.Designer.cs">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form Buy Order\OrdersArrives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Buy Order\OrdersArrives.Designer.cs">
+      <DependentUpon>OrdersArrives.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form Menu\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,6 +369,10 @@
     <Compile Include="Migrations\201703300300384_Delete_Table_providerDelivery.cs" />
     <Compile Include="Migrations\201703300300384_Delete_Table_providerDelivery.Designer.cs">
       <DependentUpon>201703300300384_Delete_Table_providerDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703300415164_Update_Table_Article4.cs" />
+    <Compile Include="Migrations\201703300415164_Update_Table_Article4.Designer.cs">
+      <DependentUpon>201703300415164_Update_Table_Article4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -551,6 +561,9 @@
     <EmbeddedResource Include="Forms\Form Buy Order\FormBuyOrder.resx">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Buy Order\OrdersArrives.resx">
+      <DependentUpon>OrdersArrives.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -592,6 +605,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703300300384_Delete_Table_providerDelivery.resx">
       <DependentUpon>201703300300384_Delete_Table_providerDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703300415164_Update_Table_Article4.resx">
+      <DependentUpon>201703300415164_Update_Table_Article4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

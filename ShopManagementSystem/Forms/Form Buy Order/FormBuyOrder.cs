@@ -1,4 +1,6 @@
-﻿using App;
+﻿//Mariam Ait Al
+
+using App;
 using App.Gwin;
 using App.Gwin.Entities.Secrurity.Authentication;
 using GenericWinForm.Demo;
@@ -152,16 +154,32 @@ namespace ShopManagement.Forms.Form_Buy_Order
                     }
                     else
                     {
-                        ProviderOrderLine pol = new ProviderOrderLine();
-                        pol.Quantity = float.Parse(Articles_dgv.CurrentRow.Cells[5].Value.ToString());
-                        pol.providerOrder = providerOrder;
-                        pol.article = article;
-                        new ProviderOrderLineBLO(db).Save(pol);
-                        ArticlesList.Add(article);
-                        Articles_dgv.DataSource = null;
-                        Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
-                        Articles_c_listbx.DataSource = null;
-                        Articles_c_listbx.DataSource = ArticlesList;
+                        if(operationType == "Buy"){
+                            ProviderOrderLine pol = new ProviderOrderLine();
+                            pol.Quantity = float.Parse(Articles_dgv.CurrentRow.Cells[5].Value.ToString());
+                            pol.providerOrder = providerOrder;
+                            article.Quantity = article.Quantity + pol.Quantity;
+                            pol.article = article;
+                            new ArticlesBLO(db).Save(article);
+                            new ProviderOrderLineBLO(db).Save(pol);
+                            ArticlesList.Add(article);
+                            Articles_dgv.DataSource = null;
+                            Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
+                            Articles_c_listbx.DataSource = null;
+                            Articles_c_listbx.DataSource = ArticlesList;
+                        }
+                        if(operationType == "Order"){
+                            ProviderOrderLine pol = new ProviderOrderLine();
+                            pol.Quantity = float.Parse(Articles_dgv.CurrentRow.Cells[5].Value.ToString());
+                            pol.providerOrder = providerOrder;
+                            pol.article = article;
+                            new ProviderOrderLineBLO(db).Save(pol);
+                            ArticlesList.Add(article);
+                            Articles_dgv.DataSource = null;
+                            Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
+                            Articles_c_listbx.DataSource = null;
+                            Articles_c_listbx.DataSource = ArticlesList;
+                        }
                     }
                 }
             }
@@ -172,14 +190,29 @@ namespace ShopManagement.Forms.Form_Buy_Order
             string message = "Do You want to unselected the article from the list";
            if(MessageBox.Show(message,"Confirmation Messag",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Article article = new Article();
-                article = new ArticlesBLO(db).GetByID(Convert.ToInt32(Articles_dgv.CurrentRow.Cells[1].Value));
-                ProviderOrderLine pol = new ProviderOrderLine();
-                pol = new ProviderOrderLineBLO(db).GetPOLByArticle(article);
-                new ProviderOrderLineBLO(db).Delete(pol);
-                ArticlesList.Remove(article);
-                Articles_c_listbx.DataSource = null;
-                Articles_c_listbx.DataSource = ArticlesList;
+                if(operationType == "Order")
+                {
+                    Article article = new Article();
+                    article = new ArticlesBLO(db).GetByID(Convert.ToInt32(Articles_dgv.CurrentRow.Cells[1].Value));
+                    ProviderOrderLine pol = new ProviderOrderLine();
+                    pol = new ProviderOrderLineBLO(db).GetPOLByArticle(article);
+                    new ProviderOrderLineBLO(db).Delete(pol);
+                    ArticlesList.Remove(article);
+                    Articles_c_listbx.DataSource = null;
+                    Articles_c_listbx.DataSource = ArticlesList;
+                }
+                if(operationType == "Buy")
+                {
+                    Article article = new Article();
+                    article = new ArticlesBLO(db).GetByID(Convert.ToInt32(Articles_dgv.CurrentRow.Cells[1].Value));
+                    ProviderOrderLine pol = new ProviderOrderLine();
+                    pol = new ProviderOrderLineBLO(db).GetPOLByArticle(article);
+                    article.Quantity = article.Quantity - pol.Quantity;
+                    new ProviderOrderLineBLO(db).Delete(pol);
+                    ArticlesList.Remove(article);
+                    Articles_c_listbx.DataSource = null;
+                    Articles_c_listbx.DataSource = ArticlesList;
+                }
             }
 
             }

@@ -18,19 +18,17 @@ namespace App.Migrations
         ModelContext db = new ModelContext();
         protected override void Seed(App.ModelContext context)
         {
-            ////Default Providers
+            //Default Articles Category
+            context.ArticleCategories.AddOrUpdate(
+                ac => ac.Reference,
+                new ArticleCategory() { Id = 1 , Name = "n_ac1", Description = "dec_ac1", Ordre = 1, DateCreation = DateTime.Now },
+                new ArticleCategory() {  Id = 2,Name = "n_ac2", Description = "dec_ac2", Ordre = 2, DateCreation = DateTime.Now }
+                );
+            //Default providers
             //context.Providers.AddOrUpdate(
             //    p => p.Reference,
-            //    new Provider() { LastName = "ln_p1", Adresse = "ad_p1" , Reference = "ref_p1"},
-            //    new Provider() { LastName = "ln_p2", Adresse = "ad_p2", Reference = "ref_p2" }
-            //    );
-            ////Default Article Categories
-            //context.ArticleCategories.AddOrUpdate(
-            //    ac => ac.Reference,
-            //    new ArticleCategory() { Reference = "ref_ac1",Name = "n_ac1", Description = "dec_ac1"},
-            //    new ArticleCategory() { Reference = "ref_ac2", Name = "n_ac2", Description = "dec_ac2" },
-            //    new ArticleCategory() { Reference = "ref_ac3", Name = "n_ac3", Description = "dec_ac3" },
-            //    new ArticleCategory() { Reference = "ref_ac4", Name = "n_ac4", Description = "dec_ac4" }
+            //    new Provider {Id=1, Reference = "ref_p1", LastName = "ln_p1" , FirstName= "fn_p1" , Ordre = 1 , DateCreation = DateTime.Now},
+            //    new Provider {Id=2 , Reference = "ref_p2", LastName = "ln_p2", FirstName = "fn_p2", Ordre = 2, DateCreation = DateTime.Now }
             //    );
             
         }
