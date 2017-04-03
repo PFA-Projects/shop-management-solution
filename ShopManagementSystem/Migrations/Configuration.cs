@@ -18,13 +18,13 @@ namespace App.Migrations
         ModelContext db = new ModelContext();
         protected override void Seed(App.ModelContext context)
         {
-            //Default Articles Category
-            context.ArticleCategories.AddOrUpdate(
-                ac => ac.Reference,
-                new ArticleCategory() { Id = 1 , Name = "n_ac1", Description = "dec_ac1", Ordre = 1, DateCreation = DateTime.Now },
-                new ArticleCategory() {  Id = 2,Name = "n_ac2", Description = "dec_ac2", Ordre = 2, DateCreation = DateTime.Now }
-                );
-            //Default providers
+            ////Default Articles Category
+            //context.ArticleCategories.AddOrUpdate(
+            //    ac => ac.Reference,
+            //    new ArticleCategory() { Id = 1 , Name = "n_ac1", Description = "dec_ac1", Ordre = 1, DateCreation = DateTime.Now },
+            //    new ArticleCategory() {  Id = 2,Name = "n_ac2", Description = "dec_ac2", Ordre = 2, DateCreation = DateTime.Now }
+            //    );
+            ////Default providers
             //context.Providers.AddOrUpdate(
             //    p => p.Reference,
             //    new Provider {Id=1, Reference = "ref_p1", LastName = "ln_p1" , FirstName= "fn_p1" , Ordre = 1 , DateCreation = DateTime.Now},

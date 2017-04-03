@@ -164,12 +164,7 @@ namespace ShopManagement.Test
             }
         }
 
-        private void ArticlesCategory_listbox_Click(object sender, EventArgs e)
-        {
-            Articles_datagridview.DataSource = null;
-            Articles_datagridview.DataSource = new ArticlesBLO(db).SearchByCateory((ArticleCategory)ArticlesCategory_listbox.SelectedItem);
-           
-        }
+        
 
         private void Reference_textbox_TextChanged(object sender, EventArgs e)
         {

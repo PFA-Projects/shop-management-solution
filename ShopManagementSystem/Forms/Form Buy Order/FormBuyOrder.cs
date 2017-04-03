@@ -53,13 +53,11 @@ namespace ShopManagement.Forms.Form_Buy_Order
             provider_combo.DataSource = null;
             provider_combo.DataSource = new ProviderBLO(db).GetAll();
             //Disabled Articles Category listbox before pass
-            Articles_Category_grpbx.Enabled = false;
+            
             //Filling the articles Category listbox
-            Articles_c_listbx.DataSource = null;
-            Articles_c_listbx.DataSource = new ArticlesCategoryBLO(db).GetAll();
+           
             //
             Articles_dgv.Enabled = false;
-            Articles_c_listbx.Enabled = false;
             Articles_dgv.DataSource = null;
             Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
             Reference_textbox.Enabled = false;
@@ -83,6 +81,7 @@ namespace ShopManagement.Forms.Form_Buy_Order
             if (operationType == "Buy")
             {
                 providerOrder.OrderState = "Buy";
+                Deliveryde_grpx.Enabled = false;
                 providerOrder.orderDate = DateTime.Now;
             }
             providerOrder.Name = "Order N : " + providerOrder.Id;
@@ -106,17 +105,12 @@ namespace ShopManagement.Forms.Form_Buy_Order
             OpType_combo.Enabled = false;
             dde_dtp.Enabled = false;
             new ProviderOrderBLO(db).Save(providerOrder);
-            Articles_Category_grpbx.Enabled = true;
+            
             Articles_dgv.Enabled = true;
             Reference_textbox.Enabled = true;
-            Articles_c_listbx.Enabled = true;
+            
         }
-        //Filling the articles datagrdview by the articles Category selected
-        private void Articles_c_listbx_SelectedValueChanged(object sender, EventArgs e)
-        {
-            Articles_dgv.DataSource = null;
-            Articles_dgv.DataSource = new ArticlesBLO(db).SearchByCateory((ArticleCategory)Articles_c_listbx.SelectedItem);
-        }
+        
 
         //Filter the datagridview by the refrence textbox (search)
         private void Reference_textbox_TextChanged(object sender, EventArgs e)
@@ -155,18 +149,20 @@ namespace ShopManagement.Forms.Form_Buy_Order
                     else
                     {
                         if(operationType == "Buy"){
+                            article = new ArticlesBLO(db).GetByID(Convert.ToInt32(Articles_dgv.CurrentRow.Cells[1].Value));
                             ProviderOrderLine pol = new ProviderOrderLine();
                             pol.Quantity = float.Parse(Articles_dgv.CurrentRow.Cells[5].Value.ToString());
                             pol.providerOrder = providerOrder;
-                            article.Quantity = article.Quantity + pol.Quantity;
-                            pol.article = article;
-                            new ArticlesBLO(db).Save(article);
-                            new ProviderOrderLineBLO(db).Save(pol);
-                            ArticlesList.Add(article);
-                            Articles_dgv.DataSource = null;
-                            Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
-                            Articles_c_listbx.DataSource = null;
-                            Articles_c_listbx.DataSource = ArticlesList;
+                            if(pol.Quantity > 0)
+                            {
+                                
+                                pol.article = article;
+                                
+                                ArticlesList.Add(article);
+                                Articles_dgv.DataSource = null;
+                                Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
+                                
+                            }
                         }
                         if(operationType == "Order"){
                             ProviderOrderLine pol = new ProviderOrderLine();
@@ -177,8 +173,7 @@ namespace ShopManagement.Forms.Form_Buy_Order
                             ArticlesList.Add(article);
                             Articles_dgv.DataSource = null;
                             Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
-                            Articles_c_listbx.DataSource = null;
-                            Articles_c_listbx.DataSource = ArticlesList;
+                            
                         }
                     }
                 }
@@ -198,8 +193,7 @@ namespace ShopManagement.Forms.Form_Buy_Order
                     pol = new ProviderOrderLineBLO(db).GetPOLByArticle(article);
                     new ProviderOrderLineBLO(db).Delete(pol);
                     ArticlesList.Remove(article);
-                    Articles_c_listbx.DataSource = null;
-                    Articles_c_listbx.DataSource = ArticlesList;
+                    
                 }
                 if(operationType == "Buy")
                 {
@@ -210,8 +204,7 @@ namespace ShopManagement.Forms.Form_Buy_Order
                     article.Quantity = article.Quantity - pol.Quantity;
                     new ProviderOrderLineBLO(db).Delete(pol);
                     ArticlesList.Remove(article);
-                    Articles_c_listbx.DataSource = null;
-                    Articles_c_listbx.DataSource = ArticlesList;
+                    
                 }
             }
 
@@ -253,13 +246,11 @@ namespace ShopManagement.Forms.Form_Buy_Order
                 provider_combo.DataSource = null;
                 provider_combo.DataSource = new ProviderBLO(db).GetAll();
                 //Disabled Articles Category listbox before pass
-                Articles_Category_grpbx.Enabled = false;
+               
                 //Filling the articles Category listbox
-                Articles_c_listbx.DataSource = null;
-                Articles_c_listbx.DataSource = new ArticlesCategoryBLO(db).GetAll();
+                
                 //
                 Articles_dgv.Enabled = false;
-                Articles_c_listbx.Enabled = false;
                 Articles_dgv.DataSource = null;
                 Articles_dgv.DataSource = new ArticlesBLO(db).GetAll();
                 Reference_textbox.Enabled = false;

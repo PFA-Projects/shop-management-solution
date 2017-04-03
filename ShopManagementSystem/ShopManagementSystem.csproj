@@ -330,49 +330,9 @@
     <Compile Include="Forms\Form Statistic\FStatistic.Designer.cs">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703291721350_Add_data.cs" />
-    <Compile Include="Migrations\201703291721350_Add_data.Designer.cs">
-      <DependentUpon>201703291721350_Add_data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703291831227_Update_Table_ProviderOrderLine.cs" />
-    <Compile Include="Migrations\201703291831227_Update_Table_ProviderOrderLine.Designer.cs">
-      <DependentUpon>201703291831227_Update_Table_ProviderOrderLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703291833566_Update_Table_providerOrderLine2.cs" />
-    <Compile Include="Migrations\201703291833566_Update_Table_providerOrderLine2.Designer.cs">
-      <DependentUpon>201703291833566_Update_Table_providerOrderLine2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703291945275_Update_Table_ProviderOrderLine3.cs" />
-    <Compile Include="Migrations\201703291945275_Update_Table_ProviderOrderLine3.Designer.cs">
-      <DependentUpon>201703291945275_Update_Table_ProviderOrderLine3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703292001009_Update_Table_ProviderOrderLine4.cs" />
-    <Compile Include="Migrations\201703292001009_Update_Table_ProviderOrderLine4.Designer.cs">
-      <DependentUpon>201703292001009_Update_Table_ProviderOrderLine4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703292203242_Update_table_providerorderline6.cs" />
-    <Compile Include="Migrations\201703292203242_Update_table_providerorderline6.Designer.cs">
-      <DependentUpon>201703292203242_Update_table_providerorderline6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703292205051_Update3_Table_Article.cs" />
-    <Compile Include="Migrations\201703292205051_Update3_Table_Article.Designer.cs">
-      <DependentUpon>201703292205051_Update3_Table_Article.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703292223104_Update_Table_ProviderOrderLine7.cs" />
-    <Compile Include="Migrations\201703292223104_Update_Table_ProviderOrderLine7.Designer.cs">
-      <DependentUpon>201703292223104_Update_Table_ProviderOrderLine7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703300202261_Update_data_EStock.cs" />
-    <Compile Include="Migrations\201703300202261_Update_data_EStock.Designer.cs">
-      <DependentUpon>201703300202261_Update_data_EStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703300300384_Delete_Table_providerDelivery.cs" />
-    <Compile Include="Migrations\201703300300384_Delete_Table_providerDelivery.Designer.cs">
-      <DependentUpon>201703300300384_Delete_Table_providerDelivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703300415164_Update_Table_Article4.cs" />
-    <Compile Include="Migrations\201703300415164_Update_Table_Article4.Designer.cs">
-      <DependentUpon>201703300415164_Update_Table_Article4.cs</DependentUpon>
+    <Compile Include="Migrations\201704011654042_Add-data.cs" />
+    <Compile Include="Migrations\201704011654042_Add-data.Designer.cs">
+      <DependentUpon>201704011654042_Add-data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -576,38 +536,8 @@
     <EmbeddedResource Include="Forms\Form Statistic\FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703291721350_Add_data.resx">
-      <DependentUpon>201703291721350_Add_data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703291831227_Update_Table_ProviderOrderLine.resx">
-      <DependentUpon>201703291831227_Update_Table_ProviderOrderLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703291833566_Update_Table_providerOrderLine2.resx">
-      <DependentUpon>201703291833566_Update_Table_providerOrderLine2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703291945275_Update_Table_ProviderOrderLine3.resx">
-      <DependentUpon>201703291945275_Update_Table_ProviderOrderLine3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703292001009_Update_Table_ProviderOrderLine4.resx">
-      <DependentUpon>201703292001009_Update_Table_ProviderOrderLine4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703292203242_Update_table_providerorderline6.resx">
-      <DependentUpon>201703292203242_Update_table_providerorderline6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703292205051_Update3_Table_Article.resx">
-      <DependentUpon>201703292205051_Update3_Table_Article.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703292223104_Update_Table_ProviderOrderLine7.resx">
-      <DependentUpon>201703292223104_Update_Table_ProviderOrderLine7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703300202261_Update_data_EStock.resx">
-      <DependentUpon>201703300202261_Update_data_EStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703300300384_Delete_Table_providerDelivery.resx">
-      <DependentUpon>201703300300384_Delete_Table_providerDelivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703300415164_Update_Table_Article4.resx">
-      <DependentUpon>201703300415164_Update_Table_Article4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704011654042_Add-data.resx">
+      <DependentUpon>201704011654042_Add-data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

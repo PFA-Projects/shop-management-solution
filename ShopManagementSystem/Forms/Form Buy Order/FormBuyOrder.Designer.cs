@@ -38,8 +38,6 @@
             this.Deliveryde_grpx = new System.Windows.Forms.GroupBox();
             this.dde_dtp = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Articles_Category_grpbx = new System.Windows.Forms.GroupBox();
-            this.Articles_c_listbx = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Articles_dgv = new System.Windows.Forms.DataGridView();
@@ -57,22 +55,21 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_result = new System.Windows.Forms.Button();
             this.result_grpbx = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.provider_tb = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.articlescount_tb = new System.Windows.Forms.TextBox();
-            this.DeliveryDateExp_tb = new System.Windows.Forms.Label();
-            this.delivery_tb = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.total_tb = new System.Windows.Forms.TextBox();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.total_tb = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.delivery_tb = new System.Windows.Forms.TextBox();
+            this.DeliveryDateExp_tb = new System.Windows.Forms.Label();
+            this.articlescount_tb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.provider_tb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Deliveryde_grpx.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.Articles_Category_grpbx.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Articles_dgv)).BeginInit();
@@ -172,7 +169,7 @@
             this.Deliveryde_grpx.Controls.Add(this.dde_dtp);
             this.Deliveryde_grpx.Location = new System.Drawing.Point(3, 121);
             this.Deliveryde_grpx.Name = "Deliveryde_grpx";
-            this.Deliveryde_grpx.Size = new System.Drawing.Size(164, 167);
+            this.Deliveryde_grpx.Size = new System.Drawing.Size(197, 167);
             this.Deliveryde_grpx.TabIndex = 4;
             this.Deliveryde_grpx.TabStop = false;
             this.Deliveryde_grpx.Text = "Delivery Date expected : ";
@@ -188,9 +185,8 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.65678F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.34322F));
-            this.tableLayoutPanel3.Controls.Add(this.Articles_Category_grpbx, 0, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.735776F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.26422F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(212, 3);
@@ -201,27 +197,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1037, 430);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // Articles_Category_grpbx
-            // 
-            this.Articles_Category_grpbx.Controls.Add(this.Articles_c_listbx);
-            this.Articles_Category_grpbx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Articles_Category_grpbx.Location = new System.Drawing.Point(3, 3);
-            this.Articles_Category_grpbx.Name = "Articles_Category_grpbx";
-            this.Articles_Category_grpbx.Size = new System.Drawing.Size(125, 424);
-            this.Articles_Category_grpbx.TabIndex = 0;
-            this.Articles_Category_grpbx.TabStop = false;
-            this.Articles_Category_grpbx.Text = "Articles Category : ";
-            // 
-            // Articles_c_listbx
-            // 
-            this.Articles_c_listbx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Articles_c_listbx.FormattingEnabled = true;
-            this.Articles_c_listbx.Location = new System.Drawing.Point(3, 16);
-            this.Articles_c_listbx.Name = "Articles_c_listbx";
-            this.Articles_c_listbx.Size = new System.Drawing.Size(119, 405);
-            this.Articles_c_listbx.TabIndex = 0;
-            this.Articles_c_listbx.SelectedValueChanged += new System.EventHandler(this.Articles_c_listbx_SelectedValueChanged);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -230,12 +205,12 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(134, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(21, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(900, 424);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1013, 424);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -251,7 +226,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.67943F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.32057F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(640, 418);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(721, 418);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // Articles_dgv
@@ -268,7 +243,7 @@
             this.Articles_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Articles_dgv.Location = new System.Drawing.Point(3, 56);
             this.Articles_dgv.Name = "Articles_dgv";
-            this.Articles_dgv.Size = new System.Drawing.Size(634, 359);
+            this.Articles_dgv.Size = new System.Drawing.Size(715, 359);
             this.Articles_dgv.TabIndex = 0;
             this.Articles_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Articles_dgv_CellContentClick);
             // 
@@ -320,7 +295,7 @@
             // Reference_textbox
             // 
             this.Reference_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Reference_textbox.Location = new System.Drawing.Point(312, 30);
+            this.Reference_textbox.Location = new System.Drawing.Point(393, 30);
             this.Reference_textbox.Name = "Reference_textbox";
             this.Reference_textbox.Size = new System.Drawing.Size(325, 20);
             this.Reference_textbox.TabIndex = 1;
@@ -334,12 +309,12 @@
             this.tableLayoutPanel6.Controls.Add(this.slected_articles_grpbx, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(649, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(730, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(248, 418);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(280, 418);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // slected_articles_grpbx
@@ -348,7 +323,7 @@
             this.slected_articles_grpbx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slected_articles_grpbx.Location = new System.Drawing.Point(3, 3);
             this.slected_articles_grpbx.Name = "slected_articles_grpbx";
-            this.slected_articles_grpbx.Size = new System.Drawing.Size(87, 412);
+            this.slected_articles_grpbx.Size = new System.Drawing.Size(99, 412);
             this.slected_articles_grpbx.TabIndex = 0;
             this.slected_articles_grpbx.TabStop = false;
             this.slected_articles_grpbx.Text = "Selected Articles";
@@ -359,7 +334,7 @@
             this.articles_selected_lb.FormattingEnabled = true;
             this.articles_selected_lb.Location = new System.Drawing.Point(3, 16);
             this.articles_selected_lb.Name = "articles_selected_lb";
-            this.articles_selected_lb.Size = new System.Drawing.Size(81, 393);
+            this.articles_selected_lb.Size = new System.Drawing.Size(93, 393);
             this.articles_selected_lb.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -370,18 +345,18 @@
             this.tableLayoutPanel7.Controls.Add(this.btn_result, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.result_grpbx, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(96, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(108, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.65049F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.34952F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(149, 412);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(169, 412);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // btn_result
             // 
             this.btn_result.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_result.Location = new System.Drawing.Point(71, 21);
+            this.btn_result.Location = new System.Drawing.Point(91, 22);
             this.btn_result.Name = "btn_result";
             this.btn_result.Size = new System.Drawing.Size(75, 23);
             this.btn_result.TabIndex = 0;
@@ -401,80 +376,12 @@
             this.result_grpbx.Controls.Add(this.provider_tb);
             this.result_grpbx.Controls.Add(this.label1);
             this.result_grpbx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.result_grpbx.Location = new System.Drawing.Point(3, 50);
+            this.result_grpbx.Location = new System.Drawing.Point(3, 51);
             this.result_grpbx.Name = "result_grpbx";
-            this.result_grpbx.Size = new System.Drawing.Size(143, 359);
+            this.result_grpbx.Size = new System.Drawing.Size(163, 358);
             this.result_grpbx.TabIndex = 1;
             this.result_grpbx.TabStop = false;
             this.result_grpbx.Text = "Result : ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Provider : ";
-            // 
-            // provider_tb
-            // 
-            this.provider_tb.Enabled = false;
-            this.provider_tb.Location = new System.Drawing.Point(28, 71);
-            this.provider_tb.Name = "provider_tb";
-            this.provider_tb.Size = new System.Drawing.Size(109, 20);
-            this.provider_tb.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Articles Count : ";
-            // 
-            // articlescount_tb
-            // 
-            this.articlescount_tb.Enabled = false;
-            this.articlescount_tb.Location = new System.Drawing.Point(28, 156);
-            this.articlescount_tb.Name = "articlescount_tb";
-            this.articlescount_tb.Size = new System.Drawing.Size(109, 20);
-            this.articlescount_tb.TabIndex = 3;
-            // 
-            // DeliveryDateExp_tb
-            // 
-            this.DeliveryDateExp_tb.AutoSize = true;
-            this.DeliveryDateExp_tb.Location = new System.Drawing.Point(7, 207);
-            this.DeliveryDateExp_tb.Name = "DeliveryDateExp_tb";
-            this.DeliveryDateExp_tb.Size = new System.Drawing.Size(128, 13);
-            this.DeliveryDateExp_tb.TabIndex = 4;
-            this.DeliveryDateExp_tb.Text = "Delivery Date Expected : ";
-            // 
-            // delivery_tb
-            // 
-            this.delivery_tb.Enabled = false;
-            this.delivery_tb.Location = new System.Drawing.Point(28, 235);
-            this.delivery_tb.Name = "delivery_tb";
-            this.delivery_tb.Size = new System.Drawing.Size(109, 20);
-            this.delivery_tb.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 269);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Total Price : ";
-            // 
-            // total_tb
-            // 
-            this.total_tb.Enabled = false;
-            this.total_tb.Location = new System.Drawing.Point(28, 285);
-            this.total_tb.Name = "total_tb";
-            this.total_tb.Size = new System.Drawing.Size(109, 20);
-            this.total_tb.TabIndex = 7;
             // 
             // btn_cancel
             // 
@@ -485,6 +392,74 @@
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // total_tb
+            // 
+            this.total_tb.Enabled = false;
+            this.total_tb.Location = new System.Drawing.Point(28, 285);
+            this.total_tb.Name = "total_tb";
+            this.total_tb.Size = new System.Drawing.Size(109, 20);
+            this.total_tb.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 269);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Total Price : ";
+            // 
+            // delivery_tb
+            // 
+            this.delivery_tb.Enabled = false;
+            this.delivery_tb.Location = new System.Drawing.Point(28, 235);
+            this.delivery_tb.Name = "delivery_tb";
+            this.delivery_tb.Size = new System.Drawing.Size(109, 20);
+            this.delivery_tb.TabIndex = 5;
+            // 
+            // DeliveryDateExp_tb
+            // 
+            this.DeliveryDateExp_tb.AutoSize = true;
+            this.DeliveryDateExp_tb.Location = new System.Drawing.Point(7, 207);
+            this.DeliveryDateExp_tb.Name = "DeliveryDateExp_tb";
+            this.DeliveryDateExp_tb.Size = new System.Drawing.Size(128, 13);
+            this.DeliveryDateExp_tb.TabIndex = 4;
+            this.DeliveryDateExp_tb.Text = "Delivery Date Expected : ";
+            // 
+            // articlescount_tb
+            // 
+            this.articlescount_tb.Enabled = false;
+            this.articlescount_tb.Location = new System.Drawing.Point(28, 156);
+            this.articlescount_tb.Name = "articlescount_tb";
+            this.articlescount_tb.Size = new System.Drawing.Size(109, 20);
+            this.articlescount_tb.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Articles Count : ";
+            // 
+            // provider_tb
+            // 
+            this.provider_tb.Enabled = false;
+            this.provider_tb.Location = new System.Drawing.Point(28, 71);
+            this.provider_tb.Name = "provider_tb";
+            this.provider_tb.Size = new System.Drawing.Size(109, 20);
+            this.provider_tb.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Provider : ";
             // 
             // FormBuyOrder
             // 
@@ -501,7 +476,6 @@
             this.groupBox2.ResumeLayout(false);
             this.Deliveryde_grpx.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.Articles_Category_grpbx.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -527,8 +501,6 @@
         private System.Windows.Forms.DateTimePicker dde_dtp;
         private System.Windows.Forms.Button btn_pass;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.GroupBox Articles_Category_grpbx;
-        private System.Windows.Forms.ListBox Articles_c_listbx;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.DataGridView Articles_dgv;

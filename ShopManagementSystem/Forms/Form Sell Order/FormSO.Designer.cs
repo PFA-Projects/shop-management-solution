@@ -216,7 +216,7 @@
             resources.ApplyResources(this.ArticlesCategory_listbox, "ArticlesCategory_listbox");
             this.ArticlesCategory_listbox.FormattingEnabled = true;
             this.ArticlesCategory_listbox.Name = "ArticlesCategory_listbox";
-            this.ArticlesCategory_listbox.Click += new System.EventHandler(this.ArticlesCategory_listbox_Click);
+        //    this.ArticlesCategory_listbox.Click += new System.EventHandler(this.ArticlesCategory_listbox_Click);
             this.ArticlesCategory_listbox.SelectedValueChanged += new System.EventHandler(this.ArticlesCategory_listbox_SelectedValueChanged);
             // 
             // tableLayoutPanel4
