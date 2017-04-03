@@ -1,8 +1,4 @@
-﻿
-using GenericWinForm.Demo;
-using ShopManagement.Forms.Form_Buy_Order;
-using ShopManagement.Forms.Form_Menu;
-using ShopManagement.Test;
+﻿using ShopManagement.Forms.Form_Buy_Order;
 using System;
 using System.Windows.Forms;
 

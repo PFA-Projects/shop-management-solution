@@ -24,17 +24,17 @@ namespace ShopManagement.BLL
         }
 
         //Search Articles By Category
-        //public List<Article> SearchByCateory(ArticleCategory articlecategory)
-        //{
-        //    var query = from a in db.Articles
-        //                where a.articleCategory.Id == articlecategory.Id
+        public List<Article> SearchByCateory(ArticleCategory articlecategory)
+        {
+            var query = from a in db.Articles
+                        where a.articleCategory.Id == articlecategory.Id
 
-        //                select a;
-        //    return query.ToList<Article>();
-        //}
+                        select a;
+            return query.ToList<Article>();
+        }
 
         //Get Articles By Provider and the state article is order
-        
+
         //Search articles By Providers
         //public List<Article> SearchByProvider(Provider provider)
         //{
@@ -43,8 +43,8 @@ namespace ShopManagement.BLL
         //                select a;
         //    return query.ToList<Article>();
         //}
-        
-       
+
+
         //Difference between 2 listes
         public List<Article> differenceListes(List<Article> liste1 , List<Article> liste2)
         {

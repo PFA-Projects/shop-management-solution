@@ -14,7 +14,7 @@
     public class ModelContext : DbContext
     {
 
-     public ModelContext() : base(@"data source =DELL-PC; initial catalog =ShopManagement; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
+     public ModelContext() : base(@"data source =DELL-PC; initial catalog =Test_sh; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
 
 
         {

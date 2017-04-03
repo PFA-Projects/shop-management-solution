@@ -39,5 +39,14 @@ namespace ShopManagement.BLL
                         select pol;
             return query.ElementAt(0);
         }
+
+        // Get Provider Order Line By Article and Provider Order
+        public List<ProviderOrderLine> GetPoLByArticleandPO(Article article,ProviderOrder po)
+        {
+            var query = from pol in db.ProviderOrderLines
+                        where (pol.article.Id == article.Id) && (pol.providerOrder.Id == po.Id)
+                        select pol;
+            return query.ToList<ProviderOrderLine>();
+        }
     }
 }
