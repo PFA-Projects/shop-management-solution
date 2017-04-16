@@ -1,4 +1,5 @@
-﻿using App;
+﻿// Mariam Ait Al
+using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
 using System;
@@ -21,7 +22,7 @@ namespace ShopManagement.BLL
         public ProviderOrderBLO() : base()
         {
         }
-        //Get Provider Order By Provider
+        //Get Provider Orders By Provider
         public List<ProviderOrder> GetPOByProvider(Provider provider)
         {
             var query = from po in db.Orders

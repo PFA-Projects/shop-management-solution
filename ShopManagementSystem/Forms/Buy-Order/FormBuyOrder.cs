@@ -54,13 +54,11 @@ namespace ShopManagement.Forms.Form_Buy_Order
             Articles_Category_lb.Enabled = false;
             //
             search_tb.Enabled = false;
-            //
-           
-           //
-            
-            //
             
         }
+        /// <summary>
+        /// Define the Operation s Type (Order || Buy)
+        /// </summary>
         string OperationType = "";
         private void OpType_combo_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -79,7 +77,9 @@ namespace ShopManagement.Forms.Form_Buy_Order
             else
                 dde_grpx.Enabled = false;
         }
-        //
+        /// <summary>
+        /// Define the Provider s Name if the Provider s type is object
+        /// </summary>
         Provider provider = new Provider();
         private void pro_combo_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -88,13 +88,19 @@ namespace ShopManagement.Forms.Form_Buy_Order
                 provider = (Provider)pro_combo.SelectedItem;
             }
         }
-        //
+        /// <summary>
+        /// Define the Order delivery date expected if the Operation type is Order !
+        /// </summary>
         DateTime DeliveryDateExpected = DateTime.Now;
         private void dd_dtp_ValueChanged(object sender, EventArgs e)
         {
             DeliveryDateExpected = dd_dtp.Value;
         }
-        //
+        /// <summary>
+        /// 1- Confirm about the informations selected 
+        ///    Provider Type / Operation Type / Delivery date Expected
+        /// 2 - Add a Provider Order Line
+        /// </summary>
         ProviderOrder po = new ProviderOrder();
         private void btn_confirm_Click(object sender, EventArgs e)
         {
@@ -144,7 +150,9 @@ namespace ShopManagement.Forms.Form_Buy_Order
         }
 
 
-        //
+        /// <summary>
+        /// Define the Provider Order s  type
+        /// </summary>
         string ProviderType = "";
         private void pro_rdb_CheckedChanged(object sender, EventArgs e)
         {
@@ -154,7 +162,10 @@ namespace ShopManagement.Forms.Form_Buy_Order
             pro_combo.DataSource = null;
             pro_combo.DataSource = new ProviderBLO(db).GetAll();
         }
-        //
+
+        /// <summary>
+        /// in case of Provider type is Id ( means unknown provider )
+        /// </summary>
         private void id_pro_label_CheckedChanged(object sender, EventArgs e)
         {
             ProviderType = "Id";
@@ -162,13 +173,15 @@ namespace ShopManagement.Forms.Form_Buy_Order
             pro_combo.Enabled = false;
             providerId_label.Text = (new ProviderOrderLineBLO(db).Count() + 1).ToString();
         }
-        //
+        /// <summary>
+        /// Get All Articles By Article Category Selected
+        /// </summary>
         private void Articles_Category_lb_Click(object sender, EventArgs e)
         {
             Articles_dgv.DataSource = null;
             Articles_dgv.DataSource = new ArticlesBLO(db).SearchByCateory((ArticleCategory)Articles_Category_lb.SelectedItem);
         }
-        //
+        // Virtual Articles List To collect all articles checked
         List<Article> ArticlesList = new List<Article>();
         //
         float TotalPrice = 0;
@@ -179,6 +192,7 @@ namespace ShopManagement.Forms.Form_Buy_Order
                 this.Articles_dgv.CommitEdit(DataGridViewDataErrorContexts.Commit);
             if ((bool)this.Articles_dgv.CurrentCell.Value == true)
             {
+                // in case of Requierd quantity datagrid view textbox is null
                 if (Articles_dgv.CurrentRow.Cells[2].Value == null)
                 {
                     MessageBox.Show("Vous avez  oblige de remplire 'Required Quantity ' avant !");
@@ -238,7 +252,9 @@ namespace ShopManagement.Forms.Form_Buy_Order
         {
             
         }
-
+        /// <summary>
+        /// Start another new  Operation 
+        /// </summary>
         private void btn_next_Click(object sender, EventArgs e)
         {
             string Message = "Do You really want To start another Operation ?";
@@ -249,7 +265,9 @@ namespace ShopManagement.Forms.Form_Buy_Order
                 f.Show();
             }
         }
-        //
+        /// <summary>
+        /// Filter Articles with artcile s reference textbox
+        /// </summary>
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
             Articles_dgv.DataSource = null;

@@ -24,7 +24,7 @@ namespace ShopManagement.BLL
         {
         }
 
-        //Search LArticlesCategory List By Reference
+        //Search Article Categories  List By Reference
         public ArticleCategory SearchByReference(string articleCategory_reference)
         {
             var query = from ac in db.ArticleCategories

@@ -303,7 +303,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Entities\Statistic.cs" />
     <Compile Include="Forms\Buy-Order\FormBuyOrder.cs">
       <SubType>Form</SubType>
     </Compile>
