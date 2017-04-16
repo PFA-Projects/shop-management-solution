@@ -24,7 +24,12 @@ namespace ShopManagement.Entities
         [DisplayProperty(Titre = "Description")]
         [EntryForm]
         [DataGrid]
-        [Filter]
         public string Description { get; set; }
+
+        //Tostring 
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

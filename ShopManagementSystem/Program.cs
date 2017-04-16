@@ -1,10 +1,9 @@
-﻿using App;
-using GenericWinForm.Demo;
-using ShopManagement.Sell;
+﻿using ShopManagement.Forms.Buy_Order__Historic;
+using ShopManagement.Forms.Form_Buy_Order;
+using ShopManagement.Forms.Form_Menu;
+using ShopManagement.Forms.Sell_Order;
+using ShopManagement.Forms.Statistic;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GenericWinFormApplication
@@ -19,7 +18,7 @@ namespace GenericWinFormApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuApplication());
+            Application.Run(new FormMenu());
         }
     }
 
