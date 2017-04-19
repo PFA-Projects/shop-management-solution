@@ -53,7 +53,7 @@
         public virtual DbSet<Expense> Expenses { get; set; }
         public virtual DbSet<configuration> configurations { get; set; }
         public virtual DbSet<ProviderOrderLine> ProviderOrderLines { get; set; }
-        public virtual DbSet<Statistic> Statistics { get; set; }
+      //  public virtual DbSet<Statistic> Statistics { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
