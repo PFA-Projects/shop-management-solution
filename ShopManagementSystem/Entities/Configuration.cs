@@ -1,4 +1,6 @@
 ﻿//Mariam Ait Al
+
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,29 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
-    public class Configuration:BaseEntity
+    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
+    [Menu]
+    public class configuration:BaseEntity
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public float value { get; set; }
-        public string TypeValue { get; set; }
+        
+
+        [DisplayProperty(Titre = "TVA")]
+        [EntryForm]
+        [DataGrid]
+        
+        public float TVA { get; set; }
+
+        [DisplayProperty(Titre = "RiskOfStock")]
+        [EntryForm]
+        [DataGrid]
+       
+        public int RiskOfStock { get; set; }
+
+        public configuration()
+        {
+            TVA = 20 ;
+            RiskOfStock = 10;
+        }
+
     }
 }

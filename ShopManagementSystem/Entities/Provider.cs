@@ -30,19 +30,16 @@ namespace ShopManagement.Entities
         [DisplayProperty(Titre = "Adresse")]
         [EntryForm]
         [DataGrid]
-        [Filter]
         public string Adresse { get; set; }
 
         [DisplayProperty(Titre = "Phone")]
         [EntryForm]
         [DataGrid]
-        [Filter]
         public string Phone { get; set; }
 
         [DisplayProperty(Titre = "Email")]
         [EntryForm]
         [DataGrid]
-        [Filter]
         public string Email { get; set; }
     }
 }

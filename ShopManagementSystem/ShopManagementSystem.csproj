@@ -33,8 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL" />
-    <Reference Include="Castle.Windsor, Version=3.4.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -46,6 +44,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
+    <Reference Include="GwinField, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Gwin Library\GwinField.dll</HintPath>
+    </Reference>
     <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
@@ -54,6 +56,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,144 +68,284 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ArticlesBLO.cs" />
+    <Compile Include="BLL\ArticlesCategoryBLO.cs" />
     <Compile Include="BLL\BaseBLO.cs" />
-    <Compile Include="BLL\Class1.cs" />
+    <Compile Include="BLL\configurationBLO.cs" />
+    <Compile Include="BLL\CustomerOrderLineBLO.cs" />
+    <Compile Include="BLL\CustomerOrdersBLO.cs" />
+    <Compile Include="BLL\CustomersBLO.cs" />
+    <Compile Include="BLL\ExpenseCategoryBLO.cs" />
+    <Compile Include="BLL\ExpensesBLO.cs" />
+    <Compile Include="BLL\ProviderBLO.cs" />
+    <Compile Include="BLL\ProviderOrderBLO.cs" />
+    <Compile Include="BLL\ProviderOrderLineBLO.cs" />
     <Compile Include="BLL\Security\RoleBAO.cs" />
-    <Compile Include="Entities\Configuration.cs" />
-    <Compile Include="Entities\Cost.cs" />
-    <Compile Include="Entities\CostCategory.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\CustomerDelivery.cs" />
-    <Compile Include="Entities\CustomerOrder.cs" />
-    <Compile Include="Entities\CustomerOrderLine.cs" />
-    <Compile Include="Entities\Notification.cs" />
-    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.ar.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.fr.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.ar.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.fr.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.ar.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.Designer.cs" />
-    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.fr.Designer.cs" />
-    <Compile Include="Entities\Resources\Customer\Customer.ar.Designer.cs" />
-    <Compile Include="Entities\Resources\Customer\Customer.Designer.cs" />
-    <Compile Include="Entities\Resources\Customer\Customer.fr.Designer.cs" />
-    <Compile Include="Entities\User\AppUser.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleCategory.cs" />
-    <Compile Include="Entities\Delivery.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderLine.cs" />
+    <Compile Include="Entities\configuration.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\CustomerOrder.cs" />
+    <Compile Include="Entities\CustomerOrderLine.cs" />
+    <Compile Include="Entities\Expense.cs" />
+    <Compile Include="Entities\ExpenseCategory.cs" />
+    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\ProviderOrder.cs" />
+    <Compile Include="Entities\ProviderOrderLine.cs" />
     <Compile Include="Entities\Resources\AppUser\AppUser.ar.Designer.cs">
       <DependentUpon>AppUser.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\AppUser\AppUser.Designer.cs">
+      <DependentUpon>AppUser.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\AppUser\AppUser.fr.Designer.cs">
       <DependentUpon>AppUser.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\AppUser\AppUser.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppUser.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.ar.Designer.cs">
       <DependentUpon>ArticleCategory.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.Designer.cs">
+      <DependentUpon>ArticleCategory.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.fr.Designer.cs">
       <DependentUpon>ArticleCategory.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\ArticleCategory\ArticleCategory.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArticleCategory.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Article\Article.ar.Designer.cs">
       <DependentUpon>Article.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Article\Article.Designer.cs">
+      <DependentUpon>Article.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\Article\Article.fr.Designer.cs">
       <DependentUpon>Article.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Entities\Resources\Article\Article.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Entities\Resources\configuration\configuration.ar.Designer.cs">
+      <DependentUpon>configuration.ar.resx</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Article.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\configuration\configuration.Designer.cs">
+      <DependentUpon>configuration.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\configuration\configuration.fr.Designer.cs">
+      <DependentUpon>configuration.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.ar.Designer.cs">
+      <DependentUpon>CustomerDelivery.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.Designer.cs">
+      <DependentUpon>CustomerDelivery.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerDelivery\CustomerDelivery.fr.Designer.cs">
+      <DependentUpon>CustomerDelivery.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.ar.Designer.cs">
+      <DependentUpon>CustomerOrderLine.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.Designer.cs">
+      <DependentUpon>CustomerOrderLine.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.fr.Designer.cs">
+      <DependentUpon>CustomerOrderLine.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.ar.Designer.cs">
+      <DependentUpon>CustomerOrder.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.Designer.cs">
+      <DependentUpon>CustomerOrder.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\CustomerOrder\CustomerOrder.fr.Designer.cs">
+      <DependentUpon>CustomerOrder.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Customer\Customer.ar.Designer.cs">
+      <DependentUpon>Customer.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Customer\Customer.Designer.cs">
+      <DependentUpon>Customer.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Customer\Customer.fr.Designer.cs">
+      <DependentUpon>Customer.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\Delivery\Delivery.ar.Designer.cs">
       <DependentUpon>Delivery.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Delivery\Delivery.Designer.cs">
+      <DependentUpon>Delivery.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\Delivery\Delivery.fr.Designer.cs">
       <DependentUpon>Delivery.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Entities\Resources\Delivery\Delivery.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Entities\Resources\ExpenseCategory\ExpenseCategory.ar.Designer.cs">
+      <DependentUpon>ExpenseCategory.ar.resx</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Delivery.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\ExpenseCategory\ExpenseCategory.Designer.cs">
+      <DependentUpon>ExpenseCategory.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\ExpenseCategory\ExpenseCategory.fr.Designer.cs">
+      <DependentUpon>ExpenseCategory.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Expense\Expense.ar.Designer.cs">
+      <DependentUpon>Expense.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Expense\Expense.Designer.cs">
+      <DependentUpon>Expense.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Expense\Expense.fr.Designer.cs">
+      <DependentUpon>Expense.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\OrderLine\OrderLine.ar.Designer.cs">
       <DependentUpon>OrderLine.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\OrderLine\OrderLine.Designer.cs">
+      <DependentUpon>OrderLine.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\OrderLine\OrderLine.fr.Designer.cs">
       <DependentUpon>OrderLine.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\OrderLine\OrderLine.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderLine.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Order\Order.ar.Designer.cs">
       <DependentUpon>Order.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Order\Order.Designer.cs">
+      <DependentUpon>Order.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\Order\Order.fr.Designer.cs">
       <DependentUpon>Order.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\Order\Order.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Order.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Provider\Provider.ar.Designer.cs">
       <DependentUpon>Provider.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\Resources\Provider\Provider.Designer.cs">
+      <DependentUpon>Provider.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Resources\Provider\Provider.fr.Designer.cs">
       <DependentUpon>Provider.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\Provider\Provider.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Provider.resx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703211336248_InitDataBase.cs" />
-    <Compile Include="Migrations\201703211336248_InitDataBase.Designer.cs">
-      <DependentUpon>201703211336248_InitDataBase.cs</DependentUpon>
+    <Compile Include="Forms\Buy-Order\FormBuyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Buy-Order\FormBuyOrder.Designer.cs">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Buy-Order\FormLivraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Buy-Order\FormLivraison.Designer.cs">
+      <DependentUpon>FormLivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Menu\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Menu\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sell-Order\FormCustomerLivraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sell-Order\FormCustomerLivraison.Designer.cs">
+      <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sell-Order\FormSellOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sell-Order\FormSellOrder.Designer.cs">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Statistic\FormStatisticNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistic\FormStatisticNotifications.Designer.cs">
+      <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071523368_Update_Data.cs" />
+    <Compile Include="Migrations\201704071523368_Update_Data.Designer.cs">
+      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704191740521_Delete_Static_class.cs" />
+    <Compile Include="Migrations\201704191740521_Delete_Static_class.Designer.cs">
+      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
@@ -212,21 +355,8 @@
     <Compile Include="FormMenuApplication.Designer.cs">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Operations\Articles.cs" />
-    <Compile Include="Presentation\Article\ProjetView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation\Article\ProjetView.Designer.cs">
-      <DependentUpon>ProjetView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sell\FormSell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sell\FormSell.Designer.cs">
-      <DependentUpon>FormSell.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Entities\Resources\AppUser\AppUser.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppUser.ar.Designer.cs</LastGenOutput>
@@ -263,18 +393,66 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Article.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.ar.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.fr.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.ar.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.fr.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.ar.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.fr.resx" />
-    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.resx" />
-    <EmbeddedResource Include="Entities\Resources\Customer\Customer.ar.resx" />
-    <EmbeddedResource Include="Entities\Resources\Customer\Customer.fr.resx" />
-    <EmbeddedResource Include="Entities\Resources\Customer\Customer.resx" />
+    <EmbeddedResource Include="Entities\Resources\configuration\configuration.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>configuration.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\configuration\configuration.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>configuration.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\configuration\configuration.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>configuration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerDelivery.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerDelivery.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerDelivery\CustomerDelivery.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerDelivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrderLine.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrderLine.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrderLine\CustomerOrderLine.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrderLine.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrder.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrder.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\CustomerOrder\CustomerOrder.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrder.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Customer\Customer.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Customer.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Customer\Customer.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Customer.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Customer\Customer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.ar.Designer.cs</LastGenOutput>
@@ -286,6 +464,30 @@
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ExpenseCategory\ExpenseCategory.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExpenseCategory.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ExpenseCategory\ExpenseCategory.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExpenseCategory.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\ExpenseCategory\ExpenseCategory.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExpenseCategory.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Expense\Expense.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Expense.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Expense\Expense.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Expense.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Expense\Expense.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Expense.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\OrderLine\OrderLine.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -323,14 +525,68 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.ar.resx">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.fr.resx">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.resx">
+      <DependentUpon>FormBuyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.ar.resx">
+      <DependentUpon>FormLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.fr.resx">
+      <DependentUpon>FormLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.resx">
+      <DependentUpon>FormLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Menu\FormMenu.ar.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Menu\FormMenu.fr.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703211336248_InitDataBase.resx">
-      <DependentUpon>201703211336248_InitDataBase.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.ar.resx">
+      <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Article\ProjetView.resx">
-      <DependentUpon>ProjetView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.fr.resx">
+      <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.resx">
+      <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.ar.resx">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.fr.resx">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.resx">
+      <DependentUpon>FormSellOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.ar.resx">
+      <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.fr.resx">
+      <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.resx">
+      <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071523368_Update_Data.resx">
+      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191740521_Delete_Static_class.resx">
+      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -342,10 +598,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sell\FormSell.resx">
-      <DependentUpon>FormSell.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.Entity.Migrations.DbMigration.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -362,8 +616,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\Configuration\" />
-    <Folder Include="Entities\Sell\" />
+    <Content Include="ShopManagement.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

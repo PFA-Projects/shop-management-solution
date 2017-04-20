@@ -2,6 +2,7 @@
 // Name : ES-SARRAJ Fouad
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
+using System.Collections.Generic;
 
 namespace ShopManagement.Entities
 {
@@ -28,21 +29,19 @@ namespace ShopManagement.Entities
         public string Name { get; set; }
 
 
-
         // 
         // Price
         //
         [EntryForm(GroupeBox = "Price")]
         [DataGrid]
-        [Filter]
         public float BuyingPrice { get; set; }
-
 
         [EntryForm(GroupeBox = "Price")]
         [DataGrid]
         [Filter]
         public float SellingPrice { get; set; }
 
+        // 
         //  fr_stock
         //
         [EntryForm(GroupeBox = "fr_stock")]
@@ -54,9 +53,15 @@ namespace ShopManagement.Entities
         //  Classification
         //
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Classification")]
+        [EntryForm]
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
+
+       
+        
+        
+
+        
     }
 }
