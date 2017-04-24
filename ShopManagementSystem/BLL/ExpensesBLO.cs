@@ -15,7 +15,8 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Expenses Management
+    ///en :  Expenses Management
+    ///fr: Gestion depenses
     /// </summary>
     public class ExpensesBLO : BaseBLO<Expense>
     {

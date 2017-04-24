@@ -339,15 +339,6 @@
     <Compile Include="Presentation\Statistic\FormStatisticNotifications.Designer.cs">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Migrations\201704071523368_Update_Data.cs" />
-    <Compile Include="DAL\Migrations\201704071523368_Update_Data.Designer.cs">
-      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\Migrations\201704191740521_Delete_Static_class.cs" />
-    <Compile Include="DAL\Migrations\201704191740521_Delete_Static_class.Designer.cs">
-      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
       <SubType>Form</SubType>
@@ -581,12 +572,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Statistic\FormStatisticNotifications.resx">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DAL\Migrations\201704071523368_Update_Data.resx">
-      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DAL\Migrations\201704191740521_Delete_Static_class.resx">
-      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

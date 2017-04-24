@@ -14,7 +14,8 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Articles Management
+    /// en : Articles Management
+    /// fr : Gestion d'articles
     /// </summary>
     public class ArticlesBLO: BaseBLO<Article>
     {

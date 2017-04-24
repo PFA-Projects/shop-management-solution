@@ -14,7 +14,8 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Configuration Management
+    /// en : Configuration Management
+    /// fr : Gestion de configuration
     /// </summary>
     public class configurationBLO : BaseBLO<configuration>
     {

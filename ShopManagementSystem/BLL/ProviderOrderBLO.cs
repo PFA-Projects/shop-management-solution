@@ -14,7 +14,8 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Provider Order Manangement
+    ///en : Provider Order Manangement
+    ///fr : Gestion Commandes fournisseurs
     /// </summary>
     public class ProviderOrderBLO : BaseBLO<ProviderOrder>
     {

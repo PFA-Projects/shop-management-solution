@@ -15,7 +15,8 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Customer Order Management
+    /// en : Customer Order Management
+    /// fr : Gestion commandes Client
     /// </summary>
     public class CustomerOrdersBLO:BaseBLO<CustomerOrder>
     {

@@ -9,13 +9,13 @@
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
-    using Migrations;
+
 
     public class ModelContext : DbContext
     {
 
-         public ModelContext() : base(@"data source=.; initial catalog =App_ShopManagement; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
-        //public ModelContext() : base(@"data source=.; AttachDbFileName =|DataDirectory|\App_ShopManagement.mdf; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework;User Instance=True")
+         public ModelContext() : base(@"data source=.\SQLEXPRESS; initial catalog =sh; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
+        //public ModelContext() : base(@"data source=.; AttachDbFileName =|DataDirectory|\sh.mdf; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework;User Instance=True")
 
 
         {

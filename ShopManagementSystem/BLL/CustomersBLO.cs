@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace ShopManagement.BLL
 {
     /// <summary>
-    /// Customers Management
+    /// Gestion Clients 
     /// </summary>
     public class CustomersBLO: BaseBLO<Customer>
     {
