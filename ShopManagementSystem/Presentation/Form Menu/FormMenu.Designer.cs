@@ -1,4 +1,4 @@
-﻿namespace ShopManagement.Forms.Form_Menu
+﻿namespace ShopManagement.Presentation.Form_Menu
 {
     partial class FormMenu
     {

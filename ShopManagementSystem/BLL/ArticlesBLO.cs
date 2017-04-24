@@ -1,4 +1,6 @@
-﻿//Mariam Ait al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
@@ -11,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// Articles Management
+    /// </summary>
     public class ArticlesBLO: BaseBLO<Article>
     {
         ModelContext db = new ModelContext();
@@ -23,7 +28,11 @@ namespace ShopManagement.BLL
         {
         }
 
-        //Search Articles By Category
+        /// <summary>
+        /// Search Articles By Category
+        /// </summary>
+        /// <param name="articlecategory"></param>
+        /// <returns>Articles List</returns>
         public List<Article> SearchByCateory(ArticleCategory articlecategory)
         {
             var query = from a in db.Articles
@@ -33,7 +42,11 @@ namespace ShopManagement.BLL
             return query.ToList<Article>();
         }
 
-        // Get Articles By Reference
+         /// <summary>
+         /// Get Articles By Reference
+         /// </summary>
+         /// <param name="reference"></param>
+         /// <returns>Articles List</returns>
         public List<Article> SearchByReference(string reference)
         {
             var query = from a in db.Articles
@@ -54,7 +67,12 @@ namespace ShopManagement.BLL
         //}
         
 
-        //Difference between 2 listes
+        /// <summary>
+        /// Defference between two lists
+        /// </summary>
+        /// <param name="liste1">The first Articles List</param>
+        /// <param name="liste2">The second Articles list to compare</param>
+        /// <returns>Articles List</returns>
         public List<Article> differenceListes(List<Article> liste1 , List<Article> liste2)
         {
             var query = liste1.Where(a => !liste2.Any(a2 => a2.Id == a.Id));

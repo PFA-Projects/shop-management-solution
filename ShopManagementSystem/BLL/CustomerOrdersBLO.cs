@@ -1,4 +1,8 @@
-﻿using App;
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
+
+using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
 using System;
@@ -10,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// Customer Order Management
+    /// </summary>
     public class CustomerOrdersBLO:BaseBLO<CustomerOrder>
     {
         ModelContext db = new ModelContext();

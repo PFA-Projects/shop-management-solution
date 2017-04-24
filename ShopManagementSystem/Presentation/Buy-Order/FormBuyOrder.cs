@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 
 using App;
 using App.Gwin;
@@ -17,7 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopManagement.Forms.Form_Buy_Order
+namespace ShopManagement.Presentation.Form_Buy_Order
 {
     public partial class FormBuyOrder : Form
     {

@@ -1,4 +1,6 @@
-﻿// Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
@@ -12,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// Expenses Management
+    /// </summary>
     public class ExpensesBLO : BaseBLO<Expense>
     {
         ModelContext db = new ModelContext();
@@ -24,7 +29,16 @@ namespace ShopManagement.BLL
         {
         }
 
-        //Get Expenses By Start Date  and EndDate 
+        /// <summary>
+        /// Get expenses by start date && end date
+        /// </summary>
+        /// <param name="StartDate">Date Debut</param>//periode
+        /// <param name="EndDate">Date fin</param>//periode
+        /// <returns>
+        /// Expense Description
+        /// Expense price
+        /// expense Category
+        /// </returns>
         public List<Object> GetExpByStartDate_Ed(DateTime StartDate , DateTime EndDate)
         {
             var query = from e in db.Expenses
@@ -46,7 +60,14 @@ namespace ShopManagement.BLL
             return query.ToList<Object>();
         }
 
-        //Get List Expences By StartDate , EndDate
+        /// <summary>
+        /// Get expenses list by start date && end date
+        /// </summary>
+        /// <param name="StartDate">Date debut</param>//periode
+        /// <param name="EndDate">Date Fin</param>//periode
+        /// <returns>
+        /// Expenses List
+        /// </returns>
         public List<Expense> GetExpBySD_ES(DateTime StartDate , DateTime EndDate)
         {
             var query = from e in db.Expenses

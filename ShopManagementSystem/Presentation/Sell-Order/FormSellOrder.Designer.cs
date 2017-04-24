@@ -1,4 +1,4 @@
-﻿namespace ShopManagement.Forms.Sell_Order
+﻿namespace ShopManagement.Presentation.Sell_Order
 {
     partial class FormSellOrder
     {
