@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using App.Gwin;
 using App.Gwin.Entities.Secrurity.Authentication;
@@ -16,7 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopManagement.Forms.Buy_Order__Historic
+namespace ShopManagement.Presentation.Buy_Order__Historic
 {
     public partial class FormLivraison : Form
     {

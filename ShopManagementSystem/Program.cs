@@ -1,8 +1,8 @@
-﻿using ShopManagement.Forms.Buy_Order__Historic;
-using ShopManagement.Forms.Form_Buy_Order;
-using ShopManagement.Forms.Form_Menu;
-using ShopManagement.Forms.Sell_Order;
-using ShopManagement.Forms.Statistic;
+﻿using ShopManagement.Presentation.Buy_Order__Historic;
+using ShopManagement.Presentation.Form_Buy_Order;
+using ShopManagement.Presentation.Form_Menu;
+using ShopManagement.Presentation.Sell_Order;
+using ShopManagement.Presentation.Statistic;
 using System;
 using System.Windows.Forms;
 

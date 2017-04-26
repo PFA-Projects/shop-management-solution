@@ -303,51 +303,42 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Forms\Buy-Order\FormBuyOrder.cs">
+    <Compile Include="Presentation\Buy-Order\FormBuyOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Buy-Order\FormBuyOrder.Designer.cs">
+    <Compile Include="Presentation\Buy-Order\FormBuyOrder.Designer.cs">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Buy-Order\FormLivraison.cs">
+    <Compile Include="Presentation\Buy-Order\FormLivraison.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Buy-Order\FormLivraison.Designer.cs">
+    <Compile Include="Presentation\Buy-Order\FormLivraison.Designer.cs">
       <DependentUpon>FormLivraison.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Menu\FormMenu.cs">
+    <Compile Include="Presentation\Form Menu\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Menu\FormMenu.Designer.cs">
+    <Compile Include="Presentation\Form Menu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Sell-Order\FormCustomerLivraison.cs">
+    <Compile Include="Presentation\Sell-Order\FormCustomerLivraison.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Sell-Order\FormCustomerLivraison.Designer.cs">
+    <Compile Include="Presentation\Sell-Order\FormCustomerLivraison.Designer.cs">
       <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Sell-Order\FormSellOrder.cs">
+    <Compile Include="Presentation\Sell-Order\FormSellOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Sell-Order\FormSellOrder.Designer.cs">
+    <Compile Include="Presentation\Sell-Order\FormSellOrder.Designer.cs">
       <DependentUpon>FormSellOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Statistic\FormStatisticNotifications.cs">
+    <Compile Include="Presentation\Statistic\FormStatisticNotifications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Statistic\FormStatisticNotifications.Designer.cs">
+    <Compile Include="Presentation\Statistic\FormStatisticNotifications.Designer.cs">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704071523368_Update_Data.cs" />
-    <Compile Include="Migrations\201704071523368_Update_Data.Designer.cs">
-      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704191740521_Delete_Static_class.cs" />
-    <Compile Include="Migrations\201704191740521_Delete_Static_class.Designer.cs">
-      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="FormMenuApplication.cs">
       <SubType>Form</SubType>
@@ -525,68 +516,62 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.ar.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormBuyOrder.ar.resx">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.fr.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormBuyOrder.fr.resx">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormBuyOrder.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormBuyOrder.resx">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.ar.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormLivraison.ar.resx">
       <DependentUpon>FormLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.fr.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormLivraison.fr.resx">
       <DependentUpon>FormLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Buy-Order\FormLivraison.resx">
+    <EmbeddedResource Include="Presentation\Buy-Order\FormLivraison.resx">
       <DependentUpon>FormLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Menu\FormMenu.ar.resx">
+    <EmbeddedResource Include="Presentation\Form Menu\FormMenu.ar.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Menu\FormMenu.fr.resx">
+    <EmbeddedResource Include="Presentation\Form Menu\FormMenu.fr.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Menu\FormMenu.resx">
+    <EmbeddedResource Include="Presentation\Form Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx">
       <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.ar.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormCustomerLivraison.ar.resx">
       <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.fr.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormCustomerLivraison.fr.resx">
       <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormCustomerLivraison.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormCustomerLivraison.resx">
       <DependentUpon>FormCustomerLivraison.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.ar.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormSellOrder.ar.resx">
       <DependentUpon>FormSellOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.fr.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormSellOrder.fr.resx">
       <DependentUpon>FormSellOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell-Order\FormSellOrder.resx">
+    <EmbeddedResource Include="Presentation\Sell-Order\FormSellOrder.resx">
       <DependentUpon>FormSellOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.ar.resx">
+    <EmbeddedResource Include="Presentation\Statistic\FormStatisticNotifications.ar.resx">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.fr.resx">
+    <EmbeddedResource Include="Presentation\Statistic\FormStatisticNotifications.fr.resx">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistic\FormStatisticNotifications.resx">
+    <EmbeddedResource Include="Presentation\Statistic\FormStatisticNotifications.resx">
       <DependentUpon>FormStatisticNotifications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704071523368_Update_Data.resx">
-      <DependentUpon>201704071523368_Update_Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704191740521_Delete_Static_class.resx">
-      <DependentUpon>201704191740521_Delete_Static_class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

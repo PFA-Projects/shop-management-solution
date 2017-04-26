@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
@@ -11,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// en : Customer Order Line Management
+    /// fr : Gestion Ligne commange client 
+    /// </summary>
     public class CustomerOrderLineBLO : BaseBLO<CustomerOrderLine>
     {
         ModelContext db = new ModelContext();
@@ -21,8 +27,18 @@ namespace ShopManagement.BLL
         public CustomerOrderLineBLO() : base()
         {
         }
-
-        //Get Customer Order Lines By Operation type !
+       
+        /// <summary>
+        /// Get Customer Order Line by Operation Type 
+        /// </summary>
+        /// <param name="OperationType">Operation Type</param>
+        /// <returns> 
+        /// Customer Order Line Id 
+        /// customer order id
+        /// article reference
+        /// quantoty required
+        /// Total Price
+        /// </returns>
         public List<Object> GetCOlByOpType(string OperationType)
         {
             var query = from col in db.CustomerOrderLines
@@ -42,7 +58,17 @@ namespace ShopManagement.BLL
             return query.ToList<Object>();
         }
         
-        //Get Sell with StartDate and EndDate and OrderState = "sell"
+        /// <summary>
+        /// Get sells by start date && end date && order state == "sell"
+        /// </summary>
+        /// <param name="StartDate"> Start Date (Date Debut)</param> //Periode
+        /// <param name="EndDate">End Date (Date Fin) </param> //Periode
+        /// <returns>
+        /// customer order line id
+        /// customer order id
+        /// quantity
+        /// article selling price
+        /// </returns>
         public List<Object> GetCOLBySD_ED(DateTime StartDate , DateTime EndDate)
         {
             var query = from col in db.CustomerOrderLines
@@ -65,8 +91,14 @@ namespace ShopManagement.BLL
             return query.ToList<Object>();
         }
 
-       //Get Articles List COL whith StartDate , EndDate and orderStaet = "Sell"
-       public List<Article> GetArticles_SD_ED(DateTime StartDate , DateTime EndDate)
+
+        /// <summary>
+        /// Get articles list customer order line by start date && end date && order state = "sell"
+        /// </summary>
+        /// <param name="StartDate">Date Debut </param>//Periode
+        /// <param name="EndDate">Date fin</param>//Periode
+        /// <returns>Articles List </returns>
+        public List<Article> GetArticles_SD_ED(DateTime StartDate , DateTime EndDate)
         {
             var query = from col in db.CustomerOrderLines
                         join co in db.CustomerOrders

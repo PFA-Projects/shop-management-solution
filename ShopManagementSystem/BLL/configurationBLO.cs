@@ -1,4 +1,7 @@
-﻿using App;
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
+using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
 using System;
@@ -10,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// en : Configuration Management
+    /// fr : Gestion de configuration
+    /// </summary>
     public class configurationBLO : BaseBLO<configuration>
     {
         ModelContext db = new ModelContext();

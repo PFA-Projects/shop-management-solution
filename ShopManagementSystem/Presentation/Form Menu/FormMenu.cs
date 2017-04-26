@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using App.Gwin;
 using App.Gwin.Application.Presentation;
@@ -9,16 +11,16 @@ using GenericWinForm.Demo;
 using ShopManagement.BAL;
 using ShopManagement.BLL;
 using ShopManagement.Entities;
-using ShopManagement.Forms.Buy_Order__Historic;
-using ShopManagement.Forms.Form_Buy_Order;
-using ShopManagement.Forms.Sell_Order;
-using ShopManagement.Forms.Statistic;
+using ShopManagement.Presentation.Buy_Order__Historic;
+using ShopManagement.Presentation.Form_Buy_Order;
+using ShopManagement.Presentation.Sell_Order;
+using ShopManagement.Presentation.Statistic;
 using System;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ShopManagement.Forms.Form_Menu
+namespace ShopManagement.Presentation.Form_Menu
 {
     public partial class FormMenu : BaseForm
     {
@@ -149,7 +151,11 @@ namespace ShopManagement.Forms.Form_Menu
 
         private void frenchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            //
             ChangeLanguage(CultureInfo.CreateSpecificCulture("ar"));
+            //
+            
         }
 
 
@@ -165,10 +171,12 @@ namespace ShopManagement.Forms.Form_Menu
 
             if(cultureInfo.TwoLetterISOLanguageName == "ar")
             {
+                
                 GwinApp.Instance.user.Language = GwinApp.Languages.ar;
             }
             if(cultureInfo.TwoLetterISOLanguageName == "fr")
             {
+               
                 GwinApp.Instance.user.Language = GwinApp.Languages.fr;
             }
 
@@ -226,6 +234,8 @@ namespace ShopManagement.Forms.Form_Menu
 
         private void francaisToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            //
             ChangeLanguage(CultureInfo.CreateSpecificCulture("fr"));
         }
     }

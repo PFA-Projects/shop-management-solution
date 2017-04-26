@@ -1,4 +1,6 @@
-﻿//Mariam Ait al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
@@ -10,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
+    /// <summary>
+    /// fr : fournisseur
+    /// </summary>
     [GwinEntity(Localizable = true, DisplayMember = "LastName")]
     [Menu(Group ="Buy")]
     public class Provider:BaseEntity  

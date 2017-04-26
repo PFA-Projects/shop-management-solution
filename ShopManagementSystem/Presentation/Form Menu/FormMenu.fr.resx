@@ -118,33 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
-  </data>
-  <data name="managementToolStripMenuItem.Text" xml:space="preserve">
-    <value>Gestion</value>
-  </data>
-  <data name="buyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="buyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Achat</value>
-  </data>
-  <data name="sellToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="sellToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vente</value>
-  </data>
-  <data name="statisticToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 20</value>
-  </data>
-  <data name="statisticToolStripMenuItem.Text" xml:space="preserve">
-    <value>Statistiques</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>491, 24</value>
-  </data>
   <data name="providersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 22</value>
   </data>
@@ -178,11 +151,35 @@
   <data name="expensesToolStripMenuItem.Text" xml:space="preserve">
     <value>Deponses</value>
   </data>
+  <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="managementToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gestion</value>
+  </data>
+  <data name="buyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="buyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Achat</value>
+  </data>
   <data name="operationsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 22</value>
   </data>
   <data name="livraisonToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 22</value>
+  </data>
+  <data name="sellToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="sellToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vente</value>
+  </data>
+  <data name="statisticToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="statisticToolStripMenuItem.Text" xml:space="preserve">
+    <value>Statistiques</value>
   </data>
   <data name="frenchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -193,7 +190,10 @@
   <data name="francaisToolStripMenuItem.Text" xml:space="preserve">
     <value>Francais</value>
   </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 24</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>491, 56</value>
+    <value>491, 156</value>
   </data>
 </root>

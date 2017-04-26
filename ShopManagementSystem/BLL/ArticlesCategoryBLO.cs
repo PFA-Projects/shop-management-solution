@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 
 using App;
 using ShopManagement.BAL;
@@ -12,6 +14,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// en : Articles Category Management
+    /// fr : Gestion Category d'articles
+    /// </summary>
     public class ArticlesCategoryBLO:BaseBLO<ArticleCategory>
     {
         ModelContext db = new ModelContext();
@@ -24,7 +30,11 @@ namespace ShopManagement.BLL
         {
         }
 
-        //Search Article Categories  List By Reference
+        /// <summary>
+        /// Search Article Category Object By reference
+        /// </summary>
+        /// <param name="articleCategory_reference">Article Category reference</param>
+        /// <returns>Article Category</returns>
         public ArticleCategory SearchByReference(string articleCategory_reference)
         {
             var query = from ac in db.ArticleCategories

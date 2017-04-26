@@ -1,5 +1,7 @@
 ﻿// Name : Mariam Ait al
 // Name : ES-SARRAJ Fouad
+// Groupe : TDI204
+//Annee : 2017
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Collections.Generic;
 namespace ShopManagement.Entities
 {
     /// <summary>
-    /// 
+    /// fr : Article
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
@@ -59,6 +61,7 @@ namespace ShopManagement.Entities
         public ArticleCategory articleCategory { get; set; }
 
        
+        
         
         
 

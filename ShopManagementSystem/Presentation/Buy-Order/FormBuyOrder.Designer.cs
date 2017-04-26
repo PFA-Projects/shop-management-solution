@@ -1,4 +1,4 @@
-﻿namespace ShopManagement.Forms.Form_Buy_Order
+﻿namespace ShopManagement.Presentation.Form_Buy_Order
 {
     partial class FormBuyOrder
     {

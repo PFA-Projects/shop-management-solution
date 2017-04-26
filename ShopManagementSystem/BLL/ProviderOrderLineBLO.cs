@@ -1,4 +1,6 @@
-﻿// Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App;
 using ShopManagement.BAL;
 using ShopManagement.Entities;
@@ -11,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.BLL
 {
+    /// <summary>
+    /// en :Provider Order Line Management
+    /// fr : Gestion Ligne commande de fournisseur
+    /// </summary>
     public class ProviderOrderLineBLO : BaseBLO<ProviderOrderLine>
     {
         ModelContext db = new ModelContext();
@@ -23,7 +29,11 @@ namespace ShopManagement.BLL
         {
         }
 
-        //Get Provider Order Line By Provider Order
+        /// <summary>
+        /// Get ProviderOrderline list by provider order
+        /// </summary>
+        /// <param name="po">provider order</param>
+        /// <returns>provider order lines list</returns>
         public List<ProviderOrderLine> GetPOLByPO (ProviderOrder po)
         {
             var query = from pol in db.ProviderOrderLines
@@ -32,7 +42,11 @@ namespace ShopManagement.BLL
             return query.ToList<ProviderOrderLine>();
         }
 
-        //Get Provider Order Line By Article
+        /// <summary>
+        /// Get Provider order line vy article object
+        /// </summary>
+        /// <param name="article">object</param>
+        /// <returns>provider order line object</returns>
         public ProviderOrderLine GetPOLByArticle(Article article)
         {
             var query = from pol in db.ProviderOrderLines
@@ -41,7 +55,12 @@ namespace ShopManagement.BLL
             return query.ElementAt(0);
         }
 
-        // Get Provider Order Line By Article and Provider Order
+       /// <summary>
+       /// Get ProviderOrderline list by article object && providerorder object
+       /// </summary>
+       /// <param name="article">object</param>
+       /// <param name="po">provider order</param>
+       /// <returns>provider order lines list</returns>
         public List<ProviderOrderLine> GetPoLByArticleandPO(Article article,ProviderOrder po)
         {
             var query = from pol in db.ProviderOrderLines
@@ -51,7 +70,11 @@ namespace ShopManagement.BLL
         }
 
         //
-        // Get Provider order Lines By provider
+        /// <summary>
+        /// Get provider order line list by provider order object
+        /// </summary>
+        /// <param name="providerOrder">Object</param>
+        /// <returns>ProviderOrderLine list</returns>
         public List<ProviderOrderLine> GetSelectedArticles(ProviderOrder providerOrder)
         {
             var query = from pol in db.ProviderOrderLines
@@ -63,8 +86,16 @@ namespace ShopManagement.BLL
 
 
 
-        /////////
-        //Get Provider Order Lines By Operation type !
+        /// <summary>
+        /// Get provider Order lines list by operation type
+        /// </summary>
+        /// <param name="OperationType">String</param>
+        /// <returns>
+        /// provider order line id 
+        /// provider order id
+        /// article reference
+        /// total price
+        /// </returns>
         public List<Object> GetPOlByOpType(string OperationType)
         {
             var query = from pol in db.ProviderOrderLines
@@ -84,7 +115,18 @@ namespace ShopManagement.BLL
             return query.ToList<Object>();
         }
 
-            // Get Provider Order Lines By Provider
+            /// <summary>
+            /// Get provider order line list by provider object
+            /// </summary>
+            /// <param name="provider">object</param>
+            /// <returns>
+            /// provider order line id
+            /// provider order id
+            /// article reference
+            /// quantity required
+            /// total price
+            /// provider last name , provider first name
+            /// </returns>
             public List<Object> GetPOLByp(Provider provider)
         {
             var query = from pol in db.ProviderOrderLines
@@ -104,8 +146,18 @@ namespace ShopManagement.BLL
             return query.ToList<Object>();
         }
 
-
-        //Get Buys By Start Date and End Date and OrderState = "Buy"
+        
+        /// <summary>
+        /// Get buys by start date && enddate (periode) && order state = "buy"
+        /// </summary>
+        /// <param name="StartDate">date debut</param>
+        /// <param name="EndDate">date fin</param>
+        /// <returns>
+        /// provider order line id
+        /// provider order id
+        /// quantity
+        /// article buying price
+        /// </returns>
         public List<Object> GetPOLBySD_ED_OS(DateTime StartDate, DateTime EndDate)
         {
             var query = from pol in db.ProviderOrderLines

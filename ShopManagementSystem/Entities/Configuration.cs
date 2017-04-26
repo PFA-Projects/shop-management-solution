@@ -1,4 +1,6 @@
-﻿//Mariam Ait Al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
@@ -12,6 +14,10 @@ namespace ShopManagement.Entities
 {
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
     [Menu]
+
+    /// <summary>
+    /// fr : configuration
+    /// </summary>
     public class configuration:BaseEntity
     {
         

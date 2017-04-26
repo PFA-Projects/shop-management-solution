@@ -1,4 +1,4 @@
-﻿namespace ShopManagement.Forms.Buy_Order__Historic
+﻿namespace ShopManagement.Presentation.Buy_Order__Historic
 {
     partial class FormLivraison
     {

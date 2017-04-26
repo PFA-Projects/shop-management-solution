@@ -1,4 +1,6 @@
-﻿//Mariam Ait al
+﻿// Nom : Mariam Ait al
+// Groupe : TDI204
+//Annee : 2017
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Entities
 {
+    /// <summary>
+    /// fr : Notification
+    /// </summary>
    public class Notification:BaseEntity
     {
         public string Name { get; set; }

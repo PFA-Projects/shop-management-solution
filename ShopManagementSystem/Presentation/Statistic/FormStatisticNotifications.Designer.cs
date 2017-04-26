@@ -1,4 +1,4 @@
-﻿namespace ShopManagement.Forms.Statistic
+﻿namespace ShopManagement.Presentation.Statistic
 {
     partial class FormStatisticNotifications
     {
