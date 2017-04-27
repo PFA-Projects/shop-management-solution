@@ -127,9 +127,6 @@
   <data name="Id.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;id_rdb.Name" xml:space="preserve">
     <value>id_rdb</value>
   </data>
@@ -218,6 +215,9 @@
   </data>
   <data name="id_rdb.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="btn_next.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 339</value>
   </data>
   <data name="&gt;&gt;op_type_grpx.Name" xml:space="preserve">
     <value>op_type_grpx</value>
@@ -360,8 +360,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormSellOrder</value>
   </data>
-  <data name="&gt;&gt;articles_cat_lb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SellingPrice.HeaderText" xml:space="preserve">
+    <value>Selling Price</value>
   </data>
   <data name="&gt;&gt;articles_count_tb.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -374,6 +374,9 @@
   </data>
   <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
     <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;btn_confirm.Name" xml:space="preserve">
+    <value>btn_confirm</value>
   </data>
   <data name="&gt;&gt;idcustomer_label.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -414,8 +417,11 @@
   <data name="&gt;&gt;articles_count_tb.Name" xml:space="preserve">
     <value>articles_count_tb</value>
   </data>
-  <data name="search_tb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>456, 20</value>
+  <data name="Result_grpbx.Text" xml:space="preserve">
+    <value>Result : </value>
+  </data>
+  <data name="&gt;&gt;articles_cat_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;articles_count_tb.Parent" xml:space="preserve">
     <value>Result_grpbx</value>
@@ -443,9 +449,6 @@
   </data>
   <data name="deliverydateexpected_dtp.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="search_grpx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
   </data>
   <data name="&gt;&gt;search_grpx.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -480,8 +483,11 @@
   <data name="&gt;&gt;search_grpx.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btn_confirm.Name" xml:space="preserve">
-    <value>btn_confirm</value>
+  <data name="search_tb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 20</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Articles Count : </value>
   </data>
   <data name="customer_combo.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 29</value>
@@ -501,8 +507,8 @@
   <data name="search_grpx.Size" type="System.Drawing.Size, System.Drawing">
     <value>676, 43</value>
   </data>
-  <data name="SellingPrice.HeaderText" xml:space="preserve">
-    <value>Selling Price</value>
+  <data name="&gt;&gt;totalPrice_tb.Name" xml:space="preserve">
+    <value>totalPrice_tb</value>
   </data>
   <data name="&gt;&gt;articles_dgv.Name" xml:space="preserve">
     <value>articles_dgv</value>
@@ -564,9 +570,6 @@
   <data name="&gt;&gt;articles_cat_lb.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="deliverydate_grpx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 207</value>
-  </data>
   <data name="op_type_combo.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 31</value>
   </data>
@@ -575,6 +578,9 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;op_type_grpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Total Price : </value>
@@ -639,11 +645,11 @@
   <data name="&gt;&gt;Selected.Name" xml:space="preserve">
     <value>Selected</value>
   </data>
-  <data name="&gt;&gt;op_type_grpx.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="search_grpx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Articles Count : </value>
+  <data name="&gt;&gt;Result_grpbx.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="customer_combo.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 21</value>
@@ -699,8 +705,8 @@
   <data name="&gt;&gt;Object_rdb.Name" xml:space="preserve">
     <value>Object_rdb</value>
   </data>
-  <data name="btn_next.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 339</value>
+  <data name="deliverydate_grpx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 207</value>
   </data>
   <data name="Selected.HeaderText" xml:space="preserve">
     <value />
@@ -714,8 +720,8 @@
   <data name="&gt;&gt;search_tb.Parent" xml:space="preserve">
     <value>search_grpx</value>
   </data>
-  <data name="Result_grpbx.Text" xml:space="preserve">
-    <value>Result : </value>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>676, 321</value>
   </data>
   <data name="op_type_grpx.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -762,20 +768,14 @@
   <data name="articles_cat_lb.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
-  <data name="&gt;&gt;idcustomer_label.Parent" xml:space="preserve">
-    <value>customer_grpx</value>
-  </data>
   <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;search_tb.Name" xml:space="preserve">
     <value>search_tb</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>676, 321</value>
-  </data>
-  <data name="&gt;&gt;Result_grpbx.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="&gt;&gt;idcustomer_label.Parent" xml:space="preserve">
+    <value>customer_grpx</value>
   </data>
   <data name="search_grpx.Text" xml:space="preserve">
     <value>Search  by Reference : </value>
@@ -801,8 +801,8 @@
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;totalPrice_tb.Name" xml:space="preserve">
-    <value>totalPrice_tb</value>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="articles_dgv.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 16</value>

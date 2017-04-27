@@ -4,11 +4,13 @@
 
 using App;
 using App.Gwin;
+using App.Gwin.Application.Presentation.EntityManagement;
 using App.Gwin.Entities.Secrurity.Authentication;
 using GenericWinForm.Demo;
 using ShopManagement.BAL;
 using ShopManagement.BLL;
 using ShopManagement.Entities;
+using ShopManagement.Presentation.Form_Menu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -106,12 +108,26 @@ namespace ShopManagement.Presentation.Form_Buy_Order
         ProviderOrder po = new ProviderOrder();
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure about this informations  : \nProvider : "
-                + provider.FirstName + " " + provider.LastName + "\n Operation Type : " + OperationType + " \nProvider Type : " + ProviderType
-                + "\n Delivery Date Expected : " + DeliveryDateExpected;
+            string message = "";
+            if(provider != null)
+            {
+                message = "Are you sure about this informations  : \nProvider : "
+               + provider.FirstName + " " + provider.LastName + "\n Operation Type : " + OperationType + " \nProvider Type : " + ProviderType
+               + "\n Delivery Date Expected : " + DeliveryDateExpected;
+            }
+            else
+            {
+                message = "Are you sure about this informations  : \nProvider : "
+               + "----"+ "\n Operation Type : " + OperationType + " \nProvider Type : " + ProviderType
+               + "\n Delivery Date Expected : " + DeliveryDateExpected;
+            }
+            
             if (MessageBox.Show(message, "Confirmation Messag", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                po.Name = OperationType + po.Id + "," + provider.LastName + " " + provider.FirstName;
+                if(provider != null)
+                {
+                    po.Name = OperationType + po.Id + "," + provider.LastName + " " + provider.FirstName;
+                }
                 if (OperationType == "Buy")
                 {
                     po.orderDate = DateTime.Now;
@@ -170,6 +186,7 @@ namespace ShopManagement.Presentation.Form_Buy_Order
         /// </summary>
         private void id_pro_label_CheckedChanged(object sender, EventArgs e)
         {
+            provider = null;
             ProviderType = "Id";
             pro_combo.DataSource = null;
             pro_combo.Enabled = false;

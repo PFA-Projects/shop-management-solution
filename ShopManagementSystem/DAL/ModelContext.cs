@@ -14,7 +14,7 @@
     public class ModelContext : DbContext
     {
 
-         public ModelContext() : base(@"data source=.\SQLEXPRESS; initial catalog =sh; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
+         public ModelContext() : base(@"data source=DELL-PC; initial catalog =ShopManagementSystem; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework")
         //public ModelContext() : base(@"data source=.; AttachDbFileName =|DataDirectory|\sh.mdf; Integrated Security = true ; MultipleActiveResultSets = True; App = EntityFramework;User Instance=True")
 
 
@@ -48,7 +48,6 @@
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<CustomerOrder> CustomerOrders { get; set; }
         public virtual DbSet<CustomerOrderLine> CustomerOrderLines { get; set; }
-        public virtual DbSet<Notification> Notifications { get; set; }
         public virtual DbSet<ExpenseCategory> ExpensesCategories { get; set; }
         public virtual DbSet<Expense> Expenses { get; set; }
         public virtual DbSet<configuration> configurations { get; set; }

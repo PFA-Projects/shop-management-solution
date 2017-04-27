@@ -68,8 +68,11 @@ namespace ShopManagement.Presentation.Sell_Order
                 string Message = "Are u want To change it from Order To Sell ?";
                 if (MessageBox.Show(Message, "Confirmation Messag", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    CustomerOrderLine col = new CustomerOrderLine();
-                    col = new CustomerOrderLineBLO(db).GetByID(Convert.ToInt32(col_dgv.CurrentRow.Cells[2].Value.ToString()));
+                    // CustomerOrderLine col = new CustomerOrderLine();
+
+                    //  col = new CustomerOrderLineBLO(db).GetByID(Convert.ToInt32(col_dgv.CurrentRow.Cells[2].Value.ToString()));
+
+                    MessageBox.Show(col_dgv.CurrentRow.Cells[5].Value.ToString());
                    
                     CustomerOrder co = new CustomerOrder();
                     co = new CustomerOrdersBLO(db).GetByID(Convert.ToInt32(col_dgv.CurrentRow.Cells[3].Value.ToString()));
@@ -79,7 +82,7 @@ namespace ShopManagement.Presentation.Sell_Order
                     Article article = new Article();
                     article = new ArticlesBLO(db).SearchByReference(col_dgv.CurrentRow.Cells[4].Value.ToString())[0];
                     MessageBox.Show("Quantity Article Before : " + article.Quantity);
-                    article.Quantity = article.Quantity - col.Quantity;
+                    article.Quantity = article.Quantity - float.Parse(col_dgv.CurrentRow.Cells[5].Value.ToString());
                     MessageBox.Show("Quantity Article After : " + article.Quantity);
                     col_dgv.DataSource = null;
                     col_dgv.DataSource = new CustomerOrderLineBLO(db).GetCOlByOpType(optype_combo.SelectedItem.ToString());
