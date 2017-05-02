@@ -64,6 +64,10 @@ namespace ShopManagement.Presentation.Sell_Order
             {
                 deliverydate_grpx.Enabled = true;
             }
+            if(OperationType == "Sell")
+            {
+                deliverydate_grpx.Enabled = false;
+            }
         }
         //
         //define the customertype
@@ -82,6 +86,7 @@ namespace ShopManagement.Presentation.Sell_Order
         //means that the customer is not selected
         private void id_rdb_CheckedChanged(object sender, EventArgs e)
         {
+            customer = null;
             CustomerType = "Id";
             customer_combo.DataSource = null;
             customer_combo.Enabled = false;
@@ -103,12 +108,16 @@ namespace ShopManagement.Presentation.Sell_Order
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             // confirm about information selected before procede to the second part
+            
             string Message = "Are You sure About this informations ? \n\t Operation Type : " + OperationType
                 + "\n\t Customer Type : " + CustomerType + "\n\t Delivery Date Expected : " + DeliveryDateExpected;
             if (MessageBox.Show(Message, "Confirmation Messag", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 // save the customer order informations selected
-                co.Name = OperationType + co.Id + customer.LastName + " " + customer.FirstName;
+                if(customer != null) {
+                    co.Name = OperationType + co.Id + customer.LastName + " " + customer.FirstName;
+                }
+                
                 if (OperationType == "Sell")
                 {
                     co.OrderDate = DateTime.Now;

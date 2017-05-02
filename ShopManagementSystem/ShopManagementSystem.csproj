@@ -89,7 +89,6 @@
     <Compile Include="Entities\CustomerOrderLine.cs" />
     <Compile Include="Entities\Expense.cs" />
     <Compile Include="Entities\ExpenseCategory.cs" />
-    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Provider.cs" />
     <Compile Include="Entities\ProviderOrder.cs" />
     <Compile Include="Entities\ProviderOrderLine.cs" />
@@ -303,6 +302,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="DAL\Migrations\201704260055377_Create_data.cs" />
+    <Compile Include="DAL\Migrations\201704260055377_Create_data.Designer.cs">
+      <DependentUpon>201704260055377_Create_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Migrations\Configuration.cs" />
     <Compile Include="Presentation\Buy-Order\FormBuyOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,6 +520,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Provider.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="DAL\Migrations\201704260055377_Create_data.resx">
+      <DependentUpon>201704260055377_Create_data.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Buy-Order\FormBuyOrder.ar.resx">
       <DependentUpon>FormBuyOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -599,9 +606,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ShopManagement.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

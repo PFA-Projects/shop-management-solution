@@ -98,26 +98,26 @@
             // 
             // OperationType_grpbx
             // 
-            resources.ApplyResources(this.OperationType_grpbx, "OperationType_grpbx");
             this.OperationType_grpbx.Controls.Add(this.OpType_combo);
+            resources.ApplyResources(this.OperationType_grpbx, "OperationType_grpbx");
             this.OperationType_grpbx.Name = "OperationType_grpbx";
             this.OperationType_grpbx.TabStop = false;
             // 
             // OpType_combo
             // 
-            resources.ApplyResources(this.OpType_combo, "OpType_combo");
             this.OpType_combo.FormattingEnabled = true;
+            resources.ApplyResources(this.OpType_combo, "OpType_combo");
             this.OpType_combo.Name = "OpType_combo";
             this.OpType_combo.SelectedValueChanged += new System.EventHandler(this.OpType_combo_SelectedValueChanged);
             // 
             // prov_grpx
             // 
-            resources.ApplyResources(this.prov_grpx, "prov_grpx");
             this.prov_grpx.Controls.Add(this.id_pro_label);
             this.prov_grpx.Controls.Add(this.pro_rdb);
             this.prov_grpx.Controls.Add(this.providerId_label);
             this.prov_grpx.Controls.Add(this.id_provider_label);
             this.prov_grpx.Controls.Add(this.pro_combo);
+            resources.ApplyResources(this.prov_grpx, "prov_grpx");
             this.prov_grpx.Name = "prov_grpx";
             this.prov_grpx.TabStop = false;
             // 
@@ -149,15 +149,15 @@
             // 
             // pro_combo
             // 
-            resources.ApplyResources(this.pro_combo, "pro_combo");
             this.pro_combo.FormattingEnabled = true;
+            resources.ApplyResources(this.pro_combo, "pro_combo");
             this.pro_combo.Name = "pro_combo";
             this.pro_combo.SelectedValueChanged += new System.EventHandler(this.pro_combo_SelectedValueChanged);
             // 
             // dde_grpx
             // 
-            resources.ApplyResources(this.dde_grpx, "dde_grpx");
             this.dde_grpx.Controls.Add(this.dd_dtp);
+            resources.ApplyResources(this.dde_grpx, "dde_grpx");
             this.dde_grpx.Name = "dde_grpx";
             this.dde_grpx.TabStop = false;
             // 
@@ -169,8 +169,8 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btn_confirm);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -203,15 +203,14 @@
             // 
             // search_grpbx
             // 
-            resources.ApplyResources(this.search_grpbx, "search_grpbx");
             this.search_grpbx.Controls.Add(this.Articles_dgv);
             this.search_grpbx.Controls.Add(this.Articles_Category_lb);
+            resources.ApplyResources(this.search_grpbx, "search_grpbx");
             this.search_grpbx.Name = "search_grpbx";
             this.search_grpbx.TabStop = false;
             // 
             // Articles_dgv
             // 
-            resources.ApplyResources(this.Articles_dgv, "Articles_dgv");
             this.Articles_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Articles_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Selected,
@@ -220,7 +219,9 @@
             this.BuyingPrice,
             this.Reference,
             this.Quantity});
+            resources.ApplyResources(this.Articles_dgv, "Articles_dgv");
             this.Articles_dgv.Name = "Articles_dgv";
+            this.Articles_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Articles_dgv_CellContentClick_1);
             // 
             // Selected
             // 
@@ -264,11 +265,12 @@
             resources.ApplyResources(this.Articles_Category_lb, "Articles_Category_lb");
             this.Articles_Category_lb.FormattingEnabled = true;
             this.Articles_Category_lb.Name = "Articles_Category_lb";
+            this.Articles_Category_lb.Click += new System.EventHandler(this.Articles_Category_lb_Click);
             // 
             // get_grpbx
             // 
-            resources.ApplyResources(this.get_grpbx, "get_grpbx");
             this.get_grpbx.Controls.Add(this.search_tb);
+            resources.ApplyResources(this.get_grpbx, "get_grpbx");
             this.get_grpbx.Name = "get_grpbx";
             this.get_grpbx.TabStop = false;
             // 
@@ -276,6 +278,7 @@
             // 
             resources.ApplyResources(this.search_tb, "search_tb");
             this.search_tb.Name = "search_tb";
+            this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
             // 
             // tableLayoutPanel6
             // 
@@ -285,12 +288,12 @@
             // 
             // result_grpx
             // 
-            resources.ApplyResources(this.result_grpx, "result_grpx");
             this.result_grpx.Controls.Add(this.btn_next);
             this.result_grpx.Controls.Add(this.totalp_tb);
             this.result_grpx.Controls.Add(this.Totel_Price_tb);
             this.result_grpx.Controls.Add(this.articlesCount_tb);
             this.result_grpx.Controls.Add(this.label1);
+            resources.ApplyResources(this.result_grpx, "result_grpx");
             this.result_grpx.Name = "result_grpx";
             this.result_grpx.TabStop = false;
             // 

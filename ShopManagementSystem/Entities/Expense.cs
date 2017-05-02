@@ -34,7 +34,7 @@ namespace ShopManagement.Entities
         [DisplayProperty(Titre = "ExpenseDate")]
         [EntryForm]
         [DataGrid]
-        [Filter]
+        //[Filter]
         public DateTime ExpenseDate { get; set; }
 
         [DisplayProperty(Titre = "price")]
@@ -51,7 +51,7 @@ namespace ShopManagement.Entities
 
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         [EntryForm]
-        [Filter]
+       // [Filter]
         [DataGrid(WidthColonne = 100)]
         public ExpenseCategory expenseCategory { get; set; }
     }

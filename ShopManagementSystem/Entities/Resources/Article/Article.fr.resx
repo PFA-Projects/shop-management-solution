@@ -123,6 +123,9 @@
   <data name="BuyingPrice" xml:space="preserve">
     <value>Prix d'achat</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
   <data name="PluralName" xml:space="preserve">
     <value>Articles</value>
   </data>

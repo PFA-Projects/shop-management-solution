@@ -120,18 +120,21 @@
   <data name="BuyingPrice" xml:space="preserve">
     <value>ثمن الشراء</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
   <data name="PluralName" xml:space="preserve">
     <value>البضائع</value>
   </data>
   <data name="Quantity" xml:space="preserve">
-    <value>Quantity</value>
+    <value>الكمية</value>
     <comment>الكمية</comment>
   </data>
   <data name="Reference" xml:space="preserve">
     <value>المرجع</value>
   </data>
   <data name="SellingPrice" xml:space="preserve">
-    <value>SellingPrice</value>
+    <value>ثمن البيع</value>
     <comment>ثمن البيع</comment>
   </data>
   <data name="SingularName" xml:space="preserve">

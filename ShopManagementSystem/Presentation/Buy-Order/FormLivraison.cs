@@ -133,8 +133,8 @@ namespace ShopManagement.Presentation.Buy_Order__Historic
                         // referesh the datagridview after delliting the  item selected
                         Operations_dgv.DataSource = null;
                         Operations_dgv.DataSource = new ProviderOrderLineBLO(db).GetPOlByOpType(comboBox1.SelectedItem.ToString());
-                        Operations_dgv.Columns[2].Visible = false;
-                        Operations_dgv.Columns[3].Visible = false;
+                        //Operations_dgv.Columns[2].Visible = false;
+                        //Operations_dgv.Columns[3].Visible = false;
                     }
                 }
                 // Update s case

@@ -12,20 +12,22 @@ namespace ShopManagement.Entities
     /// fr : Article
     /// </summary>
     /// 
-    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
+    [GwinEntity(Localizable = true, DisplayMember = "Name")]
     [Menu(Group = "Buy")]
-    [ManagementForm(FormTitle =("Article_Manager"))]
+   // [ManagementForm(FormTitle =("Article_Manager"))]
     public class Article:BaseEntity
     {
         //
         // References
         //
-        [EntryForm(GroupeBox = "References")]
+        //[EntryForm(GroupeBox = "References")]
+        [EntryForm]
         [DataGrid]
         [Filter]
         public string Reference { get; set; }
 
-        [EntryForm(GroupeBox = "References")]
+        //[EntryForm(GroupeBox = "References")]
+        [EntryForm]
         [DataGrid]
         [Filter]
         public string Name { get; set; }
@@ -34,11 +36,13 @@ namespace ShopManagement.Entities
         // 
         // Price
         //
-        [EntryForm(GroupeBox = "Price")]
+        //[EntryForm(GroupeBox = "Price")]
+        [EntryForm]
         [DataGrid]
         public float BuyingPrice { get; set; }
 
-        [EntryForm(GroupeBox = "Price")]
+        //[EntryForm(GroupeBox = "Price")]
+        [EntryForm]
         [DataGrid]
         [Filter]
         public float SellingPrice { get; set; }
@@ -46,7 +50,8 @@ namespace ShopManagement.Entities
         // 
         //  fr_stock
         //
-        [EntryForm(GroupeBox = "fr_stock")]
+        //[EntryForm(GroupeBox = "fr_stock")]
+        [EntryForm]
         [DataGrid]
         [Filter]
         public float Quantity { get; set; }
@@ -56,7 +61,7 @@ namespace ShopManagement.Entities
         //
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         [EntryForm]
-        [Filter]
+        //[Filter]
         [DataGrid(WidthColonne = 100)]
         public ArticleCategory articleCategory { get; set; }
 

@@ -112,6 +112,7 @@
             resources.ApplyResources(this.articles_cat_lb, "articles_cat_lb");
             this.articles_cat_lb.FormattingEnabled = true;
             this.articles_cat_lb.Name = "articles_cat_lb";
+            this.articles_cat_lb.SelectedValueChanged += new System.EventHandler(this.articles_cat_lb_SelectedValueChanged);
             // 
             // articles_dgv
             // 
@@ -125,6 +126,7 @@
             this.Quantity,
             this.SellingPrice});
             this.articles_dgv.Name = "articles_dgv";
+            this.articles_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.articles_dgv_CellContentClick);
             // 
             // Selected
             // 
